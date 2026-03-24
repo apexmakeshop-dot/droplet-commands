@@ -1,0 +1,115 @@
+COMBINED PIPELINE STATUS REPORT
+Generated: 2026-03-24 19:44 UTC
+================================================================================
+
+
+================================================================================
+GROWTH TIER PIPELINE
+================================================================================
+
+BATCH 1 — Outreach started 21 March
+
+Name              | Company        | Industry         | Email         | LI Request | LI DM     | Follow-up     | Final Touch  | Stage
+------------------|----------------|------------------|---------------|------------|-----------|---------------|--------------|-------------------------------
+Melanie Smith     | Nooks          | B2B SaaS         | Sent 21 Mar   | Sent 21 Mar| Sent 22 Mar| Due 26 Mar   | Due 28 Mar   | Day 5 follow-up due Thu
+Jonathon Blackburn| Fyxer AI       | B2B SaaS         | Sent 21 Mar   | Sent 21 Mar| Pending    | Due 26 Mar   | Due 28 Mar   | Day 5 follow-up due Thu
+Mark Evans        | Upvio          | Healthtech SaaS  | Sent 21 Mar   | Sent 21 Mar| Sent 23 Mar| Due 26 Mar   | Due 28 Mar   | Day 5 follow-up due Thu
+Miran Cisic       | HockeyStack    | B2B SaaS         | Bounced       | Sent 21 Mar| Pending    | N/A           | N/A          | Awaiting LI acceptance
+Max Greenwald     | Warmly         | B2B SaaS         | Sent 21 Mar   | Sent 22 Mar| Sent 22 Mar| Due 26 Mar   | Due 28 Mar   | Day 5 follow-up due Thu
+Justin McDonald   | Saleo          | B2B SaaS         | Sent 21 Mar   | Sent 21 Mar| Pending    | Due 26 Mar   | Due 28 Mar   | Day 5 follow-up due Thu
+
+BATCH 2 — Outreach started 22 March
+
+Name              | Company        | Industry         | Email         | LI Request | LI DM     | Follow-up     | Final Touch  | Stage
+------------------|----------------|------------------|---------------|------------|-----------|---------------|--------------|-------------------------------
+Alex Su           | Latitude Legal | Legal Tech       | Sent 22 Mar   | Sent 22 Mar| Pending    | Due 27 Mar   | Due 29 Mar   | Awaiting LI acceptance
+Brad Glover       | Braun & Gresham| Legal            | Bounced       | Sent 22 Mar| Pending    | N/A           | N/A          | Awaiting LI acceptance
+Beth Douglas      | Icard Merrill  | Legal            | Bounced       | Sent 22 Mar| Pending    | N/A           | N/A          | Awaiting LI acceptance
+
+BATCH 3 — Outreach started 23 March
+
+Name              | Company        | Industry         | Email         | LI Request | LI DM     | Follow-up     | Final Touch  | Stage
+------------------|----------------|------------------|---------------|------------|-----------|---------------|--------------|-------------------------------
+Dawn Aston        | Talon          | Healthtech SaaS  | Sent 23 Mar   | Sent 23 Mar| Pending    | Due 28 Mar   | Due 30 Mar   | Awaiting LI acceptance
+Yair Areli        | xtype.io       | ServiceNow SaaS  | Sent 23 Mar   | Sent 23 Mar| Pending    | Due 28 Mar   | Due 30 Mar   | Awaiting LI acceptance
+Javier Rosas      | Lune           | Climate API SaaS | Sent 23 Mar   | Sent 23 Mar| Pending    | Due 28 Mar   | Due 30 Mar   | Awaiting LI acceptance
+Alexandra Giusto  | Zixi           | Video SaaS       | Bounced       | Sent 23 Mar| Pending    | N/A           | N/A          | Awaiting LI acceptance
+Brittany Breese   | Rancher Gov    | GovTech SaaS     | Bounced       | Sent 23 Mar| Pending    | N/A           | N/A          | Awaiting LI acceptance
+
+BATCH 4 — Outreach started 24 March
+
+Name              | Company        | Industry         | Email         | LI Request | LI DM     | Follow-up     | Final Touch  | Stage
+------------------|----------------|------------------|---------------|------------|-----------|---------------|--------------|-------------------------------
+Brian Heppner     | Voxie          | SMS Mktg SaaS    | Sent 24 Mar   | Sent 24 Mar| Pending    | Due 29 Mar   | Due 31 Mar   | Awaiting LI acceptance
+Lance Goler       | FindMine       | Retail AI SaaS   | Sent 24 Mar   | Sent 24 Mar| Pending    | Due 29 Mar   | Due 31 Mar   | Awaiting LI acceptance
+Alan Keller       | Zuma           | AI Sales SaaS    | Unverified    | Sent 24 Mar| Pending    | N/A (LI only) | N/A          | Awaiting LI acceptance
+Helen Peck        | Halon          | Email Infra SaaS | Unverified    | Sent 24 Mar| Pending    | N/A (LI only) | N/A          | Awaiting LI acceptance
+Jairus Oliver     | Sharpen        | CCaaS            | Unverified    | Sent 24 Mar| Pending    | N/A (LI only) | N/A          | Awaiting LI acceptance
+Barry Holley      | Synaptic       | AI Analytics     | Unverified    | Sent 24 Mar| Pending    | N/A (LI only) | N/A          | Awaiting LI acceptance
+
+GROWTH TIER SUMMARY
+Total prospects: 20 | Emails delivered: 11 | Bounced/unverified: 9
+LI requests sent: 20 | LI accepted: 2 | DMs sent: 3 | Replies: 0
+
+UPCOMING (GROWTH)
+Thu 26 Mar — Day 5 follow-up emails: Melanie Smith, Jonathon Blackburn, Mark Evans, Max Greenwald, Justin McDonald
+Sat 28 Mar — Day 7 final touch: same 5
+Thu 27 Mar — Day 5 follow-up: Alex Su
+Sun 29 Mar — Day 7 final touch: Alex Su
+
+
+================================================================================
+STARTER TIER PIPELINE
+================================================================================
+
+BATCH 1 — 22 March 2026 (drafts awaiting approval)
+
+Name                | Company              | Industry            | Email     | LI Request | Stage
+--------------------|----------------------|---------------------|-----------|------------|----------------------
+Kyle Dunn           | Hyperdrive Bio       | Computer Software   | Pending   | Pending    | Draft awaiting approval
+Josh Harcus         | Huify                | Mgmt Consulting     | Pending   | Pending    | Draft awaiting approval
+Jeanniey Walden     | Liftoff Enterprises  | Computer Software   | Pending   | Pending    | Draft awaiting approval
+Michelle Ross       | Feelalytics          | Internet            | Pending   | Pending    | Draft awaiting approval
+Raychel Espiritu    | The RAR Studio       | Computer Software   | Pending   | Pending    | Draft awaiting approval
+Andrew Lennon       | Lennonade LLC        | Internet            | Pending   | Pending    | Draft awaiting approval
+Eric Mayers         | FlowASAP             | Mgmt Consulting     | Pending   | Pending    | Draft awaiting approval
+Michael Noack       | Blue Lake CG         | Staffing/Recruiting | Pending   | Pending    | Draft awaiting approval
+Kathy Borkoski      | Career PCS           | Computer Software   | Pending   | Pending    | Draft awaiting approval
+Lonnie Horsey       | PubConnections       | Internet            | Pending   | Pending    | Draft awaiting approval
+
+BATCH 2 — 23 March 2026 (drafts awaiting approval)
+
+Name                | Company              | Industry            | Email     | LI Request | Stage
+--------------------|----------------------|---------------------|-----------|------------|----------------------
+Bernardo Hernandez  | Solon Inversiones    | Internet            | Pending   | Pending    | Draft awaiting approval
+Juliana Mejia       | Cada Consult         | Mgmt Consulting     | Pending   | Pending    | Draft awaiting approval
+Lara Jordan         | Pericus Ventures     | Marketing/Advert    | Pending   | Pending    | Draft awaiting approval
+Samantha McKenna    | #samsales            | Mgmt Consulting     | Pending   | Pending    | Draft awaiting approval
+Jack Kocsis         | Foxbat Media         | Marketing/Advert    | Pending   | Pending    | Draft awaiting approval
+Sean Henri          | Pepperland Marketing | Marketing/Advert    | Pending   | Pending    | Draft awaiting approval
+Glenn Frese         | Riverfreeze          | Mgmt Consulting     | Pending   | Pending    | Draft awaiting approval
+Alex Chatfield      | ADvolution           | Marketing/Advert    | Pending   | Pending    | Draft awaiting approval
+Allison Chaney      | Orange Pegs          | Marketing/Advert    | Pending   | Pending    | Draft awaiting approval
+
+BATCH 3 — 24 March 2026 (active)
+
+Name                | Company              | Industry            | Email         | LI Request  | LI DM      | Follow-up     | Final Touch  | Stage
+--------------------|----------------------|---------------------|---------------|-------------|------------|---------------|--------------|----------------------------
+Michael Bellavia    | HelpGood             | Marketing/Advert    | Sent 24 Mar   | Sent 24 Mar | Due 27 Mar | Due 29 Mar    | Due 31 Mar   | Contacted Day 1
+Tim Nichols         | Three9Marketing      | Marketing/Advert    | Sent 24 Mar   | Sent 24 Mar | Due 27 Mar | Due 29 Mar    | Due 31 Mar   | Contacted Day 1
+Jeffrey Murphy      | Murphy Advertising   | Marketing/Advert    | Pending       | Sent 24 Mar | Due 27 Mar | Pending email | Pending      | LinkedIn only Day 1
+Seth Goldstein      | Goldstein Media      | Internet            | Pending       | Sent 24 Mar | Due 27 Mar | Pending email | Pending      | LinkedIn only Day 1
+Jeff Achen          | Callsign51           | Marketing/Advert    | Pending       | Sent 24 Mar | Due 27 Mar | Pending email | Pending      | LinkedIn only Day 1
+Jason Longo         | Celestial Studios    | Marketing/Advert    | Pending       | Sent 24 Mar | Due 27 Mar | Pending email | Pending      | LinkedIn only Day 1
+Bryan Bruce         | Your Brand Voice     | Marketing/Advert    | Pending       | Sent 24 Mar | Due 27 Mar | Pending email | Pending      | LinkedIn only Day 1
+Tom Thimot          | ROVA                 | Computer Software   | Pending       | Sent 24 Mar | Due 27 Mar | Pending email | Pending      | LinkedIn only Day 1
+Joe Zack            | Coding Blocks        | Computer Software   | Pending       | Sent 24 Mar | Due 27 Mar | Pending email | Pending      | LinkedIn only Day 1
+
+STARTER TIER SUMMARY
+Total prospects: 28 | Drafts pending approval: 19 | Actively contacted: 9
+Emails sent: 2 | LI requests sent: 9 | LI DMs sent: 0 | Replies: 0
+
+UPCOMING (STARTER)
+Thu 27 Mar — LinkedIn DMs (Day 3): all 9 Batch 3 prospects (if connected)
+Sat 29 Mar — Day 5 follow-up emails: Michael Bellavia, Tim Nichols
+Mon 31 Mar — Day 7 final touch: Michael Bellavia, Tim Nichols
