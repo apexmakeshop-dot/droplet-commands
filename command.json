@@ -1,4 +1,4 @@
 {
-  "status": "pending",
+  "status": "running",
   "command": "tmux ls"
 }
