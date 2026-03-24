@@ -6,12 +6,17 @@ on:
     paths:
       - command.json
 
+permissions:
+  contents: write
+
 jobs:
   execute:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.BRIDGE_TOKEN }}
 
       - name: Read command from command.json
         id: read_cmd
@@ -25,67 +30,87 @@ jobs:
         if: steps.read_cmd.outputs.status != 'pending'
         run: |
           echo "Status is '${{ steps.read_cmd.outputs.status }}' — skipping."
-          exit 0
 
       - name: Execute command on droplet via SSH
         if: steps.read_cmd.outputs.status == 'pending'
-        id: ssh_exec
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.DROPLET_HOST }}
           username: ${{ secrets.DROPLET_USER }}
           key: ${{ secrets.DROPLET_SSH_KEY }}
           script_stop: false
-          result_path: /tmp/cmd_result.txt
           script: |
-            COMMAND="${{ steps.read_cmd.outputs.command }}"
-            echo "STDOUT_START"
-            eval "$COMMAND" 2>/tmp/cmd_stderr.txt
-            echo "EXIT_CODE:$?"
-            echo "STDERR_START"
+            COMMAND='${{ steps.read_cmd.outputs.command }}'
+            eval "$COMMAND" > /tmp/cmd_stdout.txt 2>/tmp/cmd_stderr.txt
+            echo $? > /tmp/cmd_rc.txt
+
+      - name: Fetch output files from droplet
+        if: steps.read_cmd.outputs.status == 'pending'
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DROPLET_HOST }}
+          username: ${{ secrets.DROPLET_USER }}
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          script: |
+            cat /tmp/cmd_stdout.txt
+            echo "---STDERR---"
             cat /tmp/cmd_stderr.txt
+            echo "---RC---"
+            cat /tmp/cmd_rc.txt
+        id: fetch_output
 
       - name: Write result.json and mark done
         if: steps.read_cmd.outputs.status == 'pending'
         run: |
-          COMMAND="${{ steps.read_cmd.outputs.command }}"
-          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          COMMAND='${{ steps.read_cmd.outputs.command }}'
+          STDOUT='${{ steps.fetch_output.outputs.stdout }}'
+          RC=$(echo "$STDOUT" | grep -A1 "---RC---" | tail -1 | tr -d '[:space:]')
+          STDERR=$(echo "$STDOUT" | sed -n '/---STDERR---/,/---RC---/p' | grep -v "---STDERR---\|---RC---")
+          ACTUAL_STDOUT=$(echo "$STDOUT" | sed -n '/^/,/---STDERR---/p' | grep -v "---STDERR---")
+          [ -z "$RC" ] || [ "$RC" = "" ] && RC=0
 
-          # Use appleboy output or fallback
-          STDOUT="${{ steps.ssh_exec.outputs.stdout }}"
-          STDERR="${{ steps.ssh_exec.outputs.stderr }}"
-          RC="${{ steps.ssh_exec.outputs.exit_code }}"
-          [ -z "$RC" ] && RC=0
-
-          python3 - <<EOF
+          python3 - <<PYEOF
           import json, os
+          from datetime import datetime, timezone
+
+          stdout_raw = """$STDOUT"""
+          # Parse sections
+          parts = stdout_raw.split("---STDERR---")
+          actual_stdout = parts[0].strip() if parts else ""
+          rest = parts[1] if len(parts) > 1 else ""
+          stderr_parts = rest.split("---RC---")
+          actual_stderr = stderr_parts[0].strip() if stderr_parts else ""
+          rc_str = stderr_parts[1].strip() if len(stderr_parts) > 1 else "0"
+          try:
+              rc = int(rc_str.splitlines()[0])
+          except:
+              rc = 0
+
           result = {
               "status": "complete",
-              "command": os.environ.get("COMMAND", ""),
-              "stdout": os.environ.get("STDOUT", ""),
-              "stderr": os.environ.get("STDERR", ""),
-              "returncode": int(os.environ.get("RC", "0") or "0"),
-              "executed_at": os.environ.get("TIMESTAMP", ""),
+              "command": "$COMMAND",
+              "stdout": actual_stdout,
+              "stderr": actual_stderr,
+              "returncode": rc,
+              "executed_at": datetime.now(timezone.utc).isoformat(),
+              "via": "github-actions"
           }
           with open("result.json", "w") as f:
               json.dump(result, f, indent=2)
 
-          cmd_data = {"status": "done", "command": os.environ.get("COMMAND", "")}
+          cmd_data = {"status": "done", "command": "$COMMAND"}
           with open("command.json", "w") as f:
               json.dump(cmd_data, f, indent=2)
-          EOF
-        env:
-          COMMAND: ${{ steps.read_cmd.outputs.command }}
-          STDOUT: ${{ steps.ssh_exec.outputs.stdout }}
-          STDERR: ${{ steps.ssh_exec.outputs.stderr }}
-          RC: ${{ steps.ssh_exec.outputs.exit_code }}
-          TIMESTAMP: ${{ steps.run_time.outputs.timestamp }}
+
+          print("result.json written, returncode:", rc)
+          PYEOF
 
       - name: Commit and push result.json
         if: steps.read_cmd.outputs.status == 'pending'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.BRIDGE_TOKEN }}@github.com/apexmakeshop-dot/droplet-commands.git
           git add result.json command.json
           git diff --staged --quiet || git commit -m "bridge: result for '${{ steps.read_cmd.outputs.command }}'"
           git push
