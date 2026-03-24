@@ -19,6 +19,5 @@ HUNTER_API_KEY=[REDACTED]
 @reboot tmux new-session -d -s apex 'python3 /home/agentuser/apex/agent.py'
 */5 * * * * python3 /home/agentuser/watchdog.py >> /home/agentuser/watchdog.log 2>&1
 @reboot tmux new-session -d -s bridge 'cd /home/agentuser/api_bridge && gunicorn -c /home/agentuser/api_bridge/gunicorn.conf.py app:app >> /home/agentuser/api_bridge/bridge.log 2>&1'
-@reboot sleep 30 && python3 /home/agentuser/watchdog.py &
 @reboot sleep 20 && tmux new-session -d -s ngrok '/home/agentuser/ngrok http 5001 --log=stdout >> /home/agentuser/api_bridge/ngrok.log 2>&1'
 @reboot sleep 40 && tmux new-session -d -s github-bridge 'python3 /home/agentuser/github_bridge/watcher.py >> /home/agentuser/github_bridge/watcher.log 2>&1'
