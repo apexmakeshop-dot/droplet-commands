@@ -1,9 +1,9 @@
 {
   "status": "complete",
-  "command": "ls /home/agentuser",
+  "command": "tmux ls",
   "allowed": true,
-  "stdout": "__pycache__\napex\napi_bridge\ngithub_bridge\nngrok\nopenclaw-cron.log\nwatchdog.log\nwatchdog.py\n",
+  "stdout": "apex: 1 windows (created Tue Mar 24 15:10:29 2026)\nbridge: 1 windows (created Tue Mar 24 15:27:45 2026)\ngateway: 1 windows (created Tue Mar 24 16:45:01 2026)\ngithub-bridge: 1 windows (created Tue Mar 24 16:45:09 2026)\nngrok: 1 windows (created Tue Mar 24 15:34:40 2026)\n",
   "stderr": "",
   "returncode": 0,
-  "executed_at": "2026-03-24T16:26:30.710540+00:00"
+  "executed_at": "2026-03-24T16:45:11.194507+00:00"
 }
