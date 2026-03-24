@@ -1,4 +1,4 @@
 {
-  "status": "done",
-  "command": "ls /home/agentuser"
+  "status": "pending",
+  "command": "tmux ls"
 }
