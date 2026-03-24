@@ -1,4 +1,4 @@
 {
-  "status": "running",
+  "status": "done",
   "command": "ls /home/agentuser"
 }
