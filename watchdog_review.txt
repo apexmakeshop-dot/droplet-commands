@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+"""
+watchdog.py
+Checks every 5 minutes (via cron) that key services are alive.
+- gateway: checked via 'openclaw gateway status' (daemonized, no tmux)
+- apex:    checked via tmux session presence (persistent foreground process)
+Restarts any dead service automatically and logs all actions to watchdog.log.
+"""
+
+import subprocess
+import logging
+from datetime import datetime, timezone
+
+LOG_FILE = "/home/agentuser/watchdog.log"
+OPENCLAW = "/home/agentuser/.nvm/versions/node/v22.22.1/bin/openclaw"
+
+logging.basicConfig(
+    filename=LOG_FILE,
+    level=logging.INFO,
+    format="%(asctime)s UTC %(levelname)s %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+logging.Formatter.converter = lambda *a: datetime.now(timezone.utc).timetuple()
+logger = logging.getLogger("watchdog")
+
+
+def running_tmux_sessions():
+    """Return set of currently active tmux session names."""
+    try:
+        result = subprocess.run(
+            ["tmux", "list-sessions", "-F", "#{session_name}"],
+            capture_output=True, text=True, timeout=10
+        )
+        return set(result.stdout.strip().splitlines())
+    except Exception as e:
+        logger.error(f"Failed to list tmux sessions: {e}")
+        return set()
+
+
+def gateway_healthy():
+    """Return True if 'openclaw gateway status' exits with code 0."""
+    try:
+        result = subprocess.run(
+            [OPENCLAW, "gateway", "status"],
+            capture_output=True, text=True, timeout=15
+        )
+        return result.returncode == 0
+    except Exception as e:
+        logger.error(f"gateway status check failed: {e}")
+        return False
+
+
+def restart_gateway():
+    """Start the gateway daemon directly (it daemonizes itself, no tmux needed)."""
+    result = subprocess.run(
+        [OPENCLAW, "gateway", "run"],
+        capture_output=True, text=True, timeout=15
+    )
+    if result.returncode == 0:
+        logger.warning(f"RESTARTED gateway (openclaw gateway run)")
+    else:
+        logger.error(f"FAILED to restart gateway: {result.stderr.strip()[:200]}")
+
+
+def restart_tmux_session(name, command):
+    """Kill any remnant and start a fresh detached tmux session."""
+    subprocess.run(["tmux", "kill-session", "-t", name], capture_output=True)
+    result = subprocess.run(
+        ["tmux", "new-session", "-d", "-s", name, command],
+        capture_output=True, text=True, timeout=15
+    )
+    if result.returncode == 0:
+        logger.warning(f"RESTARTED tmux session '{name}' (command: {command})")
+    else:
+        logger.error(f"FAILED to restart tmux session '{name}': {result.stderr.strip()}")
+
+
+def main():
+    # ── Gateway: check via process status, not tmux ───────────────────────────
+    if gateway_healthy():
+        logger.debug("gateway is UP (status check passed)")
+    else:
+        logger.warning("gateway is DOWN (status check failed) — restarting...")
+        restart_gateway()
+
+    # ── Apex: check via tmux session ──────────────────────────────────────────
+    active = running_tmux_sessions()
+    apex_command = "python3 /home/agentuser/apex/agent.py"
+    if "apex" in active:
+        logger.debug("tmux session 'apex' is UP")
+    else:
+        logger.warning("tmux session 'apex' is DOWN — restarting...")
+        restart_tmux_session("apex", apex_command)
+
+
+if __name__ == "__main__":
+    main()
