@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "command": "ls /home/agentuser",
+  "allowed": true,
+  "stdout": "__pycache__\napex\napi_bridge\ngithub_bridge\nngrok\nopenclaw-cron.log\nwatchdog.log\nwatchdog.py\n",
+  "stderr": "",
+  "returncode": 0,
+  "executed_at": "2026-03-24T16:26:30.710540+00:00"
+}
