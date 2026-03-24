@@ -1,0 +1,24 @@
+
+@reboot /home/agentuser/.nvm/versions/node/v22.22.1/bin/openclaw gateway run
+PATH=/home/agentuser/.nvm/versions/node/v22.22.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PDL_API_KEY=[REDACTED]
+HUNTER_API_KEY=[REDACTED]
+
+0 9 * * * cd /home/agentuser && python3 .openclaw/workspace/auto_prospect.py >> /home/agentuser/openclaw-cron.log 2>&1
+0 10 * * * cd /home/agentuser && python3 .openclaw/workspace/auto_prospect_starter.py >> /home/agentuser/openclaw-cron.log 2>&1
+0 8 * * * /home/agentuser/.nvm/versions/node/v22.22.1/bin/openclaw agent --to 8235811059 --message "Morning briefing: check the prospect tracker and tell me who accepted LinkedIn connections since yesterday, who needs a Day 3 DM today, who needs a Day 5 follow up email today, and who needs a Day 7 final touch today. Show exact draft messages for each action due today." --deliver >> /home/agentuser/openclaw-cron.log 2>&1
+0 8 * * * /home/agentuser/.nvm/versions/node/v22.22.1/bin/openclaw agent --agent starter --to 8235811059 --message "Morning briefing: check the prospect tracker and tell me who accepted LinkedIn connections since yesterday, who needs a Day 3 DM today, who needs a Day 5 follow up email today, and who needs a Day 7 final touch today. Show exact draft messages for each action due today." --deliver --reply-channel telegram --reply-account starterprospectagentbot >> /home/agentuser/openclaw-cron.log 2>&1
+0 17 * * * /home/agentuser/.nvm/versions/node/v22.22.1/bin/openclaw agent --to 8235811059 --message "Growth tier afternoon pipeline check" --deliver >> /home/agentuser/openclaw-cron.log 2>&1
+0 17 * * * /home/agentuser/.nvm/versions/node/v22.22.1/bin/openclaw agent --agent starter --to 8235811059 --message "Starter tier afternoon pipeline check" --deliver --reply-channel telegram --reply-account starterprospectagentbot >> /home/agentuser/openclaw-cron.log 2>&1
+0 20 * * * /home/agentuser/.nvm/versions/node/v22.22.1/bin/openclaw agent --to 8235811059 --message "Growth tier end of day improvement report" --deliver >> /home/agentuser/openclaw-cron.log 2>&1
+15 20 * * * /home/agentuser/.nvm/versions/node/v22.22.1/bin/openclaw agent --agent reporter --to 8235811059 --message "Reporter end of day improvement report" --deliver --reply-channel telegram --reply-account openclawreportagentbot >> /home/agentuser/openclaw-cron.log 2>&1
+30 20 * * * /home/agentuser/.nvm/versions/node/v22.22.1/bin/openclaw agent --agent starter --to 8235811059 --message "Starter tier end of day improvement report" --deliver --reply-channel telegram --reply-account starterprospectagentbot >> /home/agentuser/openclaw-cron.log 2>&1
+0 7 * * * python3 /home/agentuser/.openclaw/workspace/revenue_tracker.py check >> /home/agentuser/openclaw-cron.log 2>&1
+0 7 * * * python3 /home/agentuser/.openclaw/workspace-starter/revenue_tracker.py check >> /home/agentuser/openclaw-cron.log 2>&1
+
+@reboot tmux new-session -d -s apex 'python3 /home/agentuser/apex/agent.py'
+*/5 * * * * python3 /home/agentuser/watchdog.py >> /home/agentuser/watchdog.log 2>&1
+@reboot tmux new-session -d -s bridge 'cd /home/agentuser/api_bridge && gunicorn -c /home/agentuser/api_bridge/gunicorn.conf.py app:app >> /home/agentuser/api_bridge/bridge.log 2>&1'
+@reboot sleep 30 && python3 /home/agentuser/watchdog.py &
+@reboot sleep 20 && tmux new-session -d -s ngrok '/home/agentuser/ngrok http 5001 --log=stdout >> /home/agentuser/api_bridge/ngrok.log 2>&1'
+@reboot sleep 40 && tmux new-session -d -s github-bridge 'python3 /home/agentuser/github_bridge/watcher.py >> /home/agentuser/github_bridge/watcher.log 2>&1'
