@@ -28,8 +28,7 @@ jobs:
 
       - name: Skip if not pending
         if: steps.read_cmd.outputs.status != 'pending'
-        run: |
-          echo "Status is '${{ steps.read_cmd.outputs.status }}' — skipping."
+        run: echo "Status is '${{ steps.read_cmd.outputs.status }}' — skipping."
 
       - name: Execute command on droplet via SSH
         if: steps.read_cmd.outputs.status == 'pending'
@@ -40,72 +39,61 @@ jobs:
           key: ${{ secrets.DROPLET_SSH_KEY }}
           script_stop: false
           script: |
-            COMMAND='${{ steps.read_cmd.outputs.command }}'
-            eval "$COMMAND" > /tmp/cmd_stdout.txt 2>/tmp/cmd_stderr.txt
+            eval '${{ steps.read_cmd.outputs.command }}' > /tmp/cmd_stdout.txt 2>/tmp/cmd_stderr.txt
             echo $? > /tmp/cmd_rc.txt
 
-      - name: Fetch output files from droplet
+      - name: Retrieve output from droplet
         if: steps.read_cmd.outputs.status == 'pending'
         uses: appleboy/ssh-action@v1.0.3
+        id: get_output
         with:
           host: ${{ secrets.DROPLET_HOST }}
           username: ${{ secrets.DROPLET_USER }}
           key: ${{ secrets.DROPLET_SSH_KEY }}
           script: |
-            cat /tmp/cmd_stdout.txt
-            echo "---STDERR---"
-            cat /tmp/cmd_stderr.txt
-            echo "---RC---"
-            cat /tmp/cmd_rc.txt
-        id: fetch_output
+            printf '%s' "$(cat /tmp/cmd_stdout.txt)" > /tmp/b64_stdout.txt
+            printf '%s' "$(cat /tmp/cmd_stderr.txt)" > /tmp/b64_stderr.txt
+            echo "STDOUT=$(base64 -w0 /tmp/cmd_stdout.txt)"
+            echo "STDERR=$(base64 -w0 /tmp/cmd_stderr.txt)"
+            echo "RC=$(cat /tmp/cmd_rc.txt | tr -d '[:space:]')"
 
       - name: Write result.json and mark done
         if: steps.read_cmd.outputs.status == 'pending'
         run: |
+          # Extract base64-encoded fields from SSH output
+          SSH_OUT='${{ steps.get_output.outputs.stdout }}'
+          STDOUT_B64=$(echo "$SSH_OUT" | grep '^STDOUT=' | cut -d= -f2-)
+          STDERR_B64=$(echo "$SSH_OUT" | grep '^STDERR=' | cut -d= -f2-)
+          RC=$(echo "$SSH_OUT" | grep '^RC=' | cut -d= -f2 | tr -d '[:space:]')
+          [ -z "$RC" ] && RC=0
+
+          STDOUT=$(echo "$STDOUT_B64" | base64 -d 2>/dev/null || echo "")
+          STDERR=$(echo "$STDERR_B64" | base64 -d 2>/dev/null || echo "")
+
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           COMMAND='${{ steps.read_cmd.outputs.command }}'
-          STDOUT='${{ steps.fetch_output.outputs.stdout }}'
-          RC=$(echo "$STDOUT" | grep -A1 "---RC---" | tail -1 | tr -d '[:space:]')
-          STDERR=$(echo "$STDOUT" | sed -n '/---STDERR---/,/---RC---/p' | grep -v "---STDERR---\|---RC---")
-          ACTUAL_STDOUT=$(echo "$STDOUT" | sed -n '/^/,/---STDERR---/p' | grep -v "---STDERR---")
-          [ -z "$RC" ] || [ "$RC" = "" ] && RC=0
 
-          python3 - <<PYEOF
-          import json, os
-          from datetime import datetime, timezone
-
-          stdout_raw = """$STDOUT"""
-          # Parse sections
-          parts = stdout_raw.split("---STDERR---")
-          actual_stdout = parts[0].strip() if parts else ""
-          rest = parts[1] if len(parts) > 1 else ""
-          stderr_parts = rest.split("---RC---")
-          actual_stderr = stderr_parts[0].strip() if stderr_parts else ""
-          rc_str = stderr_parts[1].strip() if len(stderr_parts) > 1 else "0"
-          try:
-              rc = int(rc_str.splitlines()[0])
-          except:
-              rc = 0
-
+          # Write result.json safely via python
+          python3 -c "
+          import json, sys
           result = {
-              "status": "complete",
-              "command": "$COMMAND",
-              "stdout": actual_stdout,
-              "stderr": actual_stderr,
-              "returncode": rc,
-              "executed_at": datetime.now(timezone.utc).isoformat(),
-              "via": "github-actions"
+              'status': 'complete',
+              'command': sys.argv[1],
+              'stdout': sys.argv[2],
+              'stderr': sys.argv[3],
+              'returncode': int(sys.argv[4] or 0),
+              'executed_at': sys.argv[5],
+              'via': 'github-actions'
           }
-          with open("result.json", "w") as f:
+          with open('result.json', 'w') as f:
               json.dump(result, f, indent=2)
+          done = {'status': 'done', 'command': sys.argv[1]}
+          with open('command.json', 'w') as f:
+              json.dump(done, f, indent=2)
+          print('Written result.json, returncode:', result['returncode'])
+          " "$COMMAND" "$STDOUT" "$STDERR" "$RC" "$TIMESTAMP"
 
-          cmd_data = {"status": "done", "command": "$COMMAND"}
-          with open("command.json", "w") as f:
-              json.dump(cmd_data, f, indent=2)
-
-          print("result.json written, returncode:", rc)
-          PYEOF
-
-      - name: Commit and push result.json
+      - name: Commit and push result
         if: steps.read_cmd.outputs.status == 'pending'
         run: |
           git config user.name "github-actions[bot]"
