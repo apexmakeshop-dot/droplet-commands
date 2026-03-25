@@ -1,5 +1,5 @@
 PENDING OUTREACH — 25 MARCH 2026
-Generated: 2026-03-25 19:36 UTC | Operator: Reinier Kobus / Stratledger Advisory
+Generated: 2026-03-25 22:12 UTC | Operator: Reinier Kobus / Stratledger Advisory
 ================================================================================
 
 TIER NOTE:
@@ -8,27 +8,30 @@ This file contains Growth tier prospects only (auto_prospects_20260325.csv, 10 c
 
 STATUS: AWAITING OPERATOR APPROVAL — nothing to be sent without explicit APPROVE.
 
-EMAIL VERIFICATION NOTE:
-Verified emails: Kyle Broderick (Zen Planner), Chad Haertling (Deed).
-All other emails are unverified — high bounce risk, proceed with care.
+EMAIL VERIFICATION:
+Verified:   Kyle Broderick (Zen Planner), Chad Haertling (Deed)
+Unverified: All others — high bounce risk, LinkedIn channel is primary for these 8
 
 FIT FLAGS:
-- Thomas Glasgo / Smart Express: auto care services company, not B2B SaaS. Low fit.
-- Kimberly Morrow / TouchSource: individual contributor (Territory Mgr / AE), not a sales manager. Low/medium fit.
-- Dale Durrett / Omeda: 162 employees, outside 10-50 headcount target. Medium fit.
+Thomas Glasgo / Smart Express    — auto care/ADAS services, not B2B SaaS. Low fit. Recommend review.
+Kimberly Morrow / TouchSource    — Territory Manager/AE (individual contributor). Low/medium fit.
+Dale Durrett / Omeda             — 162 employees, above 10-50 headcount target. Medium fit.
 
 ================================================================================
 PROSPECT 1 OF 10
 ================================================================================
 
-NAME:        Thomas Glasgo
-TITLE:       Regional Sales Director
-COMPANY:     Smart Express, Inc.
-EMAIL:       thomas.glasgo@smartexpress.com (UNVERIFIED)
-LINKEDIN:    https://linkedin.com/in/thomas-glasgo-3a033340
-FIT:         Low — auto care/ADAS services, not B2B SaaS. Recommend operator review before sending.
+NAME:     Thomas Glasgo
+TITLE:    Regional Sales Director
+COMPANY:  Smart Express, Inc.
+EMAIL:    thomas.glasgo@smartexpress.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/thomas-glasgo-3a033340
 
-BUYING SIGNAL: Actively hiring Sales Account Executives.
+RESEARCH: Smart Express is a Burnsville, Minnesota company specialising in
+advanced automotive safety system (ADAS) installation and auto care services.
+~27 employees, ~$4M revenue. Actively hiring Sales Account Executives.
+Primary buying signal: open sales headcount, regional director managing
+reps in a service-heavy field sales motion.
 
 EMAIL SUBJECT:
 Research that finds your next account before your reps do
@@ -36,27 +39,36 @@ Research that finds your next account before your reps do
 EMAIL BODY:
 Hi Thomas,
 
-I came across Smart Express while researching regional sales teams actively building pipeline. Stratledger delivers deep B2B account intelligence so your reps spend less time researching and more time selling. For teams at your stage, that usually means getting into conversations three to four weeks faster.
+I came across Smart Express while researching regional sales teams actively
+building pipeline. Stratledger delivers deep B2B account intelligence so your
+reps spend less time researching and more time selling. For teams at your stage,
+that usually means getting into conversations three to four weeks faster.
 
-I'd love to send a sample report so you can judge the quality yourself. Worth a look?
+I'd love to send a sample report so you can judge the quality yourself.
+Worth a look?
 
 Reinier Kobus / Stratledger Advisory
 
 LINKEDIN CONNECTION REQUEST (under 300 chars):
-Hi Thomas, came across your profile while researching sales leaders in the Midwest. Building a regional book of business from the ground up is genuinely challenging work. Would love to connect.
+Hi Thomas, came across your profile while researching sales leaders in the
+Midwest. Building a regional book of business from the ground up is genuinely
+challenging work. Would love to connect.
 
 ================================================================================
 PROSPECT 2 OF 10
 ================================================================================
 
-NAME:        Kimberly Morrow
-TITLE:       Mountain West Territory Manager and Account Executive
-COMPANY:     TouchSource
-EMAIL:       kimberly.morrow@touchsource.com (UNVERIFIED)
-LINKEDIN:    https://linkedin.com/in/kimberly-rose-morrow
-FIT:         Low/Medium — individual contributor, not a sales manager. TouchSource is Inc. 5000 and post-acquisition growth stage. Recommend operator review before sending.
+NAME:     Kimberly Morrow
+TITLE:    Mountain West Territory Manager and Account Executive
+COMPANY:  TouchSource
+EMAIL:    kimberly.morrow@touchsource.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/kimberly-rose-morrow
 
-BUYING SIGNAL: Inc. 5000 fastest-growing company. Acquired by LK Capital, in active post-acquisition growth mode. 51 employees.
+RESEARCH: TouchSource provides digital touch screen directories and IoT-connected
+signage solutions. Recognised as a Top 10 kiosk solution provider and an Inc. 5000
+fastest-growing company. 51 employees. Acquired by LK Capital. Post-acquisition
+growth mode with active hiring. Kimberly is an individual contributor (Territory
+Manager/AE), not a sales manager — flag for operator review.
 
 EMAIL SUBJECT:
 More pipeline, less desk research
@@ -64,27 +76,36 @@ More pipeline, less desk research
 EMAIL BODY:
 Hi Kimberly,
 
-TouchSource's run on the Inc. 5000 list tells me growth is the priority right now, and territory managers in that environment usually feel the pressure to build qualified pipeline fast. Stratledger produces deep B2B account intelligence so you can walk into conversations already knowing the account.
+TouchSource's run on the Inc. 5000 list tells me growth is the priority right
+now, and territory managers in that environment usually feel the pressure to
+build qualified pipeline fast. Stratledger produces deep B2B account intelligence
+so you can walk into conversations already knowing the account.
 
-I'd love to share a sample report built for a company in your space. Worth five minutes?
+I'd love to share a sample report built for a company in your space.
+Worth five minutes?
 
 Reinier Kobus / Stratledger Advisory
 
 LINKEDIN CONNECTION REQUEST (under 300 chars):
-Hi Kimberly, I saw TouchSource on the Inc. 5000 list and was impressed by the growth trajectory. I work with software sales teams and would love to connect.
+Hi Kimberly, I saw TouchSource on the Inc. 5000 list and was impressed by the
+growth trajectory. I work with software sales teams and would love to connect.
 
 ================================================================================
 PROSPECT 3 OF 10
 ================================================================================
 
-NAME:        Kyle Broderick
-TITLE:       Sales Team Lead
-COMPANY:     Zen Planner
-EMAIL:       kyle.broderick@zenplanner.com (VERIFIED)
-LINKEDIN:    https://linkedin.com/in/kyle-broderick-843b6456
-FIT:         Strong — PE-backed growth phase (Mainsail Partners), ~25 employees, $22M revenue, published sales acceleration case study.
+NAME:     Kyle Broderick
+TITLE:    Sales Team Lead
+COMPANY:  Zen Planner
+EMAIL:    kyle.broderick@zenplanner.com (VERIFIED)
+LINKEDIN: https://linkedin.com/in/kyle-broderick-843b6456
 
-BUYING SIGNAL: Mainsail Partners invested specifically to accelerate Zen Planner's sales. Active sales team expansion phase. Company promises clients 20% annual revenue growth.
+RESEARCH: Zen Planner is an all-in-one fitness business management software
+platform (scheduling, member management, payments) for gyms, studios, and
+martial arts schools. ~25 employees, ~$22M revenue, based in Homewood, Alabama.
+Mainsail Partners invested specifically to accelerate sales and customer success.
+Case study published on sales acceleration initiative. Company promises clients
+20% annual revenue growth on its homepage. Strong fit.
 
 EMAIL SUBJECT:
 How Zen Planner's sales team could close faster with better account intel
@@ -92,27 +113,37 @@ How Zen Planner's sales team could close faster with better account intel
 EMAIL BODY:
 Hi Kyle,
 
-Zen Planner's growth story with Mainsail Partners is well documented, and leading a sales team through that kind of acceleration means your reps need to be efficient from day one. Stratledger produces deep B2B account intelligence so your team spends less time on research and more time in front of prospects.
+Zen Planner's growth story with Mainsail Partners is well documented, and leading
+a sales team through that kind of acceleration means your reps need to be efficient
+from day one. Stratledger produces deep B2B account intelligence so your team
+spends less time on research and more time in front of prospects.
 
-I'd love to send a sample report built around a fitness software deal cycle so you can see the quality yourself. Would that be useful?
+I'd love to send a sample report built around a fitness software deal cycle so
+you can see the quality yourself. Would that be useful?
 
 Reinier Kobus / Stratledger Advisory
 
 LINKEDIN CONNECTION REQUEST (under 300 chars):
-Hi Kyle, I've been following Zen Planner's growth in the fitness software space. Leading a sales team through a PE-backed growth phase is a real craft. Would love to connect.
+Hi Kyle, I've been following Zen Planner's growth in the fitness software space.
+Leading a sales team through a PE-backed growth phase is a real craft.
+Would love to connect.
 
 ================================================================================
 PROSPECT 4 OF 10
 ================================================================================
 
-NAME:        Steven Correnti
-TITLE:       Vice President of Global Sales
-COMPANY:     Liquibase
-EMAIL:       steven.correnti@liquibase.com (UNVERIFIED)
-LINKEDIN:    https://linkedin.com/in/stevencorrenti
-FIT:         Strong — $27.8M raised, explicitly announced sales hiring and global geographic expansion. VP Global Sales actively building the team.
+NAME:     Steven Correnti
+TITLE:    Vice President of Global Sales
+COMPANY:  Liquibase
+EMAIL:    steven.correnti@liquibase.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/stevencorrenti
 
-BUYING SIGNAL: $10M Series C to expand into new geographies. Publicly stated plans to hire in sales. Database change automation tool with growing enterprise customer base.
+RESEARCH: Liquibase provides database change automation software, helping
+engineering teams manage and track database schema changes. $27.8M raised
+across 7 rounds including a $10M Series C. At Series C announcement, leadership
+explicitly stated plans to expand into new geographies and hire in sales and
+marketing. Steven Correnti is VP Global Sales, building out the international
+sales motion. Strong fit.
 
 EMAIL SUBJECT:
 Prospect research built for global sales expansion
@@ -120,27 +151,37 @@ Prospect research built for global sales expansion
 EMAIL BODY:
 Hi Steven,
 
-I noticed Liquibase has been actively expanding its sales footprint into new geographies, and a VP of Global Sales running that motion needs his team moving fast in unfamiliar markets. Stratledger produces deep B2B account intelligence so your reps can enter new territories already knowing the landscape and the right buyers.
+I noticed Liquibase has been actively expanding its sales footprint into new
+geographies, and a VP of Global Sales running that motion needs his team moving
+fast in unfamiliar markets. Stratledger produces deep B2B account intelligence
+so your reps can enter new territories already knowing the landscape and the
+right buyers.
 
-I'd love to send a sample report so you can judge the quality for yourself. Worth a quick look?
+I'd love to send a sample report so you can judge the quality for yourself.
+Worth a quick look?
 
 Reinier Kobus / Stratledger Advisory
 
 LINKEDIN CONNECTION REQUEST (under 300 chars):
-Hi Steven, I came across your work at Liquibase while researching global sales leaders in the dev tools space. Expanding a sales team into new geographies is genuinely hard work. Would love to connect.
+Hi Steven, I came across your work at Liquibase while researching global sales
+leaders in the dev tools space. Expanding a sales team into new geographies is
+genuinely hard work. Would love to connect.
 
 ================================================================================
 PROSPECT 5 OF 10
 ================================================================================
 
-NAME:        Chad Haertling
-TITLE:       Vice President of Sales, Founding Team
-COMPANY:     Deed
-EMAIL:       chad.haertling@joindeed.com (VERIFIED)
-LINKEDIN:    https://linkedin.com/in/chadhaertling
-FIT:         Strong — YC-backed, launched enterprise platform, VP Sales on founding team, building GTM from scratch, actively hiring.
+NAME:     Chad Haertling
+TITLE:    Vice President of Sales, Founding Team
+COMPANY:  Deed
+EMAIL:    chad.haertling@joindeed.com (VERIFIED)
+LINKEDIN: https://linkedin.com/in/chadhaertling
 
-BUYING SIGNAL: YC-backed, recently launched enterprise social impact platform, small team scaling into enterprise sales. Currently hiring across 3 open roles.
+RESEARCH: Deed is a YC-backed enterprise social impact platform making it easy
+for employees to volunteer, donate, and engage with causes. First product was a
+consumer volunteering app; enterprise platform launched more recently. 3 open
+roles currently. Chad is VP Sales on the founding team, building GTM from
+scratch. Enterprise sales into HR and CSR buyers. Strong fit.
 
 EMAIL SUBJECT:
 Sales research to match your enterprise ambitions
@@ -148,27 +189,38 @@ Sales research to match your enterprise ambitions
 EMAIL BODY:
 Hi Chad,
 
-Building the go-to-market engine at a YC-backed company from the founding team is a serious job, and enterprise sales cycles live or die on how well your reps know the account before they walk in. Stratledger produces deep B2B account intelligence so your team goes into conversations already knowing the stakeholders and the buying signals.
+Building the go-to-market engine at a YC-backed company from the founding team
+is a serious job, and enterprise sales cycles live or die on how well your reps
+know the account before they walk in. Stratledger produces deep B2B account
+intelligence so your team goes into conversations already knowing the
+stakeholders and the buying signals.
 
-I'd love to send a sample report so you can see exactly what we deliver. Worth five minutes?
+I'd love to send a sample report so you can see exactly what we deliver.
+Worth five minutes?
 
 Reinier Kobus / Stratledger Advisory
 
 LINKEDIN CONNECTION REQUEST (under 300 chars):
-Hi Chad, I came across Deed while researching YC-backed enterprise software companies and was impressed by what you're building. Standing up a sales team from the founding stage is no small thing. Would love to connect.
+Hi Chad, I came across Deed while researching YC-backed enterprise software
+companies and was impressed by what you're building. Standing up a sales team
+from the founding stage is no small thing. Would love to connect.
 
 ================================================================================
 PROSPECT 6 OF 10
 ================================================================================
 
-NAME:        Robert Caldwell
-TITLE:       Regional Sales Director
-COMPANY:     Agilence, Inc.
-EMAIL:       robert.caldwell@agilenceinc.com (UNVERIFIED)
-LINKEDIN:    https://linkedin.com/in/robert-caldwell-7751361
-FIT:         Strong — new CRO (Jan 2025), new VP Global Sales (Jan 2026), active growth push, $25M raised, acquired by Cuadrilla Capital.
+NAME:     Robert Caldwell
+TITLE:    Regional Sales Director
+COMPANY:  Agilence, Inc.
+EMAIL:    robert.caldwell@agilenceinc.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/robert-caldwell-7751361
 
-BUYING SIGNAL: New CRO hired January 2025. New VP of Global Sales announced January 2026. Post-acquisition growth push. Regional directors now executing against fresh leadership targets.
+RESEARCH: Agilence is an AI-powered loss prevention analytics platform serving
+retail, restaurant, and grocery chains. $25M raised across 11 rounds. Acquired
+by Cuadrilla Capital. $15M annual revenue. Six consecutive Stevie Awards for
+Customer Service. New CRO Amy Gearing hired January 2025. New VP of Global Sales
+Rick Timmerman announced January 7, 2026. Robert Caldwell is Regional Sales
+Director executing against these new leadership targets. Strong fit.
 
 EMAIL SUBJECT:
 Account intelligence for Agilence's next growth phase
@@ -176,27 +228,37 @@ Account intelligence for Agilence's next growth phase
 EMAIL BODY:
 Hi Robert,
 
-Agilence has had a busy few months: new CRO, new VP of Global Sales, and a clear push into the next phase of growth. Regional directors running quota in that environment need their reps to be sharp and efficient from day one. Stratledger produces deep B2B account intelligence so your team can prioritize the right accounts and walk into conversations better prepared.
+Agilence has had a busy start to 2026: new CRO last year, new VP of Global Sales
+announced in January. Regional directors running quota under fresh leadership need
+their reps to be sharp and efficient from day one. Stratledger produces deep B2B
+account intelligence so your team can prioritise the right accounts and walk into
+conversations better prepared.
 
-I'd love to send a sample report so you can judge the quality yourself. Worth a look?
+I'd love to send a sample report so you can judge the quality yourself.
+Worth a look?
 
 Reinier Kobus / Stratledger Advisory
 
 LINKEDIN CONNECTION REQUEST (under 300 chars):
-Hi Robert, I've been following Agilence's growth in the loss prevention analytics space. Leading a regional sales team through a leadership transition and growth push is serious work. Would love to connect.
+Hi Robert, I've been following Agilence's growth in the loss prevention analytics
+space. Leading a regional sales team through a leadership transition and growth
+push is serious work. Would love to connect.
 
 ================================================================================
 PROSPECT 7 OF 10
 ================================================================================
 
-NAME:        Breal Madison
-TITLE:       Vice President, Federal Sales
-COMPANY:     Voltron Data
-EMAIL:       breal.madison@voltrondata.com (UNVERIFIED)
-LINKEDIN:    https://linkedin.com/in/breal-m-729b51b
-FIT:         Medium — Accenture strategic investment, VP Federal Sales building federal GTM from scratch. Composable open source data systems.
+NAME:     Breal Madison
+TITLE:    Vice President, Federal Sales
+COMPANY:  Voltron Data
+EMAIL:    breal.madison@voltrondata.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/breal-m-729b51b
 
-BUYING SIGNAL: Accenture strategic investment secured. Actively hiring. Building a federal sales motion for a technically complex, open source data infrastructure product.
+RESEARCH: Voltron Data builds composable, open source data infrastructure
+(Apache Arrow ecosystem) for large-scale enterprise data processing. Accenture
+made a strategic investment to help organisations use GPU technology with Voltron
+Data's tools. Actively hiring. Breal Madison leads federal sales, building a
+government GTM for a technically complex open source product. Medium fit.
 
 EMAIL SUBJECT:
 Account research built for federal sales cycles
@@ -204,27 +266,36 @@ Account research built for federal sales cycles
 EMAIL BODY:
 Hi Breal,
 
-Federal sales cycles are long and the cost of targeting the wrong agency or contract vehicle is high. Stratledger produces deep B2B account intelligence so your team can go into federal conversations knowing the stakeholders, the procurement signals, and the buying context in advance.
+Federal sales cycles are long and the cost of targeting the wrong agency or
+contract vehicle is high. Stratledger produces deep B2B account intelligence
+so your team can go into federal conversations knowing the stakeholders, the
+procurement signals, and the buying context in advance.
 
-I'd love to send a sample report so you can judge whether it fits how your team at Voltron Data operates. Worth a look?
+I'd love to send a sample report so you can judge whether it fits how your
+team at Voltron Data operates. Worth a look?
 
 Reinier Kobus / Stratledger Advisory
 
 LINKEDIN CONNECTION REQUEST (under 300 chars):
-Hi Breal, I came across your profile while researching federal sales leaders in the data infrastructure space. The federal market takes a specific kind of patience and expertise. Would love to connect.
+Hi Breal, I came across your profile while researching federal sales leaders
+in the data infrastructure space. The federal market takes a specific kind of
+patience and expertise. Would love to connect.
 
 ================================================================================
 PROSPECT 8 OF 10
 ================================================================================
 
-NAME:        Derek Feuerman
-TITLE:       Senior Director of Sales
-COMPANY:     Pixalate
-EMAIL:       derek.feuerman@pixalate.com (UNVERIFIED)
-LINKEDIN:    https://linkedin.com/in/derekfeuerman
-FIT:         Strong — 9 open roles, new Chief of Staff Jan 2026, active hiring across sales, data, and engineering. Clear scaling phase.
+NAME:     Derek Feuerman
+TITLE:    Senior Director of Sales
+COMPANY:  Pixalate
+EMAIL:    derek.feuerman@pixalate.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/derekfeuerman
 
-BUYING SIGNAL: 9 open positions across sales, data science, and engineering. New Chief of Staff hired January 2026. ZoomInfo shows multiple recent hires. Company in an active growth phase.
+RESEARCH: Pixalate is an ad fraud detection and programmatic advertising
+compliance platform. 9 open roles across sales, data science, and engineering.
+New Chief of Staff hired January 2026. ZoomInfo shows multiple recent hires
+through late 2025 and early 2026. Derek Feuerman is Senior Director of Sales
+managing a growing team. Strong fit.
 
 EMAIL SUBJECT:
 More time selling, less time researching
@@ -232,27 +303,37 @@ More time selling, less time researching
 EMAIL BODY:
 Hi Derek,
 
-Pixalate is clearly in a growth phase right now, and a Senior Director of Sales at a company hiring across the board needs his team focused on pipeline, not desk research. Stratledger produces deep B2B account intelligence so your reps walk into conversations already knowing the account.
+Pixalate is clearly in a growth phase right now, with 9 open roles and fresh
+hires across the team. A Senior Director of Sales in that environment needs
+his team focused on pipeline, not desk research. Stratledger produces deep
+B2B account intelligence so your reps walk into conversations already knowing
+the account.
 
-I'd love to send a sample report so you can judge the quality for yourself. Worth five minutes?
+I'd love to send a sample report so you can judge the quality for yourself.
+Worth five minutes?
 
 Reinier Kobus / Stratledger Advisory
 
 LINKEDIN CONNECTION REQUEST (under 300 chars):
-Hi Derek, I came across Pixalate while researching ad tech companies building out their sales teams. The fraud detection and compliance space is moving fast. Would love to connect.
+Hi Derek, I came across Pixalate while researching ad tech companies building
+out their sales teams. The fraud detection and compliance space is moving fast.
+Would love to connect.
 
 ================================================================================
 PROSPECT 9 OF 10
 ================================================================================
 
-NAME:        Dale Durrett
-TITLE:       Executive Vice President of Sales
-COMPANY:     Omeda
-EMAIL:       dale.durrett@omeda.com (UNVERIFIED)
-LINKEDIN:    https://linkedin.com/in/daledurrett
-FIT:         Medium — $21M revenue, audience data and media tech platform. 162 employees, above 10-50 headcount target. Senior buyer worth testing.
+NAME:     Dale Durrett
+TITLE:    Executive Vice President of Sales
+COMPANY:  Omeda
+EMAIL:    dale.durrett@omeda.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/daledurrett
 
-BUYING SIGNAL: $21M revenue, 162-person audience data company. Stable enough to invest in sales productivity tools. Glassdoor shows active hiring (4 open roles).
+RESEARCH: Omeda is an audience data management and engagement platform for
+media and publishing companies. ~162 employees, ~$21M annual revenue. 4 open
+roles on Glassdoor. Stable, established company investing in sales productivity.
+Dale Durrett is EVP Sales. Note: 162 employees is above the 10-50 headcount
+target for Stratledger's core ICP, but senior buyer worth testing.
 
 EMAIL SUBJECT:
 Account intelligence for your revenue team
@@ -260,27 +341,37 @@ Account intelligence for your revenue team
 EMAIL BODY:
 Hi Dale,
 
-Omeda's position in the audience data and media technology space is a strong one, and at the EVP level you're likely thinking about how to make your sales team more efficient at finding and converting the right accounts. Stratledger produces deep B2B account intelligence so your team spends less time on research and more time on deals.
+Omeda's position in the audience data and media technology space is a strong
+one, and at the EVP level you're likely thinking about how to make your sales
+team more efficient at finding and converting the right accounts. Stratledger
+produces deep B2B account intelligence so your team spends less time on research
+and more time on deals.
 
-I'd love to send a sample report so you can judge the quality yourself. Worth a look?
+I'd love to send a sample report so you can judge the quality yourself.
+Worth a look?
 
 Reinier Kobus / Stratledger Advisory
 
 LINKEDIN CONNECTION REQUEST (under 300 chars):
-Hi Dale, I came across Omeda while researching sales leaders in the audience data and media technology space. Building a revenue team in that niche takes real expertise. Would love to connect.
+Hi Dale, I came across Omeda while researching sales leaders in the audience
+data and media technology space. Building a revenue team in that niche takes
+real expertise. Would love to connect.
 
 ================================================================================
 PROSPECT 10 OF 10
 ================================================================================
 
-NAME:        Evan McGrath
-TITLE:       Vice President of Sales
-COMPANY:     EVS, LLC
-EMAIL:       evan.mcgrath@evssw.com (UNVERIFIED)
-LINKEDIN:    https://linkedin.com/in/evanmcgrath
-FIT:         Medium — supply chain and warehouse software, actively hiring, VP Sales running complex technical sale to logistics and ops buyers.
+NAME:     Evan McGrath
+TITLE:    Vice President of Sales
+COMPANY:  EVS, LLC
+EMAIL:    evan.mcgrath@evssw.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/evanmcgrath
 
-BUYING SIGNAL: Actively building warehouse, yard, and location technology solutions. Hiring page shows open roles. Complex technical sale into logistics/ops buyers requires deep account research.
+RESEARCH: EVS builds advanced supply chain software including warehouse management
+(WMS), real-time location systems (RTLS), and yard management (YMS). Actively
+hiring across engineering and sales. Complex technical sale to logistics, warehouse,
+and operations buyers who are hard to identify without deep research. Evan McGrath
+is VP of Sales. Medium fit.
 
 EMAIL SUBJECT:
 Account research that helps supply chain sales teams move faster
@@ -288,14 +379,21 @@ Account research that helps supply chain sales teams move faster
 EMAIL BODY:
 Hi Evan,
 
-EVS builds sophisticated supply chain software, and selling into logistics and ops buyers means your reps are often navigating long research cycles just to find the right stakeholder. Stratledger produces deep B2B account intelligence so your team can go into those conversations already knowing the account and the buyer.
+EVS builds sophisticated supply chain software, and selling WMS and RTLS into
+logistics and ops buyers means your reps are often spending significant time just
+finding the right stakeholder before the first conversation. Stratledger produces
+deep B2B account intelligence so your team can go into those conversations already
+knowing the account and the buyer.
 
-I'd love to send a sample report so you can judge the quality yourself. Worth a look?
+I'd love to send a sample report so you can judge the quality yourself.
+Worth a look?
 
 Reinier Kobus / Stratledger Advisory
 
 LINKEDIN CONNECTION REQUEST (under 300 chars):
-Hi Evan, I came across EVS while researching sales leaders in supply chain and warehouse software. Selling complex tech to ops buyers takes a specific skill set. Would love to connect.
+Hi Evan, I came across EVS while researching sales leaders in supply chain and
+warehouse software. Selling complex tech to ops buyers takes a specific skill
+set. Would love to connect.
 
 ================================================================================
 END OF FILE
