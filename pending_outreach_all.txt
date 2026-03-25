@@ -1,291 +1,276 @@
-PENDING OUTREACH — ALL TIERS
-Generated: 2026-03-24 19:06 UTC
+PENDING OUTREACH — AUTO_PROSPECTS_20260325.CSV
+Generated: 2026-03-25 | Operator: Reinier Kobus / Stratledger Advisory
+Status: AWAITING OPERATOR APPROVAL — do not send without explicit APPROVE
 ================================================================================
 
-================================================================================
-GROWTH TIER — auto_prospects_20260324.csv
-Stratledger Growth tier outreach
-Note: Email bodies were drafted by the growth agent in session today.
-      Raw contact data is below. Draft messages were presented to Reinier for approval.
-================================================================================
-
---- PROSPECT 1 ---
-Name:     scott risseeuw
-Title:    vice president of saas sales
-Company:  vizenta ai
-Email:    scott.risseeuw@realcoderz.com (verified: False)
-LinkedIn: https://linkedin.com/in/scottrisseeuw
-Domain:   realcoderz.com
-Industry: computer software | Size: 54
-
-Email Subject: Account research for Vizenta Ai
-LinkedIn Connection Request: Hi Scott, I help vice president of saas sales leaders like you find and profile the right accounts faster. Stratledger delivers structured account intelligence so your reps start every conversation with context. Would love to connect.
-
---- PROSPECT 2 ---
-Name:     alan keller
-Title:    vice president of revenue
-Company:  zuma ⚡
-Email:    alan.keller@getzuma.com (verified: False)
-LinkedIn: https://linkedin.com/in/alanrkeller
-Domain:   getzuma.com
-Industry: computer software | Size: 32
-
-Email Subject: Account research for Zuma ⚡
-LinkedIn Connection Request: Hi Alan, I help vice president of revenue leaders like you find and profile the right accounts faster. Stratledger delivers structured account intelligence so your reps start every conversation with context. Would love to connect.
-
---- PROSPECT 3 ---
-Name:     helen peck
-Title:    sales director - service providers americas
-Company:  halon
-Email:    helen.peck@halon.io (verified: False)
-LinkedIn: https://linkedin.com/in/helenpeck
-Domain:   halon.io
-Industry: computer software | Size: 48
-
-Email Subject: Account research for Halon
-LinkedIn Connection Request: Hi Helen, I help sales director - service providers americas leaders like you find and profile the right accounts faster. Stratledger delivers structured account intelligence so your reps start every conversation with context. Would love to connect.
-
---- PROSPECT 4 ---
-Name:     david erwin
-Title:    director - sales
-Company:  nearstar inc
-Email:    david.erwin@nearstar.com (verified: False)
-LinkedIn: https://linkedin.com/in/david-erwin-122a894
-Domain:   nearstar.com
-Industry: computer software | Size: 10
-
-Email Subject: Account research for Nearstar Inc
-LinkedIn Connection Request: Hi David, I help director - sales leaders like you find and profile the right accounts faster. Stratledger delivers structured account intelligence so your reps start every conversation with context. Would love to connect.
-
---- PROSPECT 5 ---
-Name:     jairus oliver
-Title:    head of sales
-Company:  sharpen
-Email:    jairus.oliver@sharpencx.com (verified: False)
-LinkedIn: https://linkedin.com/in/jairus-oliver-b9aab012
-Domain:   sharpencx.com
-Industry: computer software | Size: 75
-
-Email Subject: Account research for Sharpen
-LinkedIn Connection Request: Hi Jairus, I help head of sales leaders like you find and profile the right accounts faster. Stratledger delivers structured account intelligence so your reps start every conversation with context. Would love to connect.
-
---- PROSPECT 6 ---
-Name:     barry holley
-Title:    vice president of sales
-Company:  synaptic
-Email:    barry.holley@synaptic.build (verified: False)
-LinkedIn: https://linkedin.com/in/barryholley
-Domain:   synaptic.build
-Industry: computer software | Size: 42
-
-Email Subject: Account research for Synaptic
-LinkedIn Connection Request: Hi Barry, I help vice president of sales leaders like you find and profile the right accounts faster. Stratledger delivers structured account intelligence so your reps start every conversation with context. Would love to connect.
-
---- PROSPECT 7 ---
-Name:     brian heppner
-Title:    vice president of sales
-Company:  voxie
-Email:    brian.heppner@voxie.com (verified: True)
-LinkedIn: https://linkedin.com/in/brianheppner
-Domain:   voxie.com
-Industry: computer software | Size: 30
-
-Email Subject: Account research for Voxie
-LinkedIn Connection Request: Hi Brian, I help vice president of sales leaders like you find and profile the right accounts faster. Stratledger delivers structured account intelligence so your reps start every conversation with context. Would love to connect.
-
---- PROSPECT 8 ---
-Name:     lance goler
-Title:    vice president of sales
-Company:  findmine
-Email:    lance.goler@findmine.com (verified: True)
-LinkedIn: https://linkedin.com/in/lancegoler
-Domain:   findmine.com
-Industry: computer software | Size: 32
-
-Email Subject: Account research for Findmine
-LinkedIn Connection Request: Hi Lance, I help vice president of sales leaders like you find and profile the right accounts faster. Stratledger delivers structured account intelligence so your reps start every conversation with context. Would love to connect.
-
-
+NOTE ON EMAIL VERIFICATION
+Verified emails: Kyle Broderick (Zen Planner), Chad Haertling (Deed)
+Unverified (high bounce risk): all others
+Fit flags: Thomas Glasgo (Smart Express) — auto care, not B2B SaaS, low fit
+           Kimberly Morrow (TouchSource) — individual contributor, not manager
+           Dale Durrett (Omeda) — 162 employees, outside 10-50 target range
 
 ================================================================================
-STARTER TIER — outreach_drafts_20260324b.md
-Stratledger Starter tier ($149) outreach
+PROSPECT 1 OF 10
 ================================================================================
 
-# Starter Tier Outreach Drafts — 24 March 2026 (Afternoon Batch)
-**Prospect file:** `inbox/starter_prospects_20260324.csv` (17:54 UTC version)
-**Package:** Stratledger Starter — $149
-**Core value prop:** Save 4 to 8 hours of manual research per client
+NAME:     Thomas Glasgo
+TITLE:    Regional Sales Director
+COMPANY:  Smart Express, Inc.
+EMAIL:    thomas.glasgo@smartexpress.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/thomas-glasgo-3a033340
+FIT NOTE: Low — auto care services company, not B2B SaaS. Recommend review before sending.
 
-> ✅ = verified email | ❌ = unverified
-> No em-dashes used (per standing copy rules)
+EMAIL SUBJECT:
+Research that finds your next account before your reps do
 
----
+EMAIL BODY:
+Hi Thomas,
 
-## 1 — Jeffrey Murphy | Murphy Advertising Co. | jeffrey.murphy@jam-solutions.com ❌
-*Owner, CAS certified · Promotional products, decorated apparel, marketing campaigns · Wilmington, OH · Solo operator, HALO Branded Solutions partner*
+I came across Smart Express while researching regional sales teams actively building pipeline. Stratledger delivers deep B2B account intelligence so your reps spend less time researching and more time selling. For teams at your stage, that usually means getting into conversations three to four weeks faster.
 
-**Subject:** The research hours behind every Murphy Advertising campaign
+I'd love to send a sample report so you can judge the quality yourself. Worth a look?
 
-Hi Jeffrey,
+Reinier Kobus / Stratledger Advisory
 
-Running Murphy Advertising as a one-person operation means every new client or campaign prospect requires real groundwork before you can tell their story well. Understanding their market position, their competitors, and their audience is what separates a generic pitch from one that lands.
+LINKEDIN CONNECTION REQUEST (under 300 chars):
+Hi Thomas, came across your profile while researching sales leaders in the Midwest. Building a regional book of business from the ground up is genuinely challenging work. Would love to connect.
 
-That research typically runs 4 to 8 hours per client before you can bring a single creative idea to the table.
+================================================================================
+PROSPECT 2 OF 10
+================================================================================
 
-Stratledger's Starter tier does that groundwork for you at $149. You get a comprehensive research brief covering the company, their market, and their competitive context, ready before your first conversation.
+NAME:     Kimberly Morrow
+TITLE:    Mountain West Territory Manager and Account Executive
+COMPANY:  TouchSource
+EMAIL:    kimberly.morrow@touchsource.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/kimberly-rose-morrow
+FIT NOTE: Low/Medium — individual contributor, not a sales manager. TouchSource is Inc. 5000 and post-acquisition growth stage. Recommend review before sending.
 
-For a solo owner where every hour goes straight to client work, that's a meaningful time recovery. Want to see a sample report?
+EMAIL SUBJECT:
+More pipeline, less desk research
 
----
+EMAIL BODY:
+Hi Kimberly,
 
-## 2 — Michael Bellavia | HelpGood | michael.bellavia@helpgood.com ✅
-*CEO and Founder · Emmy-winning producer · Social impact marketing for nonprofits, government agencies, CSR teams · Certified B Corp · Forbes Nonprofit Council · Los Angeles*
+TouchSource's run on the Inc. 5000 list tells me growth is the priority right now, and territory managers in that environment usually feel the pressure to build qualified pipeline fast. Stratledger produces deep B2B account intelligence so you can walk into conversations already knowing the account.
 
-**Subject:** The research that goes into every HelpGood impact campaign
+I'd love to share a sample report built for a company in your space. Worth five minutes?
 
-Hi Michael,
+Reinier Kobus / Stratledger Advisory
 
-Building HelpGood into a certified B Corp serving nonprofits, government agencies, and CSR teams is no small thing. Each new client engagement in the social impact space requires serious upfront research: understanding the cause landscape, the target audience, the messaging terrain, and what comparable organisations are doing.
+LINKEDIN CONNECTION REQUEST (under 300 chars):
+Hi Kimberly, I saw TouchSource on the Inc. 5000 list and was impressed by the growth trajectory. I work with software sales teams and would love to connect.
 
-Done properly, that pre-engagement research runs 4 to 8 hours per client. For an agency focused on amplifying impact, those hours deserve to go into strategy, not background digging.
+================================================================================
+PROSPECT 3 OF 10
+================================================================================
 
-Stratledger's Starter tier ($149) automates that research brief so your team walks into every new engagement already informed.
+NAME:     Kyle Broderick
+TITLE:    Sales Team Lead
+COMPANY:  Zen Planner
+EMAIL:    kyle.broderick@zenplanner.com (VERIFIED)
+LINKEDIN: https://linkedin.com/in/kyle-broderick-843b6456
+FIT NOTE: Strong — PE-backed growth phase (Mainsail Partners), ~25 employees, $22M revenue, active sales acceleration.
 
-Given your work with purpose-driven organisations, I think you'd appreciate a tool that makes every client conversation start from a stronger place. Happy to share a sample report.
+EMAIL SUBJECT:
+How Zen Planner's sales team could close faster with better account intel
 
----
+EMAIL BODY:
+Hi Kyle,
 
-## 3 — Seth Goldstein | Goldstein Media | seth.goldstein@goldsteinmedia.com ❌
-*Principal Creative Director and Co-Founder · Digital marketing and WordPress web design · Doylestown, PA · 15 plus years, insights-driven*
+Zen Planner's growth story with Mainsail Partners is well documented, and leading a sales team through that kind of acceleration means your reps need to be efficient from day one. Stratledger produces deep B2B account intelligence so your team spends less time on research and more time in front of prospects.
 
-**Subject:** Faster client research for every Goldstein Media engagement
+I'd love to send a sample report built around a fitness software deal cycle so you can see the quality yourself. Would that be useful?
 
-Hi Seth,
+Reinier Kobus / Stratledger Advisory
 
-Fifteen years of insights-driven creative and digital marketing work means you know how much the right research changes a campaign. But building that baseline for each new client, their competitive landscape, their audience signals, their digital positioning, still takes real time before creative work can begin.
+LINKEDIN CONNECTION REQUEST (under 300 chars):
+Hi Kyle, I've been following Zen Planner's growth in the fitness software space. Leading a sales team through a PE-backed growth phase is a real craft. Would love to connect.
 
-That pre-engagement groundwork typically runs 4 to 8 hours per client. For a small team, that time adds up fast.
+================================================================================
+PROSPECT 4 OF 10
+================================================================================
 
-Stratledger's Starter tier ($149) delivers that research brief automatically, so your team can spend more time on the creative and strategic work that Goldstein Media is actually built for.
+NAME:     Steven Correnti
+TITLE:    Vice President of Global Sales
+COMPANY:  Liquibase
+EMAIL:    steven.correnti@liquibase.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/stevencorrenti
+FIT NOTE: Strong — $27.8M raised, announced sales hiring and global geographic expansion. VP Global Sales actively building the team.
 
-Would a sample report be worth a look?
+EMAIL SUBJECT:
+Prospect research built for global sales expansion
 
----
+EMAIL BODY:
+Hi Steven,
 
-## 4 — Tim Nichols | Three9Marketing | tim.nichols@three9marketing.com ✅
-*Founder and CMO · B2B and B2C marketing solutions · Boise, ID · Solo operator · Previously VP Marketing at Prolucent Health, Ephesoft, Laserfiche*
+I noticed Liquibase has been actively expanding its sales footprint into new geographies, and a VP of Global Sales running that motion needs his team moving fast in unfamiliar markets. Stratledger produces deep B2B account intelligence so your reps can enter new territories already knowing the landscape and the right buyers.
 
-**Subject:** The research overhead every fractional CMO quietly absorbs
+I'd love to send a sample report so you can judge the quality for yourself. Worth a quick look?
 
-Hi Tim,
+Reinier Kobus / Stratledger Advisory
 
-Running Three9Marketing as a solo operator means the research work before every new client engagement comes entirely out of your time. Understanding their market, their competitive position, their audience, their messaging gaps: that groundwork typically runs 4 to 8 hours per client before you can bring anything strategic to the table.
+LINKEDIN CONNECTION REQUEST (under 300 chars):
+Hi Steven, I came across your work at Liquibase while researching global sales leaders in the dev tools space. Expanding a sales team into new geographies is genuinely hard work. Would love to connect.
 
-With a background spanning Laserfiche, Ephesoft, and Prolucent Health, you know what sharp market intel looks like and how long it takes to build manually.
+================================================================================
+PROSPECT 5 OF 10
+================================================================================
 
-Stratledger's Starter tier ($149) automates that initial research brief so you can walk into every client conversation already prepared, not still catching up.
+NAME:     Chad Haertling
+TITLE:    Vice President of Sales, Founding Team
+COMPANY:  Deed
+EMAIL:    chad.haertling@joindeed.com (VERIFIED)
+LINKEDIN: https://linkedin.com/in/chadhaertling
+FIT NOTE: Strong — YC-backed, launched enterprise platform, VP Sales on founding team, actively building GTM from scratch.
 
-Happy to send a sample so you can judge whether it clears the bar.
+EMAIL SUBJECT:
+Sales research to match your enterprise ambitions
 
----
+EMAIL BODY:
+Hi Chad,
 
-## 5 — Jeff Achen | Callsign51 | jeff.achen@callsign51.com ❌
-*Owner, Chief Video Producer and Photographer · Creative services and digital marketing strategy · Navy veteran · Farmington, MN*
+Building the go-to-market engine at a YC-backed company from the founding team is a serious job, and enterprise sales cycles live or die on how well your reps know the account before they walk in. Stratledger produces deep B2B account intelligence so your team goes into conversations already knowing the stakeholders and the buying signals.
 
-**Subject:** Less research time, more time telling client stories
+I'd love to send a sample report so you can see exactly what we deliver. Worth five minutes?
 
-Hi Jeff,
+Reinier Kobus / Stratledger Advisory
 
-Running Callsign51 as a veteran-owned creative services operation means your value is in the storytelling and production, not the background research. But before you can produce compelling video or marketing content for a new client, there is real groundwork to do: understanding their market, their audience, their competitors, their positioning.
+LINKEDIN CONNECTION REQUEST (under 300 chars):
+Hi Chad, I came across Deed while researching YC-backed enterprise software companies and was impressed by what you're building. Standing up a sales team from the founding stage is no small thing. Would love to connect.
 
-That pre-production research typically runs 4 to 8 hours per client before a single frame is shot or a strategy conversation happens.
+================================================================================
+PROSPECT 6 OF 10
+================================================================================
 
-Stratledger's Starter tier ($149) handles that research layer automatically, delivering a brief so you can get straight to the creative work clients are actually paying for.
+NAME:     Robert Caldwell
+TITLE:    Regional Sales Director
+COMPANY:  Agilence, Inc.
+EMAIL:    robert.caldwell@agilenceinc.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/robert-caldwell-7751361
+FIT NOTE: Strong — new CRO hired Jan 2025, new VP Global Sales hired Jan 2026, active growth push with fresh leadership, $25M raised.
 
-Worth a look? Happy to share a sample report.
+EMAIL SUBJECT:
+Account intelligence for Agilence's next growth phase
 
----
+EMAIL BODY:
+Hi Robert,
 
-## 6 — Jason Longo | Celestial Studios | jason.longo@jasonlongo.com ❌
-*Founder and CEO · Graphic design, web design, WordPress, social media marketing · Florida-based · Founded 2000*
+Agilence has had a busy few months: new CRO, new VP of Global Sales, and a clear push into the next phase of growth. Regional directors running quota in that environment need their reps to be sharp and efficient from day one. Stratledger produces deep B2B account intelligence so your team can prioritize the right accounts and walk into conversations better prepared.
 
-**Subject:** 25 years in, the research grind before each client still costs you hours
+I'd love to send a sample report so you can judge the quality yourself. Worth a look?
 
-Hi Jason,
+Reinier Kobus / Stratledger Advisory
 
-Twenty-five years running Celestial Studios means you have seen every kind of client and every kind of market. But the research ritual before a new engagement has not changed: understanding a client's competitive landscape, their audience, their digital positioning, their content gaps. Done properly, that still runs 4 to 8 hours per client.
+LINKEDIN CONNECTION REQUEST (under 300 chars):
+Hi Robert, I've been following Agilence's growth in the loss prevention analytics space. Leading a regional sales team through a leadership transition and growth push is serious work. Would love to connect.
 
-For a founder who has been doing this since 2000, that time could go somewhere better.
+================================================================================
+PROSPECT 7 OF 10
+================================================================================
 
-Stratledger's Starter tier ($149) automates that initial research brief. You get the baseline intelligence in a fraction of the time so you can focus on the design and marketing work that Celestial Studios has been delivering for over two decades.
+NAME:     Breal Madison
+TITLE:    Vice President, Federal Sales
+COMPANY:  Voltron Data
+EMAIL:    breal.madison@voltrondata.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/breal-m-729b51b
+FIT NOTE: Medium — Accenture strategic investment secured. VP Federal Sales building federal GTM. Composable open source data systems angle.
 
-Want to see a sample output?
+EMAIL SUBJECT:
+Account research built for federal sales cycles
 
----
+EMAIL BODY:
+Hi Breal,
 
-## 7 — Bryan Bruce | Your Brand Voice | bryan.bruce@yourbrandvoice.com ❌
-*Founder and CEO · Full-service digital marketing agency · Orlando, FL · Disney Golf's agency of record · Hospitality and travel sector specialism*
+Federal sales cycles are long and the cost of targeting the wrong agency or contract vehicle is high. Stratledger produces deep B2B account intelligence so your team can go into federal conversations knowing the stakeholders, the procurement signals, and the buying context in advance.
 
-**Subject:** The research behind every Your Brand Voice pitch
+I'd love to send a sample report so you can judge whether it fits how your team at Voltron Data operates. Worth a look?
 
-Hi Bryan,
+Reinier Kobus / Stratledger Advisory
 
-Landing Disney Golf as an agency of record is a serious credential. Winning and retaining clients at that level means walking into every new conversation with sharp intelligence: their market, their audience, their competitive context, their messaging landscape.
+LINKEDIN CONNECTION REQUEST (under 300 chars):
+Hi Breal, I came across your profile while researching federal sales leaders in the data infrastructure space. The federal market takes a specific kind of patience and expertise. Would love to connect.
 
-That pre-pitch research typically runs 4 to 8 hours per prospective client before your team can say anything intelligent about what they need.
+================================================================================
+PROSPECT 8 OF 10
+================================================================================
 
-Stratledger's Starter tier ($149) automates that research brief. You get the depth your team would build manually, delivered fast so the strategy and creative work can start sooner.
+NAME:     Derek Feuerman
+TITLE:    Senior Director of Sales
+COMPANY:  Pixalate
+EMAIL:    derek.feuerman@pixalate.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/derekfeuerman
+FIT NOTE: Strong — actively hiring across sales and engineering (9 open roles), new Chief of Staff Jan 2026, clear scaling phase.
 
-Given the calibre of clients you are pursuing in hospitality and beyond, this might be worth 20 minutes to evaluate. Happy to share a sample report.
+EMAIL SUBJECT:
+More time selling, less time researching
 
----
+EMAIL BODY:
+Hi Derek,
 
-## 8 — Tom Thimot | ROVA | tom.thimot@rova.com ❌
-*Executive Chairman · Enterprise mobility and remote work software · Four-time CEO · Los Gatos, CA · Former Supply Wisdom, authID.ai, Socure, Cognizant*
+Pixalate is clearly in a growth phase right now, and a Senior Director of Sales at a company hiring across the board needs his team focused on pipeline, not desk research. Stratledger produces deep B2B account intelligence so your reps walk into conversations already knowing the account.
 
-**Subject:** The research behind every ROVA enterprise conversation
+I'd love to send a sample report so you can judge the quality for yourself. Worth five minutes?
 
-Hi Tom,
+Reinier Kobus / Stratledger Advisory
 
-Four-time CEO with stops at Socure, authID.ai, and Supply Wisdom means you have run more enterprise sales cycles than most. You know how much pre-call research matters and how long it takes to do properly: market positioning, competitive landscape, buyer context, sector signals.
+LINKEDIN CONNECTION REQUEST (under 300 chars):
+Hi Derek, I came across Pixalate while researching ad tech companies building out their sales teams. The fraud detection and compliance space is moving fast. Would love to connect.
 
-That groundwork typically runs 4 to 8 hours per target account before a meaningful enterprise conversation can happen. At the pace ROVA is scaling, that research overhead compounds quickly.
+================================================================================
+PROSPECT 9 OF 10
+================================================================================
 
-Stratledger's Starter tier ($149) automates that account research brief so your team walks into every enterprise conversation already armed.
+NAME:     Dale Durrett
+TITLE:    Executive Vice President of Sales
+COMPANY:  Omeda
+EMAIL:    dale.durrett@omeda.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/daledurrett
+FIT NOTE: Medium — $21M revenue, audience data platform, 162 employees (outside 10-50 target range). Senior buyer but above headcount threshold.
 
-Given your background, I suspect you would evaluate this quickly and know whether it holds up. Happy to send a sample report.
+EMAIL SUBJECT:
+Account intelligence for your revenue team
 
----
+EMAIL BODY:
+Hi Dale,
 
-## 9 — Joe Zack | Coding Blocks | joe.zack@codingblocks.net ❌
-*Co-Founder · Software development education podcast and community · Nearly 20 years software engineering experience · Pluralsight author · Currently also at Broadcom*
+Omeda's position in the audience data and media technology space is a strong one, and at the EVP level you're likely thinking about how to make your sales team more efficient at finding and converting the right accounts. Stratledger produces deep B2B account intelligence so your team spends less time on research and more time on deals.
 
-**Subject:** The research behind every Coding Blocks partnership or sponsor conversation
+I'd love to send a sample report so you can judge the quality yourself. Worth a look?
 
-Hi Joe,
+Reinier Kobus / Stratledger Advisory
 
-Building Coding Blocks into a respected software development podcast and community over nearly 20 years takes real hustle. Growing that community, whether through sponsorships, partnerships, or new content directions, means doing real research before every conversation: understanding a potential partner's market, their audience fit, their competitive context.
+LINKEDIN CONNECTION REQUEST (under 300 chars):
+Hi Dale, I came across Omeda while researching sales leaders in the audience data and media technology space. Building a revenue team in that niche takes real expertise. Would love to connect.
 
-That pre-conversation research typically runs 4 to 8 hours per target. For a co-founder running this alongside a full-time role at Broadcom, that time is genuinely scarce.
+================================================================================
+PROSPECT 10 OF 10
+================================================================================
 
-Stratledger's Starter tier ($149) automates that research brief so you can walk into every sponsorship or partnership conversation already prepared.
+NAME:     Evan McGrath
+TITLE:    Vice President of Sales
+COMPANY:  EVS, LLC
+EMAIL:    evan.mcgrath@evssw.com (UNVERIFIED)
+LINKEDIN: https://linkedin.com/in/evanmcgrath
+FIT NOTE: Medium — supply chain software, actively hiring, VP Sales running complex technical sale to logistics and ops buyers.
 
-Want to see a sample? Given your engineering instincts, I think you would form a view on it fast.
+EMAIL SUBJECT:
+Account research that helps supply chain sales teams move faster
 
----
+EMAIL BODY:
+Hi Evan,
 
-## Summary Table
+EVS builds sophisticated supply chain software, and selling into logistics and ops buyers means your reps are often navigating long research cycles just to find the right stakeholder. Stratledger produces deep B2B account intelligence so your team can go into those conversations already knowing the account and the buyer.
 
-| # | Name | Company | Email | Angle |
-|---|------|---------|-------|-------|
-| 1 | Jeffrey Murphy | Murphy Advertising | ❌ | Solo operator; research before every campaign |
-| 2 | Michael Bellavia | HelpGood | ✅ | Social impact agency; research-heavy client onboarding |
-| 3 | Seth Goldstein | Goldstein Media | ❌ | 15yrs insights-driven; research before every brief |
-| 4 | Tim Nichols | Three9Marketing | ✅ | Solo CMO; every research hour is his own |
-| 5 | Jeff Achen | Callsign51 | ❌ | Navy vet, creative services; research before production |
-| 6 | Jason Longo | Celestial Studios | ❌ | 25yr founder; research grind unchanged since 2000 |
-| 7 | Bryan Bruce | Your Brand Voice | ❌ | Disney Golf agency of record; high-calibre client research |
-| 8 | Tom Thimot | ROVA | ❌ | 4x CEO; enterprise research overhead at scale |
-| 9 | Joe Zack | Coding Blocks | ❌ | Community founder; partnership research alongside day job |
+I'd love to send a sample report so you can judge the quality yourself. Worth a look?
 
+Reinier Kobus / Stratledger Advisory
+
+LINKEDIN CONNECTION REQUEST (under 300 chars):
+Hi Evan, I came across EVS while researching sales leaders in supply chain and warehouse software. Selling complex tech to ops buyers takes a specific skill set. Would love to connect.
+
+================================================================================
+END OF FILE — 10 prospects total
+Stratledger Advisory | stratledger.com
+================================================================================
