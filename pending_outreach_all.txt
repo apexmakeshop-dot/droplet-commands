@@ -1,25 +1,34 @@
-PENDING OUTREACH — AUTO_PROSPECTS_20260325.CSV
-Generated: 2026-03-25 | Operator: Reinier Kobus / Stratledger Advisory
-Status: AWAITING OPERATOR APPROVAL — do not send without explicit APPROVE
+PENDING OUTREACH — 25 MARCH 2026
+Generated: 2026-03-25 19:36 UTC | Operator: Reinier Kobus / Stratledger Advisory
 ================================================================================
 
-NOTE ON EMAIL VERIFICATION
-Verified emails: Kyle Broderick (Zen Planner), Chad Haertling (Deed)
-Unverified (high bounce risk): all others
-Fit flags: Thomas Glasgo (Smart Express) — auto care, not B2B SaaS, low fit
-           Kimberly Morrow (TouchSource) — individual contributor, not manager
-           Dale Durrett (Omeda) — 162 employees, outside 10-50 target range
+TIER NOTE:
+No Starter tier prospect file exists for 25 March 2026.
+This file contains Growth tier prospects only (auto_prospects_20260325.csv, 10 contacts).
+
+STATUS: AWAITING OPERATOR APPROVAL — nothing to be sent without explicit APPROVE.
+
+EMAIL VERIFICATION NOTE:
+Verified emails: Kyle Broderick (Zen Planner), Chad Haertling (Deed).
+All other emails are unverified — high bounce risk, proceed with care.
+
+FIT FLAGS:
+- Thomas Glasgo / Smart Express: auto care services company, not B2B SaaS. Low fit.
+- Kimberly Morrow / TouchSource: individual contributor (Territory Mgr / AE), not a sales manager. Low/medium fit.
+- Dale Durrett / Omeda: 162 employees, outside 10-50 headcount target. Medium fit.
 
 ================================================================================
 PROSPECT 1 OF 10
 ================================================================================
 
-NAME:     Thomas Glasgo
-TITLE:    Regional Sales Director
-COMPANY:  Smart Express, Inc.
-EMAIL:    thomas.glasgo@smartexpress.com (UNVERIFIED)
-LINKEDIN: https://linkedin.com/in/thomas-glasgo-3a033340
-FIT NOTE: Low — auto care services company, not B2B SaaS. Recommend review before sending.
+NAME:        Thomas Glasgo
+TITLE:       Regional Sales Director
+COMPANY:     Smart Express, Inc.
+EMAIL:       thomas.glasgo@smartexpress.com (UNVERIFIED)
+LINKEDIN:    https://linkedin.com/in/thomas-glasgo-3a033340
+FIT:         Low — auto care/ADAS services, not B2B SaaS. Recommend operator review before sending.
+
+BUYING SIGNAL: Actively hiring Sales Account Executives.
 
 EMAIL SUBJECT:
 Research that finds your next account before your reps do
@@ -40,12 +49,14 @@ Hi Thomas, came across your profile while researching sales leaders in the Midwe
 PROSPECT 2 OF 10
 ================================================================================
 
-NAME:     Kimberly Morrow
-TITLE:    Mountain West Territory Manager and Account Executive
-COMPANY:  TouchSource
-EMAIL:    kimberly.morrow@touchsource.com (UNVERIFIED)
-LINKEDIN: https://linkedin.com/in/kimberly-rose-morrow
-FIT NOTE: Low/Medium — individual contributor, not a sales manager. TouchSource is Inc. 5000 and post-acquisition growth stage. Recommend review before sending.
+NAME:        Kimberly Morrow
+TITLE:       Mountain West Territory Manager and Account Executive
+COMPANY:     TouchSource
+EMAIL:       kimberly.morrow@touchsource.com (UNVERIFIED)
+LINKEDIN:    https://linkedin.com/in/kimberly-rose-morrow
+FIT:         Low/Medium — individual contributor, not a sales manager. TouchSource is Inc. 5000 and post-acquisition growth stage. Recommend operator review before sending.
+
+BUYING SIGNAL: Inc. 5000 fastest-growing company. Acquired by LK Capital, in active post-acquisition growth mode. 51 employees.
 
 EMAIL SUBJECT:
 More pipeline, less desk research
@@ -66,12 +77,14 @@ Hi Kimberly, I saw TouchSource on the Inc. 5000 list and was impressed by the gr
 PROSPECT 3 OF 10
 ================================================================================
 
-NAME:     Kyle Broderick
-TITLE:    Sales Team Lead
-COMPANY:  Zen Planner
-EMAIL:    kyle.broderick@zenplanner.com (VERIFIED)
-LINKEDIN: https://linkedin.com/in/kyle-broderick-843b6456
-FIT NOTE: Strong — PE-backed growth phase (Mainsail Partners), ~25 employees, $22M revenue, active sales acceleration.
+NAME:        Kyle Broderick
+TITLE:       Sales Team Lead
+COMPANY:     Zen Planner
+EMAIL:       kyle.broderick@zenplanner.com (VERIFIED)
+LINKEDIN:    https://linkedin.com/in/kyle-broderick-843b6456
+FIT:         Strong — PE-backed growth phase (Mainsail Partners), ~25 employees, $22M revenue, published sales acceleration case study.
+
+BUYING SIGNAL: Mainsail Partners invested specifically to accelerate Zen Planner's sales. Active sales team expansion phase. Company promises clients 20% annual revenue growth.
 
 EMAIL SUBJECT:
 How Zen Planner's sales team could close faster with better account intel
@@ -92,12 +105,14 @@ Hi Kyle, I've been following Zen Planner's growth in the fitness software space.
 PROSPECT 4 OF 10
 ================================================================================
 
-NAME:     Steven Correnti
-TITLE:    Vice President of Global Sales
-COMPANY:  Liquibase
-EMAIL:    steven.correnti@liquibase.com (UNVERIFIED)
-LINKEDIN: https://linkedin.com/in/stevencorrenti
-FIT NOTE: Strong — $27.8M raised, announced sales hiring and global geographic expansion. VP Global Sales actively building the team.
+NAME:        Steven Correnti
+TITLE:       Vice President of Global Sales
+COMPANY:     Liquibase
+EMAIL:       steven.correnti@liquibase.com (UNVERIFIED)
+LINKEDIN:    https://linkedin.com/in/stevencorrenti
+FIT:         Strong — $27.8M raised, explicitly announced sales hiring and global geographic expansion. VP Global Sales actively building the team.
+
+BUYING SIGNAL: $10M Series C to expand into new geographies. Publicly stated plans to hire in sales. Database change automation tool with growing enterprise customer base.
 
 EMAIL SUBJECT:
 Prospect research built for global sales expansion
@@ -118,12 +133,14 @@ Hi Steven, I came across your work at Liquibase while researching global sales l
 PROSPECT 5 OF 10
 ================================================================================
 
-NAME:     Chad Haertling
-TITLE:    Vice President of Sales, Founding Team
-COMPANY:  Deed
-EMAIL:    chad.haertling@joindeed.com (VERIFIED)
-LINKEDIN: https://linkedin.com/in/chadhaertling
-FIT NOTE: Strong — YC-backed, launched enterprise platform, VP Sales on founding team, actively building GTM from scratch.
+NAME:        Chad Haertling
+TITLE:       Vice President of Sales, Founding Team
+COMPANY:     Deed
+EMAIL:       chad.haertling@joindeed.com (VERIFIED)
+LINKEDIN:    https://linkedin.com/in/chadhaertling
+FIT:         Strong — YC-backed, launched enterprise platform, VP Sales on founding team, building GTM from scratch, actively hiring.
+
+BUYING SIGNAL: YC-backed, recently launched enterprise social impact platform, small team scaling into enterprise sales. Currently hiring across 3 open roles.
 
 EMAIL SUBJECT:
 Sales research to match your enterprise ambitions
@@ -144,12 +161,14 @@ Hi Chad, I came across Deed while researching YC-backed enterprise software comp
 PROSPECT 6 OF 10
 ================================================================================
 
-NAME:     Robert Caldwell
-TITLE:    Regional Sales Director
-COMPANY:  Agilence, Inc.
-EMAIL:    robert.caldwell@agilenceinc.com (UNVERIFIED)
-LINKEDIN: https://linkedin.com/in/robert-caldwell-7751361
-FIT NOTE: Strong — new CRO hired Jan 2025, new VP Global Sales hired Jan 2026, active growth push with fresh leadership, $25M raised.
+NAME:        Robert Caldwell
+TITLE:       Regional Sales Director
+COMPANY:     Agilence, Inc.
+EMAIL:       robert.caldwell@agilenceinc.com (UNVERIFIED)
+LINKEDIN:    https://linkedin.com/in/robert-caldwell-7751361
+FIT:         Strong — new CRO (Jan 2025), new VP Global Sales (Jan 2026), active growth push, $25M raised, acquired by Cuadrilla Capital.
+
+BUYING SIGNAL: New CRO hired January 2025. New VP of Global Sales announced January 2026. Post-acquisition growth push. Regional directors now executing against fresh leadership targets.
 
 EMAIL SUBJECT:
 Account intelligence for Agilence's next growth phase
@@ -170,12 +189,14 @@ Hi Robert, I've been following Agilence's growth in the loss prevention analytic
 PROSPECT 7 OF 10
 ================================================================================
 
-NAME:     Breal Madison
-TITLE:    Vice President, Federal Sales
-COMPANY:  Voltron Data
-EMAIL:    breal.madison@voltrondata.com (UNVERIFIED)
-LINKEDIN: https://linkedin.com/in/breal-m-729b51b
-FIT NOTE: Medium — Accenture strategic investment secured. VP Federal Sales building federal GTM. Composable open source data systems angle.
+NAME:        Breal Madison
+TITLE:       Vice President, Federal Sales
+COMPANY:     Voltron Data
+EMAIL:       breal.madison@voltrondata.com (UNVERIFIED)
+LINKEDIN:    https://linkedin.com/in/breal-m-729b51b
+FIT:         Medium — Accenture strategic investment, VP Federal Sales building federal GTM from scratch. Composable open source data systems.
+
+BUYING SIGNAL: Accenture strategic investment secured. Actively hiring. Building a federal sales motion for a technically complex, open source data infrastructure product.
 
 EMAIL SUBJECT:
 Account research built for federal sales cycles
@@ -196,12 +217,14 @@ Hi Breal, I came across your profile while researching federal sales leaders in 
 PROSPECT 8 OF 10
 ================================================================================
 
-NAME:     Derek Feuerman
-TITLE:    Senior Director of Sales
-COMPANY:  Pixalate
-EMAIL:    derek.feuerman@pixalate.com (UNVERIFIED)
-LINKEDIN: https://linkedin.com/in/derekfeuerman
-FIT NOTE: Strong — actively hiring across sales and engineering (9 open roles), new Chief of Staff Jan 2026, clear scaling phase.
+NAME:        Derek Feuerman
+TITLE:       Senior Director of Sales
+COMPANY:     Pixalate
+EMAIL:       derek.feuerman@pixalate.com (UNVERIFIED)
+LINKEDIN:    https://linkedin.com/in/derekfeuerman
+FIT:         Strong — 9 open roles, new Chief of Staff Jan 2026, active hiring across sales, data, and engineering. Clear scaling phase.
+
+BUYING SIGNAL: 9 open positions across sales, data science, and engineering. New Chief of Staff hired January 2026. ZoomInfo shows multiple recent hires. Company in an active growth phase.
 
 EMAIL SUBJECT:
 More time selling, less time researching
@@ -222,12 +245,14 @@ Hi Derek, I came across Pixalate while researching ad tech companies building ou
 PROSPECT 9 OF 10
 ================================================================================
 
-NAME:     Dale Durrett
-TITLE:    Executive Vice President of Sales
-COMPANY:  Omeda
-EMAIL:    dale.durrett@omeda.com (UNVERIFIED)
-LINKEDIN: https://linkedin.com/in/daledurrett
-FIT NOTE: Medium — $21M revenue, audience data platform, 162 employees (outside 10-50 target range). Senior buyer but above headcount threshold.
+NAME:        Dale Durrett
+TITLE:       Executive Vice President of Sales
+COMPANY:     Omeda
+EMAIL:       dale.durrett@omeda.com (UNVERIFIED)
+LINKEDIN:    https://linkedin.com/in/daledurrett
+FIT:         Medium — $21M revenue, audience data and media tech platform. 162 employees, above 10-50 headcount target. Senior buyer worth testing.
+
+BUYING SIGNAL: $21M revenue, 162-person audience data company. Stable enough to invest in sales productivity tools. Glassdoor shows active hiring (4 open roles).
 
 EMAIL SUBJECT:
 Account intelligence for your revenue team
@@ -248,12 +273,14 @@ Hi Dale, I came across Omeda while researching sales leaders in the audience dat
 PROSPECT 10 OF 10
 ================================================================================
 
-NAME:     Evan McGrath
-TITLE:    Vice President of Sales
-COMPANY:  EVS, LLC
-EMAIL:    evan.mcgrath@evssw.com (UNVERIFIED)
-LINKEDIN: https://linkedin.com/in/evanmcgrath
-FIT NOTE: Medium — supply chain software, actively hiring, VP Sales running complex technical sale to logistics and ops buyers.
+NAME:        Evan McGrath
+TITLE:       Vice President of Sales
+COMPANY:     EVS, LLC
+EMAIL:       evan.mcgrath@evssw.com (UNVERIFIED)
+LINKEDIN:    https://linkedin.com/in/evanmcgrath
+FIT:         Medium — supply chain and warehouse software, actively hiring, VP Sales running complex technical sale to logistics and ops buyers.
+
+BUYING SIGNAL: Actively building warehouse, yard, and location technology solutions. Hiring page shows open roles. Complex technical sale into logistics/ops buyers requires deep account research.
 
 EMAIL SUBJECT:
 Account research that helps supply chain sales teams move faster
@@ -271,6 +298,7 @@ LINKEDIN CONNECTION REQUEST (under 300 chars):
 Hi Evan, I came across EVS while researching sales leaders in supply chain and warehouse software. Selling complex tech to ops buyers takes a specific skill set. Would love to connect.
 
 ================================================================================
-END OF FILE — 10 prospects total
-Stratledger Advisory | stratledger.com
+END OF FILE
+10 prospects | Growth tier only | 25 March 2026
+Stratledger Advisory
 ================================================================================
