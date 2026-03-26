@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "generated_at": "2026-03-26T13:28:59.422298+00:00",
+  "prospects": [
+    {
+      "name": "Miran Cisic",
+      "company": "HockeyStack",
+      "email": "miran@hockeystack.com",
+      "email_status": "BOUNCED",
+      "email_notes": "Both miran@ and mcisic@ bounced. LinkedIn is primary channel.",
+      "linkedin_url": "https://linkedin.com/in/miran-cisic",
+      "linkedin_request_sent": "2026-03-21",
+      "linkedin_connected": false,
+      "stage": "Awaiting LinkedIn acceptance \u2014 email channel closed",
+      "next_action": "LinkedIn DM when connection accepted"
+    },
+    {
+      "name": "Justin McDonald",
+      "company": "Saleo",
+      "note": "Original contact name 'Jake' was incorrect \u2014 correct contact is Justin McDonald (CEO)",
+      "email": "justin@saleo.io",
+      "email_status": "SENT",
+      "email_notes": "Initial outreach sent. Jake Leahy was incorrect contact \u2014 replaced with Justin McDonald.",
+      "linkedin_url": "https://linkedin.com/in/justin-mcdonald-21a3aa6",
+      "linkedin_request_sent": "2026-03-21",
+      "linkedin_connected": false,
+      "stage": "Day 1 outreach sent \u2014 awaiting LinkedIn acceptance",
+      "next_action": "Day 5 follow-up email if no reply; LinkedIn DM when connection accepted"
+    }
+  ]
+}
