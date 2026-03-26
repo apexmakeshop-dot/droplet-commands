@@ -1,0 +1,24 @@
+{
+  "version": 5,
+  "generated_at": "2026-03-26T13:51:43.234036+00:00",
+  "prospect": {
+    "name": "Brittany Breese",
+    "title": "Director of Inside Sales (PDL) / Director Federal Inside Sales (LinkedIn confirmed)",
+    "company": "Rancher Government Solutions",
+    "domain": "ranchergovernment.com",
+    "email": "brittany.breese@ranchergovernment.com",
+    "email_status": "BOUNCED",
+    "linkedin_url": "https://linkedin.com/in/brittany-breese-74073248",
+    "company_size": 73,
+    "industry": "Computer Software",
+    "tier": "Growth",
+    "outreach_history": {
+      "linkedin_request_sent": "2026-03-23",
+      "linkedin_connected": false,
+      "email_sent": "2026-03-23",
+      "email_status": "Bounced",
+      "stage": "Awaiting LinkedIn acceptance \u2014 email channel closed",
+      "next_action": "LinkedIn DM when connection accepted"
+    }
+  }
+}
