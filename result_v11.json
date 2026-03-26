@@ -1,0 +1,54 @@
+{
+  "version": 11,
+  "generated_at": "2026-03-26T22:45:35.456259+00:00",
+  "deployment": "YouTube Agent \u2014 /opt/yt-agent",
+  "status": "DEPLOYED \u2014 awaiting manual YouTube OAuth before first run",
+  "files_created": [
+    "/opt/yt-agent/.env (API keys \u2014 chmod 600)",
+    "/opt/yt-agent/config/credentials.json (Google OAuth client secrets \u2014 chmod 600)",
+    "/opt/yt-agent/config/settings.json (niche config \u2014 current_niche: personal finance tips)",
+    "/opt/yt-agent/scripts/__init__.py",
+    "/opt/yt-agent/scripts/niche_researcher.py",
+    "/opt/yt-agent/scripts/script_generator.py",
+    "/opt/yt-agent/scripts/voice_synthesizer.py",
+    "/opt/yt-agent/scripts/video_assembler.py",
+    "/opt/yt-agent/scripts/shorts_cutter.py",
+    "/opt/yt-agent/scripts/seo_publisher.py",
+    "/opt/yt-agent/scripts/analytics_tracker.py",
+    "/opt/yt-agent/scripts/cost_auditor.py",
+    "/opt/yt-agent/scripts/alert_manager.py",
+    "/opt/yt-agent/scripts/auth_setup.py",
+    "/opt/yt-agent/orchestrator.py (chmod +x)"
+  ],
+  "directories_created": [
+    "/opt/yt-agent/config",
+    "/opt/yt-agent/scripts",
+    "/opt/yt-agent/output/videos",
+    "/opt/yt-agent/output/shorts",
+    "/opt/yt-agent/output/thumbnails",
+    "/opt/yt-agent/output/audio",
+    "/opt/yt-agent/logs",
+    "/opt/yt-agent/assets/music"
+  ],
+  "syntax_checks": "All 11 Python files passed syntax check",
+  "cron_schedule": "0 2 * * 0 \u2014 runs every Sunday at 2am UTC",
+  "cron_added_to": "agentuser crontab (ytagent user creation requires sudo \u2014 not available in sandbox)",
+  "api_keys_configured": {
+    "ANTHROPIC_API_KEY": "Loaded from existing droplet environment",
+    "ELEVENLABS_API_KEY": "Configured",
+    "PEXELS_API_KEY": "Configured",
+    "YOUTUBE_API_KEY": "Empty \u2014 add after OAuth"
+  },
+  "action_required": {
+    "step_1": "Run OAuth auth: python3 /opt/yt-agent/scripts/auth_setup.py \u2014 requires browser access to port 8080 (forward port or run locally with credentials)",
+    "step_2": "Add YOUTUBE_API_KEY to /opt/yt-agent/.env from Google Cloud Console",
+    "step_3": "Optionally add background.mp3 to /opt/yt-agent/assets/music/ for background music in videos",
+    "step_4": "Install system packages with sudo: apt-get install -y ffmpeg imagemagick",
+    "do_not": "Do NOT run orchestrator.py until auth_setup.py has been completed and token.json exists"
+  },
+  "notes": [
+    "whisper (openai-whisper) install had metadata warnings \u2014 if subtitle generation fails, run: pip3 install git+https://github.com/openai/whisper.git",
+    "ytagent system user creation requires elevated sudo \u2014 currently runs under agentuser",
+    "Orchestrator will NOT run until next Sunday 2am unless triggered manually after OAuth is complete"
+  ]
+}
