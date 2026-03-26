@@ -1,0 +1,12 @@
+{
+  "version": 7,
+  "generated_at": "2026-03-26T15:04:33.023861+00:00",
+  "anthropic_usage": {
+    "api_key_prefix": "sk-ant-api03-fW5USC0...",
+    "api_key_location": "Environment variable ANTHROPIC_API_KEY on droplet",
+    "usage_data_available": false,
+    "reason": "Anthropic does not expose a programmatic usage/billing API. Token consumption and cost data is only accessible via console.anthropic.com \u2014 requires browser login.",
+    "how_to_check": "Go to https://console.anthropic.com/settings/billing to view current month usage and cost",
+    "known_context": "Credits were reportedly exhausted on 2026-03-25. Current status unknown without console access."
+  }
+}
