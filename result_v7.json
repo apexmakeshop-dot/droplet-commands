@@ -1,12 +1,97 @@
 {
   "version": 7,
-  "generated_at": "2026-03-26T15:04:33.023861+00:00",
-  "anthropic_usage": {
-    "api_key_prefix": "sk-ant-api03-fW5USC0...",
-    "api_key_location": "Environment variable ANTHROPIC_API_KEY on droplet",
-    "usage_data_available": false,
-    "reason": "Anthropic does not expose a programmatic usage/billing API. Token consumption and cost data is only accessible via console.anthropic.com \u2014 requires browser login.",
-    "how_to_check": "Go to https://console.anthropic.com/settings/billing to view current month usage and cost",
-    "known_context": "Credits were reportedly exhausted on 2026-03-25. Current status unknown without console access."
-  }
+  "generated_at": "2026-03-26T15:10:06.658245+00:00",
+  "investigation": "Anthropic API cache write cost \u2014 $83 in 6 days",
+  "system_prompt_sizes": {
+    "growth_agent_AGENTS.md": {
+      "tokens": 1389,
+      "chars": 5556
+    },
+    "starter_agent_AGENTS.md": {
+      "tokens": 1674,
+      "chars": 6698
+    },
+    "reporter_agent_AGENTS.md": {
+      "tokens": 819,
+      "chars": 3275
+    },
+    "devagent_AGENTS.md": {
+      "tokens": 845,
+      "chars": 3379
+    },
+    "verdict": "System prompts are NOT the problem. All under 1700 tokens."
+  },
+  "memory_files_loaded_per_call": {
+    "growth_agent": {
+      "files": [
+        "AGENTS.md (1389t)",
+        "2026-03-21.md (534t)",
+        "2026-03-22-prospect-search.md (1599t)"
+      ],
+      "total_tokens_per_call": 3522
+    },
+    "starter_agent": {
+      "files": [
+        "AGENTS.md (1674t)",
+        "memory/2026-03-22-*.md x4 (~2500t)"
+      ],
+      "total_tokens_per_call": "~4200"
+    },
+    "reporter_agent": {
+      "files": [
+        "AGENTS.md (819t)",
+        "MEMORY.md (268t)",
+        "memory/2026-03-22-mesh-bioplastics-report.md (1797t)",
+        "memory/2026-03-22-hubspot-research.md (1230t)",
+        "memory/2026-03-22-mesh-bioplastics-prospects.md (6414t)"
+      ],
+      "total_tokens_per_call": 10526
+    }
+  },
+  "large_workspace_files": {
+    "reporter/mesh_asia_growth_prospects.md": {
+      "tokens": 23934,
+      "chars": 95734,
+      "risk": "HIGH \u2014 if loaded as context on every call"
+    },
+    "reporter/country_research_matrix.md": {
+      "tokens": 19551,
+      "chars": 78204,
+      "risk": "HIGH \u2014 if loaded as context on every call"
+    },
+    "reporter/memory/2026-03-22-mesh-bioplastics-prospects.md": {
+      "tokens": 6414,
+      "chars": 25655,
+      "risk": "MEDIUM \u2014 loaded every reporter call"
+    },
+    "workspace/improvements_prospect.md": {
+      "tokens": 3105,
+      "chars": 12419,
+      "risk": "LOW"
+    },
+    "workspace-starter/improvements_starter.md": {
+      "tokens": 2705,
+      "chars": 10821,
+      "risk": "LOW"
+    }
+  },
+  "root_cause_analysis": {
+    "primary_suspect": "Conversation history length \u2014 22M cache write tokens in 6 days is NOT explained by system prompts alone (max ~10K tokens). The most likely cause is long conversation threads being re-sent to the API on every message. Each Telegram message to an agent replays the full session history.",
+    "secondary_suspect": "Reporter agent's large workspace files (country_research_matrix.md at 78K chars, mesh_asia_growth_prospects.md at 96K chars) if OpenClaw is auto-loading all workspace files as context.",
+    "calculation": "22M tokens / 6 days = 3.67M tokens/day. At ~10K tokens per agent call, this implies ~367 agent API calls per day \u2014 far more than manual interactions explain. Scheduled heartbeats, cron-triggered agent calls, and morning briefings all fire daily and each replays conversation history.",
+    "biggest_cost_drivers": [
+      "1. Morning briefing cron (8am) fires TWICE daily \u2014 growth + starter \u2014 each replaying full conversation history",
+      "2. Afternoon pipeline check (5pm) fires TWICE \u2014 growth + starter",
+      "3. Evening improvement report (8pm) fires THREE times \u2014 growth + starter + reporter",
+      "4. Revenue tracker check (7am) fires TWICE",
+      "5. Each cron call replays full session history which grows longer every day"
+    ]
+  },
+  "recommendations": [
+    "1. Switch all cron-triggered agent calls to isolated sessions (no history replay) \u2014 each should be stateless",
+    "2. Archive or move large reporter workspace files out of auto-loaded context",
+    "3. Reduce morning/afternoon/evening briefing frequency or consolidate into one daily call",
+    "4. Consider switching scheduled cron agents to a cheaper model (haiku) for routine checks",
+    "5. Do NOT load improvements_*.md, outreach_drafts_*.md, pipeline_status_*.md into context automatically"
+  ]
 }
