@@ -1,0 +1,209 @@
+{
+  "label": "GROWTH TIER — 26 March 2026",
+  "generated": "2026-03-26",
+  "source": "Apollo.io (PDL credits exhausted — fallback active until 2026-04-24)",
+  "total_researched": 8,
+  "disqualified_upfront": [
+    {
+      "name": "Tom",
+      "company": "Ole Tyme Produce Inc",
+      "reason": "Not B2B SaaS ICP. Food distribution / produce company."
+    },
+    {
+      "name": "Christopher",
+      "company": "Cicero Hospitality Group LLC",
+      "reason": "Not B2B SaaS ICP. Hospitality / hotel management company."
+    }
+  ],
+  "prospects": [
+    {
+      "id": 1,
+      "status": "QUALIFIED",
+      "first_name": "Patrick",
+      "last_name": "Sullivan",
+      "full_name": "Patrick Sullivan",
+      "title": "VP of Sales",
+      "company": "SaaS Alerts",
+      "domain": "saasalerts.com",
+      "email": "p.sullivan@saasalerts.com",
+      "email_confidence": "Medium — format inferred from RocketReach partial (p******@saasalerts.com); first.last pattern common at this domain",
+      "linkedin_url": "https://www.linkedin.com/in/patrick-sullivan-7182b812/",
+      "company_description": "SaaS Alerts is a first-of-its-kind cybersecurity platform purpose-built for Managed Service Providers (MSPs). It monitors, reports, and remediates threats across SaaS applications for SMB clients. The platform logs over 200 million SaaS events and covers 3,100+ SMBs and 200,000+ end-user accounts.",
+      "buying_signals": [
+        "Recently launched new Respond Module with automated threat remediation — expanding product, likely scaling sales headcount",
+        "Actively scaling MSP channel — VP of Sales role is front-line growth position",
+        "Company listed on cybersecurity startups to watch lists for 2026",
+        "Hiring signal: cybersecurity talent shortage is a stated pain point in their own press releases"
+      ],
+      "icp_verdict": "Strong fit. B2B SaaS, 10-50 employees, clear growth phase, VP of Sales is decision maker for sales intelligence tooling.",
+      "outreach": {
+        "email": {
+          "subject": "Prospect intel for SaaS Alerts' MSP channel growth",
+          "body": "Hi Patrick, SaaS Alerts' new Respond Module launch caught my attention. Scaling an MSP-focused channel while the cybersecurity talent market is this tight means your team needs to be finding and closing the right MSPs fast, not burning cycles on bad-fit prospects.\n\nStratledger builds deep account intelligence packages on your target MSP prospects, so your reps walk into every conversation knowing exactly what's going on at that account before the first call.\n\nI shared a bit more about how we built this and why here: https://www.linkedin.com/posts/reinier-kobus-5434252_fractionalcfo-b2bsales-salesintelligence-activity-7442645172766670848-GnVx\n\nWould a free sample report on one of your target MSP accounts be worth 10 minutes of your time?\n\nReinier Kobus / Stratledger Advisory"
+        },
+        "linkedin_connection_request": "Hi Patrick, your work building the MSP channel at SaaS Alerts during a product expansion phase is impressive. Would love to connect with someone navigating that kind of growth."
+      }
+    },
+    {
+      "id": 2,
+      "status": "DISQUALIFIED — ICP FAIL",
+      "first_name": "Luke",
+      "last_name": "Van Dyke",
+      "full_name": "Luke Van Dyke",
+      "title": "Director of Revenue Operations and Vice President of Sales",
+      "company": "NuCare API",
+      "domain": "nucareapi.com",
+      "email": null,
+      "linkedin_url": "https://www.linkedin.com/in/luke-van-dyke-30a66a1b4/",
+      "disqualification_reason": "NuCare API is an NABP-accredited pharmaceutical wholesaler supplying Active Pharmaceutical Ingredients (APIs) and finished dose products. Not a B2B SaaS company. The 'API' in the company name refers to Active Pharmaceutical Ingredient, not Application Programming Interface. Outside Stratledger ICP entirely."
+    },
+    {
+      "id": 3,
+      "status": "QUALIFIED — LOW CONFIDENCE",
+      "first_name": "Brennan",
+      "last_name": "Unknown",
+      "full_name": "Brennan [Last name not found]",
+      "title": "Vice President of Sales",
+      "company": "Pro Cloud SaaS",
+      "domain": "procloudsaas.com",
+      "email": null,
+      "email_confidence": "Unknown — no last name resolved, email cannot be constructed",
+      "linkedin_url": null,
+      "company_description": "Pro Cloud SaaS is a managed IT and cybersecurity services provider with 35+ years of combined experience. Specialises in cloud migrations, identity management, cybersecurity, business applications, and consulting for compliance-driven businesses. IT services reseller / MSP, not a SaaS product company.",
+      "buying_signals": [
+        "Active digital presence, compliance-focused client base suggests structured sales process",
+        "Managed IT services is a growing market with consistent hiring"
+      ],
+      "icp_verdict": "Borderline. Pro Cloud SaaS is an IT services and managed services company, not a SaaS product vendor. Their VP of Sales sells services, not software. The ICP fit is weak. Contact also cannot be fully identified: 'Brennan' first name only, no last name found across Apollo, RocketReach, or LinkedIn search. Recommend hold pending last name confirmation.",
+      "outreach": {
+        "note": "DRAFT HELD — last name and email address unresolved. Not ready to send."
+      }
+    },
+    {
+      "id": 4,
+      "status": "QUALIFIED — STALE TITLE RISK",
+      "first_name": "Jesse",
+      "last_name": "Filadelfia",
+      "full_name": "Jesse Filadelfia",
+      "title": "VP of Sales / Sales Director",
+      "company": "Vitruvi Software",
+      "domain": "vitruvisoftware.com",
+      "email": "jesse@vitruvisoftware.com",
+      "email_confidence": "Medium — Vitruvi's primary email format is [first]@vitruvisoftware.com per RocketReach; ZoomInfo shows j***@vitruvisoftware.com confirming first-name format",
+      "linkedin_url": "https://www.linkedin.com/in/jesse-filadelfia-82445348/",
+      "company_description": "Vitruvi Software is a GIS-enabled, end-to-end telecom construction management platform (DCM). It converts GIS designs into web and mobile construction management tools for broadband, wireless, and wireline infrastructure builds. B2B SaaS serving telecom and utility operators.",
+      "buying_signals": [
+        "Active LinkedIn company page with 5,100 followers, consistent content about telecom buildout",
+        "Jesse's LinkedIn still shows Vitruvi as current employer as of March 2026",
+        "ZoomInfo also shows prior role at Sitetracker — background in construction/field ops software sales, strong domain expertise",
+        "Telecom infrastructure buildout is booming in the US (BEAD programme) — strong expansion signal"
+      ],
+      "stale_risk_note": "ZoomInfo text describes Jesse as 'prior to Sitetracker, Jesse served as Sales Director at Vitruvi' which may indicate he has moved to Sitetracker. However, LinkedIn still shows Vitruvi as current employer. Treat with caution: verify on LinkedIn before sending.",
+      "icp_verdict": "Good fit if still at Vitruvi. B2B SaaS, field-ops/telecom niche, growth phase. Verify current role before sending email.",
+      "outreach": {
+        "email": {
+          "subject": "Prospect intelligence for Vitruvi's telecom sales push",
+          "body": "Hi Jesse, Vitruvi's focus on GIS-enabled construction management for telecom buildouts is well-timed given how much broadband infrastructure spend is moving right now.\n\nGetting in front of the right telecom operators and contractors at the right time is the hard part, especially when the market is moving fast and everyone is competing for the same accounts.\n\nStratledger builds deep B2B account intelligence on your target prospects, so your team walks into every conversation with a full picture of what's happening at that account before the first call.\n\nI shared a bit more about how we built this and why here: https://www.linkedin.com/posts/reinier-kobus-5434252_fractionalcfo-b2bsales-salesintelligence-activity-7442645172766670848-GnVx\n\nWould a free sample report on one of your target telecom operators be useful?\n\nReinier Kobus / Stratledger Advisory"
+        },
+        "linkedin_connection_request": "Hi Jesse, your background selling GIS-based construction management into the telecom buildout market is a niche I don't come across often. Would love to connect."
+      }
+    },
+    {
+      "id": 5,
+      "status": "QUALIFIED",
+      "first_name": "Kristen",
+      "last_name": "O'Hara",
+      "full_name": "Kristen O'Hara",
+      "title": "Vice President of Sales",
+      "company": "DockMaster Software",
+      "domain": "dockmaster.com",
+      "email": "kristen.ohara@dockmaster.com",
+      "email_confidence": "High — RocketReach confirms first.last@dockmaster.com format at 70-100% confidence for this domain",
+      "linkedin_url": "https://www.linkedin.com/in/kristenohara/",
+      "company_description": "DockMaster Software pioneered the marina management software industry in 1983 and now offers a cloud-based SaaS platform for marina operators. The product covers reservations, billing, service management, fuel management, and retail. B2B vertical SaaS for the marine/marina industry. ~25 employees.",
+      "buying_signals": [
+        "Company is actively expanding its SaaS product line with cloud-based tools",
+        "Kristen joined from Cornell-educated background, professional LinkedIn presence with 500+ connections",
+        "Small sales team (confirmed ~25 employees total) means Kristen is likely hands-on with prospecting, not just managing",
+        "Vertical SaaS in a niche market means account intelligence on the right marina groups and boat dealerships would be high-value"
+      ],
+      "icp_verdict": "Good fit. B2B vertical SaaS, 10-50 employees, VP of Sales is directly responsible for pipeline. Small team benefits most from outsourced account intel.",
+      "outreach": {
+        "email": {
+          "subject": "Account intelligence for DockMaster's marina sales pipeline",
+          "body": "Hi Kristen, DockMaster's move to cloud-based marina management is smart positioning, and I imagine getting in front of the right marina groups and boat dealerships at the right moment is the hard part of the job.\n\nStratledger builds deep account intelligence on your target prospects. Your reps walk in knowing the account's current tech setup, recent activity, key contacts, and the right hook before the first call.\n\nI shared a bit more about how we built this and why here: https://www.linkedin.com/posts/reinier-kobus-5434252_fractionalcfo-b2bsales-salesintelligence-activity-7442645172766670848-GnVx\n\nWould a free sample report on one of your target marina accounts be worth a look?\n\nReinier Kobus / Stratledger Advisory"
+        },
+        "linkedin_connection_request": "Hi Kristen, leading sales at a vertical SaaS company like DockMaster in a niche market takes real focus. Impressed by the work you're doing there. Would love to connect."
+      }
+    },
+    {
+      "id": 6,
+      "status": "DISQUALIFIED — ICP FAIL",
+      "first_name": "Bartosz",
+      "last_name": "Parszewski",
+      "full_name": "Bartosz Parszewski",
+      "title": "Vice-president, Sales Director",
+      "company": "Maxto ITS",
+      "domain": "maxto.pl",
+      "email": null,
+      "linkedin_url": "https://www.linkedin.com/in/bartosz-parszewski-895bba47/",
+      "disqualification_reason": "Maxto ITS is a Polish IT infrastructure reseller and system integrator (hardware, software wholesale, IT solutions). Based in Krakow/Modlniczka, Poland. Not a B2B SaaS product company. Sells third-party technology products and IT services. Outside Stratledger's ICP and likely outside addressable market for Reinier's outreach geography."
+    },
+    {
+      "id": 7,
+      "status": "DISQUALIFIED — ICP FAIL",
+      "first_name": "Randy",
+      "last_name": "Dame",
+      "full_name": "Randy Dame",
+      "title": "VP of Sales / Director of Sales",
+      "company": "Audacy",
+      "domain": "audacyinc.com",
+      "email": null,
+      "linkedin_url": null,
+      "disqualification_reason": "Audacy is a large US radio broadcasting and audio entertainment company (formerly Entercom), operating 227+ radio stations. Not a B2B SaaS company. Randy Dame's VP of Sales role is for selling advertising inventory on radio/streaming platforms, not SaaS products. Entirely outside Stratledger ICP."
+    },
+    {
+      "id": 8,
+      "status": "QUALIFIED",
+      "first_name": "Martha",
+      "last_name": "Sandia",
+      "full_name": "Martha Sandia",
+      "title": "Vice President of Sales",
+      "company": "Omnira Software",
+      "domain": "omnirasoftware.com",
+      "email": "martha.sandia@omnirasoftware.com",
+      "email_confidence": "Medium — no public format confirmation found; constructed on first.last pattern which is common for 40-50 person SaaS companies; treat as unverified",
+      "linkedin_url": "https://www.linkedin.com/in/marthasandia/",
+      "company_description": "Omnira Software (formerly Mosaic by Omnira) builds reserves management, planning, and operational software for oil and gas exploration and production (E&P) companies. ~43 employees across North America and Europe. B2B vertical SaaS for the energy/oil and gas sector.",
+      "buying_signals": [
+        "LinkedIn company page updated February 2026, active presence",
+        "Company serves E&P clients who are actively investing in digital transformation and operational efficiency tools",
+        "43-person company with a VP of Sales: small team, pipeline pressure is real",
+        "Customer testimonials on website reference 70/30 split between analysis and data entry as a key efficiency win, suggesting buyers are ROI-focused"
+      ],
+      "icp_verdict": "Good fit. B2B vertical SaaS, ~43 employees, VP of Sales is direct decision maker. Energy sector clients are data-driven and respond well to account intelligence framing.",
+      "outreach": {
+        "email": {
+          "subject": "Account intelligence for Omnira's E&P pipeline",
+          "body": "Hi Martha, Omnira's focus on helping E&P companies shift from data entry to real analysis is a compelling value prop, and I imagine getting that message in front of the right decision makers at the right E&P operators takes precision.\n\nStratledger builds deep B2B account intelligence on your target prospects. Your team walks into every conversation knowing what's happening at that account, who the real decision makers are, and the right angle before the first call.\n\nI shared a bit more about how we built this and why here: https://www.linkedin.com/posts/reinier-kobus-5434252_fractionalcfo-b2bsales-salesintelligence-activity-7442645172766670848-GnVx\n\nWould a free sample report on one of your target E&P accounts be worth a look?\n\nReinier Kobus / Stratledger Advisory"
+        },
+        "linkedin_connection_request": "Hi Martha, Omnira's work helping E&P companies move from data management to actual analysis is a smart angle in the energy software market. Would love to connect."
+      }
+    }
+  ],
+  "summary": {
+    "total_in_file": 10,
+    "disqualified_upfront": 2,
+    "researched": 8,
+    "qualified_ready_to_send": 3,
+    "qualified_hold": 1,
+    "disqualified_after_research": 4,
+    "qualified_prospects": ["Patrick Sullivan (SaaS Alerts)", "Jesse Filadelfia (Vitruvi Software — verify role first)", "Kristen O'Hara (DockMaster Software)", "Martha Sandia (Omnira Software)"],
+    "disqualified_after_research_list": [
+      "Luke Van Dyke (NuCare API) — pharmaceutical wholesaler, not SaaS",
+      "Bartosz Parszewski (Maxto ITS) — IT reseller in Poland, not SaaS product",
+      "Randy Dame (Audacy) — radio broadcasting, not SaaS",
+      "Brennan (Pro Cloud SaaS) — IT services company, not SaaS product; last name also unresolved"
+    ]
+  }
+}
