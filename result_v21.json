@@ -1,0 +1,23 @@
+{
+  "version": 21,
+  "generated_at": "2026-03-27T18:08:51.137185+00:00",
+  "topic": "YouTube OAuth token exchange + channel connection test",
+  "token_exchange": {
+    "status": "SUCCESS",
+    "token_saved": "/opt/yt-agent/config/token.json",
+    "token_valid": true,
+    "scopes": [
+      "youtube.upload",
+      "youtube.readonly",
+      "yt-analytics.readonly"
+    ]
+  },
+  "channel_test": {
+    "status": "NO CHANNEL FOUND",
+    "channels_returned": 0,
+    "diagnosis": "The OAuth flow completed successfully but the Google account that was authorized does not have a YouTube channel, or the wrong Google account was used. The API returns 0 channels for 'mine=True'.",
+    "action_required": "Please re-run the OAuth flow using the Google account that owns your YouTube channel. If you have multiple Google accounts, make sure to select the correct one when the browser opens."
+  },
+  "youtube_api_key": "Configured in /opt/yt-agent/.env",
+  "next_step": "Re-do OAuth with the correct Google account. DevAgent will generate a new URL on request."
+}
