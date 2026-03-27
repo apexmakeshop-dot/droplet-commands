@@ -1,0 +1,47 @@
+{
+  "version": 23,
+  "generated_at": "2026-03-27T18:31:34.135700+00:00",
+  "topic": "YouTube agent setup complete \u2014 niche approved, scripts generated",
+  "setup_status": {
+    "niche": "personal finance tips",
+    "channel": "APEX Media (@APEXMediachannel)",
+    "channel_id": "UCHuYH7xACaezVDAmVz0BgVg",
+    "settings_json": "Updated",
+    "ffmpeg": "Already installed (/usr/bin/ffmpeg)",
+    "imagemagick": "Already installed (/usr/bin/convert)",
+    "anthropic_key": "Configured in /opt/yt-agent/.env",
+    "youtube_api_key": "Configured in /opt/yt-agent/.env",
+    "token_json": "Valid \u2014 channel verified",
+    "scripts_saved": "/opt/yt-agent/scripts_output/scripts_batch_1.json"
+  },
+  "scripts_generated": [
+    {
+      "video": 1,
+      "title": "The 50/30/20 Budget Rule Explained for Beginners (Take Control of Your Money Today)",
+      "segments": 8,
+      "tags_count": 20,
+      "description_chars": 1798
+    },
+    {
+      "video": 2,
+      "title": "7 Things to Do With Your First $1,000 (Smart Money Moves for Beginners)",
+      "segments": 9,
+      "tags_count": 20,
+      "description_chars": 1977
+    },
+    {
+      "video": 3,
+      "title": "How to Build a 6-Month Emergency Fund (Step by Step)",
+      "segments": 6,
+      "tags_count": 12,
+      "description_chars": 786
+    }
+  ],
+  "next_steps": [
+    "Run voice_synthesizer.py to generate ElevenLabs voiceovers for each script",
+    "Run video_assembler.py to download Pexels footage and assemble videos",
+    "Add background.mp3 to /opt/yt-agent/assets/music/ for background audio (optional)",
+    "First automated Sunday 2am run will produce and upload a video end-to-end"
+  ],
+  "orchestrator_schedule": "Every Sunday at 2am UTC via cron"
+}
