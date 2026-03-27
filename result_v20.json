@@ -1,0 +1,10 @@
+{
+  "version": 20,
+  "generated_at": "2026-03-27T18:00:56.643580+00:00",
+  "topic": "YouTube agent OAuth setup",
+  "youtube_api_key": "AIzaSyDpKQkB44dCtlWHIny_B1ZJr4aA7nRCZzI \u2014 added to /opt/yt-agent/.env",
+  "oauth_status": "AWAITING USER AUTHORIZATION",
+  "action_required": "Reinier must open the OAuth URL sent via Telegram, log in with the YouTube channel Google account, click Allow, and send the authorization code back to DevAgent",
+  "next_step": "When Reinier sends the auth code, DevAgent will exchange it for a token and save to /opt/yt-agent/config/token.json",
+  "auth_method": "Out-of-band (urn:ietf:wg:oauth:2.0:oob) \u2014 no local server needed"
+}
