@@ -1,16 +1,21 @@
 {
   "version": 27,
-  "generated_at": "2026-03-27T19:33:51.876814+00:00",
-  "rule_added": "PRE-FLIGHT PLAN RULE \u2014 added to workspace-devagent/AGENTS.md",
-  "rule_summary": {
-    "trigger": "Before any new agent, workflow, feature, or non-trivial task",
-    "required_content": [
-      "Step-by-step task breakdown",
-      "API and model used per step",
-      "Estimated tokens and cost per step",
-      "Total estimated cost per run and per month"
-    ],
-    "default_model": "Claude Haiku \u2014 Sonnet only when justified",
-    "gate": "No code written, no run starts until Reinier replies APPROVE"
-  }
+  "generated_at": "2026-03-27T19:37:30.682470+00:00",
+  "topic": "APEXYTAgentBot deployed",
+  "bot": {
+    "name": "APEXYTAgentBot",
+    "token_stored": "TELEGRAM_BOT_TOKEN_YT in /opt/yt-agent/.env",
+    "script": "/opt/yt-agent/yt_bot.py",
+    "tmux_session": "yt-bot (running)",
+    "reboot_cron": "@reboot sleep 45 \u2014 starts after gateway/apex/bridge"
+  },
+  "commands": {
+    "/start": "Show available commands",
+    "/stats": "Fetch live YouTube channel subscriber/view/video counts",
+    "/run": "Send pre-flight cost plan, wait for /approve before starting pipeline",
+    "/status": "Show last pipeline run status from logs",
+    "/approve": "Approve pending cost gate or pipeline run",
+    "/cancel": "Cancel pending action"
+  },
+  "pipeline_integration": "Pre-flight cost plan sent on /run before any API calls. Pipeline runs in background thread, notifies when complete."
 }
