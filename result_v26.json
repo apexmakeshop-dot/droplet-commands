@@ -1,0 +1,64 @@
+{
+  "version": 26,
+  "generated_at": "2026-03-27T19:26:46.582760+00:00",
+  "topic": "YouTube orchestrator refactored \u2014 $2.00 Claude cost cap",
+  "claude_calls_per_video": {
+    "before": "Multiple: script generation (Sonnet) + thumbnail concept (Sonnet) = ~$0.15-0.30/video",
+    "after": "1 call only: script generation (Haiku) = ~$0.054/video"
+  },
+  "cost_per_step": {
+    "1_topic_research": {
+      "tool": "pytrends (Google Trends)",
+      "claude_cost": "$0.00",
+      "note": "No AI needed"
+    },
+    "2_script_generation": {
+      "tool": "Claude Haiku (1 call)",
+      "claude_cost": "$0.054",
+      "tokens": "600 input + 3500 output"
+    },
+    "3_voiceover": {
+      "tool": "ElevenLabs",
+      "claude_cost": "$0.00",
+      "note": "ElevenLabs API, not Anthropic"
+    },
+    "4_stock_footage": {
+      "tool": "Pexels API",
+      "claude_cost": "$0.00"
+    },
+    "5_video_assembly": {
+      "tool": "ffmpeg",
+      "claude_cost": "$0.00"
+    },
+    "6_shorts_cut": {
+      "tool": "ffmpeg",
+      "claude_cost": "$0.00"
+    },
+    "7_thumbnail": {
+      "tool": "ImageMagick",
+      "claude_cost": "$0.00",
+      "note": "Removed Claude thumbnail concept call"
+    },
+    "8_youtube_upload": {
+      "tool": "YouTube Data API v3",
+      "claude_cost": "$0.00"
+    }
+  },
+  "projected_cost_per_video": {
+    "claude_api": "$0.054",
+    "elevenlabs": "~$0.34 (11K chars at $0.30/1K) or $0 if within monthly quota",
+    "pexels": "$0.00 (free tier)",
+    "total_ai_cost_per_video": "~$0.054-0.39"
+  },
+  "cost_gate": {
+    "threshold": "$2.00",
+    "mechanism": "estimate_claude_cost() called before any API calls. Aborts and sends Telegram if estimate > $2.00.",
+    "current_estimate": "$0.0543 \u2014 well within limit"
+  },
+  "model_change": "Script generation switched from claude-sonnet-4-6 to claude-haiku-4-5-20251001 \u2014 10x cheaper for this task",
+  "test_video": {
+    "url": "https://youtu.be/jAa60PFgMQ0",
+    "status": "unlisted \u2014 review before publishing",
+    "title": "The 50/30/20 Budget Rule Explained for Beginners"
+  }
+}
