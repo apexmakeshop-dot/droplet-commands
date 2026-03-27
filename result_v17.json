@@ -1,0 +1,82 @@
+{
+  "version": 17,
+  "generated_at": "2026-03-27T15:30:46.660383+00:00",
+  "topic": "Starter tier ICP filter update \u2014 exclude creative/design/advertising agencies",
+  "file_updated": "~/.openclaw/workspace/auto_prospect_starter.py",
+  "changes": {
+    "pdl_query": {
+      "removed_from_industry_whitelist": [
+        "marketing and advertising"
+      ],
+      "added_must_not_industries": [
+        "marketing and advertising",
+        "graphic design",
+        "public relations and communications",
+        "arts and crafts",
+        "fine art",
+        "photography",
+        "media production",
+        "entertainment"
+      ],
+      "added_must_not_company_names": [
+        "creative agency",
+        "design agency",
+        "advertising agency",
+        "branding agency",
+        "marketing agency",
+        "creative studio",
+        "digital agency",
+        "creative group"
+      ]
+    },
+    "apollo_titles": {
+      "removed": [
+        "creative director"
+      ],
+      "reason": "Was pulling creative agency founders instead of B2B SaaS founders"
+    },
+    "apollo_industries": {
+      "old": [
+        "marketing",
+        "advertising",
+        "consulting",
+        "public relations",
+        "graphic design",
+        "financial services",
+        "creative agency"
+      ],
+      "new": [
+        "saas",
+        "software",
+        "hr tech",
+        "fintech",
+        "legaltech",
+        "recruiting",
+        "staffing",
+        "consulting",
+        "professional services",
+        "financial services",
+        "insurtech",
+        "proptech",
+        "edtech"
+      ]
+    },
+    "apollo_exclusions": {
+      "organization_not_tags": [
+        "creative agency",
+        "design agency",
+        "advertising agency",
+        "branding agency",
+        "marketing agency",
+        "creative studio",
+        "digital agency",
+        "creative group",
+        "graphic design",
+        "animation studio",
+        "production company"
+      ]
+    },
+    "company_size_correction": "1-15 \u2192 1-50 (aligned with ICP definition)"
+  },
+  "target_icp": "Founders/CEOs at B2B SaaS, professional services, HR tech, fintech, recruitment, legal tech, and consulting firms (1-50 employees)"
+}
