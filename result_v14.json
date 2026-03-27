@@ -1,0 +1,61 @@
+{
+  "version": 14,
+  "generated_at": "2026-03-27T15:00:51.537165+00:00",
+  "topic": "Apollo API data quality investigation",
+  "endpoints_called": {
+    "search": "https://api.apollo.io/v1/mixed_people/api_search",
+    "enrich": "NOT called \u2014 no enrichment step exists in either script",
+    "note": "Both scripts call only the single search endpoint. There is no separate enrich or reveal step."
+  },
+  "fields_requested": {
+    "person_fields": [
+      "name",
+      "first_name",
+      "last_name",
+      "title",
+      "email",
+      "linkedin_url",
+      "organization"
+    ],
+    "organization_fields": [
+      "name",
+      "website_url",
+      "estimated_num_employees",
+      "industry"
+    ],
+    "reveal_personal_emails": true,
+    "reveal_phone_number": false
+  },
+  "what_apollo_actually_returns_on_free_tier": {
+    "sample_keys_returned": [
+      "id",
+      "first_name",
+      "last_name_obfuscated",
+      "title",
+      "has_email",
+      "has_city",
+      "has_state",
+      "organization"
+    ],
+    "name": "null \u2014 field not returned",
+    "last_name": "obfuscated \u2014 returned as last_name_obfuscated, actual value hidden",
+    "email": "null \u2014 has_email=true indicates email exists but value withheld",
+    "linkedin_url": "null \u2014 withheld",
+    "website_url": "null \u2014 withheld"
+  },
+  "root_cause": "Apollo free/basic tier obfuscates contact data. reveal_personal_emails=True is ignored unless on a paid Apollo plan. There is no free enrichment API that bypasses this.",
+  "options": {
+    "option_1": "Upgrade Apollo to a paid plan (starts ~$49/mo for basic email credits) \u2014 unlocks email and LinkedIn data",
+    "option_2": "Use Apollo search to get company names, then cross-reference with Hunter.io domain search (find emails by company domain)",
+    "option_3": "Use RocketReach or Clearbit as alternative enrichment APIs",
+    "option_4": "Wait for PDL monthly quota reset (April 24) \u2014 PDL returns full contact data including emails and LinkedIn URLs on current plan",
+    "recommended": "Option 2 \u2014 Hunter.io domain search costs nothing extra (already subscribed) and can recover emails from company names. Add a post-search enrichment step to both scripts."
+  },
+  "proposed_fix": {
+    "step_1": "Apollo search returns company name (e.g. 'SaaS Alerts')",
+    "step_2": "Search Hunter.io domain search API for that company to get domain + email pattern",
+    "step_3": "Use Hunter.io email finder to construct verified email from first name + domain",
+    "step_4": "For LinkedIn: use company name + title in a web search to find the person's profile",
+    "implementation": "Add a hunter_enrich(company_name, first_name, last_name) function to both scripts"
+  }
+}
