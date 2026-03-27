@@ -1,0 +1,127 @@
+{
+  "version": 22,
+  "generated_at": "2026-03-27T18:17:51.312561+00:00",
+  "channel_verification": {
+    "status": "CONNECTED",
+    "channel_name": "APEX Media",
+    "channel_id": "UCHuYH7xACaezVDAmVz0BgVg",
+    "handle": "@APEXMediachannel",
+    "subscribers": 0,
+    "videos": 0
+  },
+  "niche_research": {
+    "methodology": "Evaluated against: search volume, competition density, CPM rates, AI-content viability, monetization speed, algorithm performance",
+    "niches_evaluated": [
+      {
+        "rank": 1,
+        "niche": "Personal Finance for Millennials / Gen Z",
+        "search_demand": "Very High \u2014 'how to save money', 'investing for beginners', 'credit score tips' get 500K-5M monthly searches",
+        "competition": "Medium \u2014 dominated by large channels but sub-niches (e.g. 'finance for side hustlers', 'zero-based budgeting') are underserved",
+        "cpm": "$18-25 \u2014 one of the highest CPMs on YouTube (financial services advertisers)",
+        "ai_content_viability": "High \u2014 evergreen scripts, no on-camera presenter needed, stock footage + text overlays work well",
+        "algorithm_performance": "Strong \u2014 high watch time, saves, and shares; search-driven traffic compounds over time",
+        "est_time_to_1k_subs": "4-6 months posting 3x/week",
+        "est_time_to_4k_hours": "5-7 months alongside subs milestone",
+        "monetization_beyond_adsense": "Affiliate (Robinhood, Acorns, Personal Capital), digital products (budget templates), sponsorships",
+        "weakness": "Requires factual accuracy \u2014 financial misinformation risk; E-E-A-T matters for Google/YouTube trust signals",
+        "recommendation": "STRONG PICK \u2014 high CPM, evergreen, AI-producible, strong algorithm pull"
+      },
+      {
+        "rank": 2,
+        "niche": "AI Tools and Productivity Tutorials",
+        "search_demand": "Very High and growing \u2014 'how to use ChatGPT', 'best AI tools 2025', 'AI for work' trending upward",
+        "competition": "High \u2014 many creators, but tool landscape changes fast meaning fresh content is always needed",
+        "cpm": "$12-16 \u2014 tech/SaaS advertiser pool",
+        "ai_content_viability": "Very High \u2014 can literally use AI to script videos about AI; screen recordings + voiceover format works perfectly",
+        "algorithm_performance": "Excellent short-term \u2014 trending topic, high CTR; risk: content dates quickly as tools evolve",
+        "est_time_to_1k_subs": "2-4 months \u2014 fast-moving niche rewards early movers on new tool releases",
+        "est_time_to_4k_hours": "3-5 months",
+        "monetization_beyond_adsense": "Affiliate links for AI tool subscriptions (20-30% recurring commissions on tools like Jasper, Midjourney, etc.)",
+        "weakness": "Content shelf life is short \u2014 tools change fast. Requires constant topic refresh.",
+        "recommendation": "GOOD PICK for fast growth, less ideal for long-term passive income"
+      },
+      {
+        "rank": 3,
+        "niche": "Stoicism and Practical Philosophy",
+        "search_demand": "Medium-High \u2014 'stoic philosophy', 'Marcus Aurelius quotes', 'stoicism for modern life' growing steadily",
+        "competition": "Medium \u2014 several mid-size channels (100K-500K) but no dominant brand yet at the top",
+        "cpm": "$7-10 \u2014 self-improvement advertiser pool",
+        "ai_content_viability": "Very High \u2014 philosophical content is inherently evergreen, script-heavy, stock footage viable, no live footage needed",
+        "algorithm_performance": "Strong long-tail \u2014 videos continue getting views for years; low post frequency works (1-2x/week)",
+        "est_time_to_1k_subs": "6-9 months",
+        "est_time_to_4k_hours": "7-10 months",
+        "monetization_beyond_adsense": "Books/audiobooks affiliate, courses, merchandise, Patreon",
+        "weakness": "Lower CPM limits ad revenue ceiling even with large audience",
+        "recommendation": "SOLID for low-effort production but slower monetization path"
+      },
+      {
+        "rank": 4,
+        "niche": "Passive Income and Side Hustles",
+        "search_demand": "Very High \u2014 perennial top searches; 'passive income ideas', 'how to make money online' 1M+ monthly",
+        "competition": "High \u2014 very saturated at the top level, but specific angles (e.g. 'passive income for software developers', 'AI-powered side hustles') have room",
+        "cpm": "$16-22 \u2014 finance/business advertiser pool",
+        "ai_content_viability": "High \u2014 list-format and tutorial content works well with AI scripting and stock footage",
+        "algorithm_performance": "High CTR naturally (money-related thumbnails), strong suggested video performance",
+        "est_time_to_1k_subs": "3-5 months with right angle",
+        "est_time_to_4k_hours": "4-6 months",
+        "monetization_beyond_adsense": "High \u2014 affiliate income from platforms covered in videos, courses, consulting",
+        "weakness": "Trust and credibility are hard to build as a new channel in this space; audience is skeptical",
+        "recommendation": "GOOD but needs a differentiated angle to cut through saturation"
+      },
+      {
+        "rank": 5,
+        "niche": "History Facts and Untold Stories",
+        "search_demand": "High \u2014 'history mysteries', 'untold history', 'forgotten empires' consistently strong",
+        "competition": "Medium \u2014 well-served by large channels (Oversimplified, Knowledgia) but short-form and specific era niches are open",
+        "cpm": "$5-8 \u2014 general interest advertiser pool",
+        "ai_content_viability": "Very High \u2014 AI voiceover + historical illustrations/stock footage is a proven format",
+        "algorithm_performance": "Strong watch time (educational format, curiosity-driven), good Shorts crossover potential",
+        "est_time_to_1k_subs": "5-8 months",
+        "est_time_to_4k_hours": "6-9 months",
+        "monetization_beyond_adsense": "Limited \u2014 books affiliate, Patreon for bonus content",
+        "weakness": "Low CPM means high view counts needed for meaningful ad revenue",
+        "recommendation": "GOOD for audience building but slow monetization"
+      }
+    ],
+    "recommendation": {
+      "winner": "Personal Finance for Millennials / Gen Z",
+      "rationale": [
+        "Highest CPM ($18-25) means every 1,000 views earns 3-5x more than history or philosophy niches",
+        "Evergreen content compounds \u2014 a video on 'emergency fund basics' gets views indefinitely",
+        "Affiliate income is substantial and recurring (fintech apps pay 20-40% commissions)",
+        "AI production is fully viable \u2014 no camera, no face, stock footage + professional voiceover",
+        "Sub-niche angle recommendation: 'Personal finance for tech workers and side hustlers' \u2014 avoids the most saturated angles"
+      ],
+      "proposed_content_strategy": {
+        "format": "Explainer videos 8-12 minutes, AI voiceover (ElevenLabs Adam voice), stock footage from Pexels, auto-generated subtitles",
+        "posting_cadence": "3 videos/week for first 90 days, then 2/week once library is built",
+        "first_10_videos": [
+          "The 50/30/20 Budget Rule Explained (Beginner Guide)",
+          "7 Things to Do With Your First $1,000",
+          "How to Build a 6-Month Emergency Fund in 12 Months",
+          "Index Funds vs ETFs: What Beginners Need to Know",
+          "The FIRE Movement Explained: Can You Really Retire Early?",
+          "5 Money Mistakes People Make in Their 20s",
+          "How to Negotiate Your Salary (Scripts That Work)",
+          "Roth IRA vs Traditional IRA: Which Is Better For You?",
+          "How Compound Interest Works (And Why It Matters Now)",
+          "The $0 to $10,000 Emergency Fund Blueprint"
+        ],
+        "shorts_strategy": "Cut 45-60 second hooks from long-form videos \u2014 strong Shorts performance in finance niche",
+        "thumbnail_style": "High contrast, bold number/stat in center, clean background, minimal text",
+        "monetization_timeline": {
+          "month_1_3": "Build content library, optimise SEO, no revenue",
+          "month_4_6": "Approach 1K subs and 4K hours \u2014 apply for monetization",
+          "month_6_12": "Adsense + affiliate links \u2014 target $500-1,500/month",
+          "year_2": "Sponsorships + digital products \u2014 target $3,000-8,000/month"
+        }
+      }
+    }
+  },
+  "next_actions": [
+    "Update settings.json with niche: 'personal finance tips'",
+    "Run niche_researcher.py to confirm scoring agrees with manual analysis",
+    "Generate first 3 video scripts via script_generator.py",
+    "Install ffmpeg and imagemagick (requires sudo) to enable video assembly"
+  ]
+}
