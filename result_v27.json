@@ -1,0 +1,16 @@
+{
+  "version": 27,
+  "generated_at": "2026-03-27T19:33:51.876814+00:00",
+  "rule_added": "PRE-FLIGHT PLAN RULE \u2014 added to workspace-devagent/AGENTS.md",
+  "rule_summary": {
+    "trigger": "Before any new agent, workflow, feature, or non-trivial task",
+    "required_content": [
+      "Step-by-step task breakdown",
+      "API and model used per step",
+      "Estimated tokens and cost per step",
+      "Total estimated cost per run and per month"
+    ],
+    "default_model": "Claude Haiku \u2014 Sonnet only when justified",
+    "gate": "No code written, no run starts until Reinier replies APPROVE"
+  }
+}
