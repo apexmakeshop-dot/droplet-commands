@@ -1,71 +1,21 @@
 {
   "version": 12,
-  "generated_at": "2026-03-26T23:52:13.222582+00:00",
-  "topic": "Etsy OAuth \u2014 manual paste method",
-  "status": "Script updated \u2014 ready for Reinier to run",
-  "instructions": {
-    "step_1_fix_redirect_uri": {
-      "action": "Go to https://www.etsy.com/developers/your-apps",
-      "then": "Open your 'apex-agent' app \u2192 Callback URLs",
-      "add_this_url": "https://www.etsy.com/oauth/redirect_callback",
-      "why": "The redirect URI in the script must match exactly what is registered in your Etsy app settings. This is what caused the 'redirect URL is not permitted' error."
+  "generated_at": "2026-03-27T00:06:02.399130+00:00",
+  "topic": "Etsy OAuth \u2014 redirect URI check",
+  "redirect_uri_in_script": "REDIRECT_URI = \"https://www.etsy.com/oauth/redirect_callback\"",
+  "confirmed": "https://www.etsy.com/oauth/redirect_callback is already set in etsy_auth.py \u2014 no change needed",
+  "action_required": {
+    "etsy_developer_console": {
+      "url": "https://www.etsy.com/developers/your-apps",
+      "steps": [
+        "1. Open apex-agent app",
+        "2. Go to Callback URLs section",
+        "3. Confirm https://www.etsy.com/oauth/redirect_callback is listed",
+        "4. If not listed, add it and save"
+      ]
     },
-    "step_2_run_script": {
-      "command": "python3 /home/agentuser/.openclaw/workspace-apex/etsy_auth.py",
-      "how": "SSH into the droplet and run this command. No port forwarding needed."
-    },
-    "step_3_browser": {
-      "action": "The script prints a URL. Open it in your browser.",
-      "then": "Log in to Etsy and click Allow Access.",
-      "result": "You will be redirected \u2014 the page may show an error or be blank. That is fine."
-    },
-    "step_4_paste": {
-      "action": "Copy the FULL URL from your browser address bar after the redirect.",
-      "then": "Paste it into the terminal where the script is waiting.",
-      "what_to_look_for": "The URL will contain ?code= in it"
-    },
-    "step_5_done": {
-      "result": "Token saved to /home/agentuser/.openclaw/workspace-apex/etsy_token.json",
-      "next": "Tell DevAgent \u2014 all 6 listings will be published immediately"
-    }
+    "then_run": "python3 /home/agentuser/.openclaw/workspace-apex/etsy_auth.py",
+    "what_happens": "Script prints auth URL \u2192 open in browser \u2192 Allow Access \u2192 copy redirect URL from address bar \u2192 paste into terminal \u2192 token saved"
   },
-  "listings_ready_to_publish": [
-    {
-      "id": "APXE-001",
-      "name": "Earring Display Stand",
-      "price": "$14.99",
-      "licence": "Free commercial use \u2014 clear"
-    },
-    {
-      "id": "APXB-001",
-      "name": "Desktop Bin (Swing Lid)",
-      "price": "$14.99",
-      "licence": "KL Worx \u2014 subscribed \u2705"
-    },
-    {
-      "id": "APXK-001",
-      "name": "Kumiko Desk Organiser",
-      "price": "$17.99",
-      "licence": "KL Worx \u2014 subscribed \u2705"
-    },
-    {
-      "id": "APXS-001",
-      "name": "Spinning Desk Organiser",
-      "price": "$19.99",
-      "licence": "KL Worx \u2014 subscribed \u2705"
-    },
-    {
-      "id": "APXC-001",
-      "name": "Cable Management Clips 6-pack",
-      "price": "$13.99",
-      "licence": "Printables Club \u2014 subscribed \u2705"
-    },
-    {
-      "id": "APXP-001",
-      "name": "Adjustable Phone Stand",
-      "price": "$15.99",
-      "licence": "Printables Club \u2014 subscribed \u2705"
-    }
-  ],
-  "script_location": "/home/agentuser/.openclaw/workspace-apex/etsy_auth.py"
+  "script_path": "/home/agentuser/.openclaw/workspace-apex/etsy_auth.py"
 }
