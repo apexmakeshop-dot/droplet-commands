@@ -1,48 +1,19 @@
 {
   "version": 24,
-  "generated_at": "2026-03-27T18:39:46.318142+00:00",
-  "topic": "Session management and token control rules implemented",
-  "rule_1_daily_session_reset": {
-    "status": "DONE",
-    "cron": "50 6 * * * \u2014 fires at 6:50am UTC, 5 min before token monitor",
-    "mechanism": "openclaw agent --agent devagent --session-id devagent-YYYYMMDD sends a fresh morning message to a new session ID each day, preventing history accumulation beyond 24 hours",
-    "files_updated": [
-      "crontab"
-    ]
-  },
-  "rule_2_100k_token_gate": {
-    "status": "DONE \u2014 rule added to AGENTS.md for all 5 agents",
+  "generated_at": "2026-03-27T18:43:12.617172+00:00",
+  "topic": "Approval gate threshold updated to $1.00 cost",
+  "approval_gate_rule": {
+    "threshold": "$1.00 estimated cost",
+    "trigger": "Before executing any task where estimated cost exceeds $1.00",
+    "notification": "\u26a0\ufe0f Next action estimated at [X] tokens ([X] cache write / [X] cache read / [X] output). Estimated cost: $[X]. This exceeds the $1.00 threshold. Reply APPROVE to proceed or CANCEL to abort.",
+    "cost_formula": "cache_write_tokens \u00d7 $3.75/MTok + cache_read_tokens \u00d7 $0.30/MTok + output_tokens \u00d7 $15/MTok",
+    "behaviour": "Agent waits for explicit APPROVE reply before continuing. CANCEL aborts the task.",
     "agents_updated": [
-      "workspace/AGENTS.md (Growth)",
-      "workspace-starter/AGENTS.md (Starter)",
-      "workspace-reporter/AGENTS.md (Reporter)",
-      "workspace-apex/AGENTS.md (APEX Craft)",
-      "workspace-devagent/AGENTS.md (DevAgent)"
-    ],
-    "note": "This is a behavioural rule \u2014 the agent reads it on startup and applies it. No code enforcement exists at the OpenClaw level. The agent is instructed to self-apply this gate."
-  },
-  "rule_3_context_freshness": {
-    "status": "DONE \u2014 rule added to all AGENTS.md files",
-    "rule": "No workspace file auto-loaded into context unless modified in last 24 hours. Older files referenced by path only.",
-    "additional_cleanup_rules": [
-      "Outreach drafts archived within 48 hours",
-      "improvements_*.md trimmed to last 10 entries monthly",
-      "result_v*.json never left in workspace root"
+      "DevAgent",
+      "Growth",
+      "Starter",
+      "Reporter",
+      "APEX Craft"
     ]
-  },
-  "current_crontab_order": [
-    "6:50am \u2014 DevAgent session reset",
-    "6:55am \u2014 Token monitor (cost estimate)",
-    "6:59am \u2014 Revenue trackers",
-    "8:00am \u2014 Morning briefing Growth (Haiku)",
-    "8:05am \u2014 Morning briefing Starter (Haiku)",
-    "9:00am \u2014 Growth prospector",
-    "10:00am \u2014 Starter prospector",
-    "8:00pm \u2014 Evening report Growth (Haiku)",
-    "8:15pm \u2014 Evening report Starter (Haiku)",
-    "8:30pm \u2014 Evening report Reporter (Haiku)",
-    "Sun 2am \u2014 YouTube orchestrator",
-    "Hourly \u2014 Etsy order fulfillment",
-    "Every 5min \u2014 Watchdog"
-  ]
+  }
 }
