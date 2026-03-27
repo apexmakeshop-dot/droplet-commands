@@ -1,47 +1,41 @@
 {
   "version": 23,
-  "generated_at": "2026-03-27T18:31:34.135700+00:00",
-  "topic": "YouTube agent setup complete \u2014 niche approved, scripts generated",
-  "setup_status": {
-    "niche": "personal finance tips",
-    "channel": "APEX Media (@APEXMediachannel)",
-    "channel_id": "UCHuYH7xACaezVDAmVz0BgVg",
-    "settings_json": "Updated",
-    "ffmpeg": "Already installed (/usr/bin/ffmpeg)",
-    "imagemagick": "Already installed (/usr/bin/convert)",
-    "anthropic_key": "Configured in /opt/yt-agent/.env",
-    "youtube_api_key": "Configured in /opt/yt-agent/.env",
-    "token_json": "Valid \u2014 channel verified",
-    "scripts_saved": "/opt/yt-agent/scripts_output/scripts_batch_1.json"
+  "generated_at": "2026-03-27T18:32:56.440907+00:00",
+  "topic": "Context size investigation + trimming",
+  "root_cause": {
+    "primary": "74M cache read tokens are from THIS DevAgent session's conversation history being replayed on every message \u2014 the session is now ~18 hours old with hundreds of exchanges. This is expected Anthropic caching behaviour; the cache is being read (cheap) not written (expensive). The conversation length itself is the cost driver.",
+    "secondary": "Workspace files at root were growing \u2014 outreach drafts (10-17KB each), improvements files (13-15KB), result_v9.json (16KB) all auto-loaded as context on every agent call"
   },
-  "scripts_generated": [
-    {
-      "video": 1,
-      "title": "The 50/30/20 Budget Rule Explained for Beginners (Take Control of Your Money Today)",
-      "segments": 8,
-      "tags_count": 20,
-      "description_chars": 1798
-    },
-    {
-      "video": 2,
-      "title": "7 Things to Do With Your First $1,000 (Smart Money Moves for Beginners)",
-      "segments": 9,
-      "tags_count": 20,
-      "description_chars": 1977
-    },
-    {
-      "video": 3,
-      "title": "How to Build a 6-Month Emergency Fund (Step by Step)",
-      "segments": 6,
-      "tags_count": 12,
-      "description_chars": 786
-    }
+  "files_archived": {
+    "growth_workspace": [
+      "result_v9.json (16KB) \u2192 archive/",
+      "improvements_prospect.md (15KB) \u2192 archive/",
+      "prospecting-process.md (3KB) \u2192 archive/"
+    ],
+    "starter_workspace": [
+      "outreach_drafts_20260322.md (15KB) \u2192 archive/",
+      "outreach_drafts_20260323.md (11KB) \u2192 archive/",
+      "outreach_drafts_20260324b.md (11KB) \u2192 archive/",
+      "outreach_drafts_20260326.md (17KB) \u2192 archive/",
+      "outreach_drafts_20260327.md (15KB) \u2192 archive/",
+      "improvements_starter.md (13KB) \u2192 archive/",
+      "pipeline_status_starter.md (5KB) \u2192 archive/"
+    ],
+    "reporter_workspace": [
+      "improvements_reporter.md trimmed to last 3 entries (7KB \u2192 4KB)"
+    ]
+  },
+  "context_tokens_after_trim": {
+    "growth_agent": "~8,551 tokens/call",
+    "starter_agent": "~8,069 tokens/call",
+    "reporter_agent": "~6,550 tokens/call",
+    "apex_agent": "~6,454 tokens/call",
+    "devagent": "~3,701 tokens/call"
+  },
+  "standing_rules_added": [
+    "Outreach draft files should be archived after 48 hours \u2014 they are for immediate use only",
+    "improvements_*.md files should be trimmed monthly to last 10 entries",
+    "result_v*.json files should never be left in the workspace root \u2014 always write to GitHub"
   ],
-  "next_steps": [
-    "Run voice_synthesizer.py to generate ElevenLabs voiceovers for each script",
-    "Run video_assembler.py to download Pexels footage and assemble videos",
-    "Add background.mp3 to /opt/yt-agent/assets/music/ for background audio (optional)",
-    "First automated Sunday 2am run will produce and upload a video end-to-end"
-  ],
-  "orchestrator_schedule": "Every Sunday at 2am UTC via cron"
+  "note_on_74m_cache_reads": "Cache reads at $0.30/million are 10x cheaper than writes. 74M cache reads = ~$22 vs the same tokens as writes would be ~$277. The caching is working correctly and saving money. The real cost is the session history length \u2014 starting a new DevAgent session tomorrow will reset this."
 }
