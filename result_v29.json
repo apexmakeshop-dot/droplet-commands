@@ -1,0 +1,208 @@
+{
+  "timestamp": "2026-04-05T15:08:38.972931Z",
+  "task": "droplet-commands result_v29 collection",
+  "video_raw": {
+    "filename": "test-animation-1920x1080-001.mp4",
+    "size_bytes": 56128,
+    "size_human": "0.1 MB",
+    "modified": "2026-04-03T19:54:43.417513Z"
+  },
+  "video_published": {
+    "filename": "5030_20_budget_final.mp4",
+    "size_bytes": 9287145,
+    "size_human": "8.9 MB",
+    "modified": "2026-03-31T02:37:48.161386Z"
+  },
+  "ffprobe_mp4": {
+    "file": "test-animation-1920x1080-001.mp4",
+    "output": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "closed_captions": 0,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "refs": 1,
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 450000,
+          "duration": "5.000000",
+          "bit_rate": "75620",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "150",
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "vendor_id": "[0][0][0][0]"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_long_name": "AAC (Advanced Audio Coding)",
+          "profile": "LC",
+          "codec_type": "audio",
+          "codec_tag_string": "mp4a",
+          "codec_tag": "0x6134706d",
+          "sample_fmt": "fltp",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/48000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 240624,
+          "duration": "5.013000",
+          "bit_rate": "2288",
+          "nb_frames": "236",
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "SoundHandler",
+            "vendor_id": "[0][0][0][0]"
+          }
+        }
+      ],
+      "format": {
+        "filename": "/home/agentuser/media/video/raw/test-animation-1920x1080-001.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "5.014000",
+        "size": "56128",
+        "bit_rate": "89554",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf58.76.100",
+          "comment": "Made with Remotion 4.0.443"
+        }
+      }
+    }
+  },
+  "ffprobe_mp3": {
+    "file": "ep01-5030-budget.mp3",
+    "output": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "mp3",
+          "codec_long_name": "MP3 (MPEG audio layer 3)",
+          "codec_type": "audio",
+          "codec_tag_string": "[0][0][0][0]",
+          "codec_tag": "0x0000",
+          "sample_fmt": "fltp",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/14112000",
+          "start_pts": 324870,
+          "start_time": "0.023021",
+          "duration_ts": 10231087104,
+          "duration": "724.992000",
+          "bit_rate": "32000",
+          "disposition": {
+            "default": 0,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0
+          },
+          "tags": {
+            "encoder": "Lavc58.13"
+          }
+        }
+      ],
+      "format": {
+        "filename": "/home/agentuser/media/audio/ep01-5030-budget.mp3",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "format_name": "mp3",
+        "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+        "start_time": "0.023021",
+        "duration": "724.992000",
+        "size": "2900308",
+        "bit_rate": "32003",
+        "probe_score": 51,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf58.76.100"
+        }
+      }
+    }
+  },
+  "audio_agent_py": "#!/usr/bin/env python3\n\"\"\"\nAPEX Audio Agent (Agent 10)\nPure Python audio generation via edge-tts\nSaves to canonical paths via asset_manager\n\"\"\"\n\nimport json\nimport os\nimport sys\nimport asyncio\nimport requests\nfrom datetime import datetime, timezone\nfrom pathlib import Path\n\n# Import asset_manager for canonical paths\nsys.path.insert(0, '/home/agentuser/media')\ntry:\n    from asset_manager import episode_audio, episode_dir\nexcept ImportError:\n    episode_audio = None\n    episode_dir = None\n\n# Configuration\nQUEUE_PATH = \"/home/agentuser/queue.json\"\nAUDIO_OUTPUT_DIR = \"/home/agentuser/media/audio\"\nLOG_DIR = \"/home/agentuser/agents/audio_agent/logs\"\nINFRA_BOT_TOKEN = \"8674742844:AAGIIRrl_jnHiO-vlYujOxEcZdo7UZQajKU\"\nREINIER_CHAT_ID = \"8235811059\"\nVOICE = \"en-US-GuyNeural\"\n\n# Ensure directories exist\nPath(AUDIO_OUTPUT_DIR).mkdir(parents=True, exist_ok=True)\nPath(LOG_DIR).mkdir(parents=True, exist_ok=True)\n\n\ndef log_event(message: str):\n    \"\"\"Log timestamped event to daily log file.\"\"\"\n    timestamp = datetime.now(timezone.utc).strftime(\"%Y-%m-%d %H:%M:%S UTC\")\n    log_line = f\"[{timestamp}] {message}\\n\"\n    \n    log_file = Path(LOG_DIR) / f\"audio_{datetime.now(timezone.utc).strftime('%Y%m%d')}.log\"\n    with open(log_file, \"a\") as f:\n        f.write(log_line)\n    \n    print(log_line.strip())\n\n\ndef send_message(message: str):\n    \"\"\"Send Telegram message via @Apexinfrabot.\"\"\"\n    try:\n        url = f\"https://api.telegram.org/bot{INFRA_BOT_TOKEN}/sendMessage\"\n        payload = {\n            \"chat_id\": REINIER_CHAT_ID,\n            \"text\": message,\n            \"parse_mode\": \"Markdown\"\n        }\n        response = requests.post(url, json=payload, timeout=10)\n        if response.status_code == 200:\n            log_event(f\"Telegram alert sent\")\n        else:\n            log_event(f\"Telegram send failed: {response.status_code}\")\n    except Exception as e:\n        log_event(f\"Telegram error: {str(e)}\")\n\n\ndef send_alert(task_id: str, audio_path: str):\n    \"\"\"Send completion alert to Reinier.\"\"\"\n    message = f\"\"\"\ud83c\udf99 Audio ready\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nTask: {task_id}\nFile: {audio_path}\nVoice: {VOICE}\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nAudio Agent ready for next task.\"\"\"\n    \n    send_message(message)\n\n\nasync def generate_audio(task_id: str, script_text: str, episode_num: int = None) -> bool:\n    \"\"\"\n    Generate MP3 from script text using edge-tts.\n    Saves to canonical path if episode_num provided, otherwise to /media/audio/\n    \"\"\"\n    # Determine output path (prefer canonical if episode_num provided)\n    if episode_num and episode_audio:\n        try:\n            os.makedirs(episode_dir(episode_num), exist_ok=True)\n            output_path = Path(episode_audio(episode_num))\n            log_event(f\"Using canonical path: {output_path}\")\n        except Exception as e:\n            log_event(f\"Warning: Could not use canonical path: {e}\")\n            output_path = Path(AUDIO_OUTPUT_DIR) / f\"{task_id}.mp3\"\n    else:\n        output_path = Path(AUDIO_OUTPUT_DIR) / f\"{task_id}.mp3\"\n    \n    # Check for existing file\n    if output_path.exists():\n        log_event(f\"File already exists \u2014 skipping: {output_path}\")\n        return False\n    \n    try:\n        import edge_tts\n        \n        log_event(f\"Generating audio: {task_id}\")\n        \n        # Use edge-tts to generate audio\n        communicate = edge_tts.Communicate(text=script_text, voice=VOICE)\n        await communicate.save(str(output_path))\n        \n        # Verify file exists and has content\n        if not output_path.exists():\n            log_event(f\"ERROR: File not created: {output_path}\")\n            return False\n        \n        file_size = output_path.stat().st_size\n        if file_size == 0:\n            log_event(f\"ERROR: File empty: {output_path}\")\n            output_path.unlink()  # Delete empty file\n            return False\n        \n        log_event(f\"Audio generated successfully: {task_id} ({file_size} bytes)\")\n        return True\n    \n    except Exception as e:\n        log_event(f\"ERROR generating audio for {task_id}: {str(e)}\")\n        return False\n\n\ndef update_queue(task_id: str, audio_path: str):\n    \"\"\"Update task status in queue.json to 'done'.\"\"\"\n    try:\n        with open(QUEUE_PATH, \"r\") as f:\n            queue = json.load(f)\n        \n        # Find and update task\n        for task in queue.get(\"tasks\", []):\n            if task[\"id\"] == task_id:\n                task[\"status\"] = \"done\"\n                task[\"audio_file\"] = audio_path\n                task[\"completed_at\"] = datetime.now(timezone.utc).isoformat() + \"Z\"\n                \n                with open(QUEUE_PATH, \"w\") as f:\n                    json.dump(queue, f, indent=2)\n                \n                log_event(f\"Queue updated: {task_id} \u2192 done\")\n                return True\n        \n        log_event(f\"ERROR: Task not found in queue: {task_id}\")\n        return False\n    \n    except Exception as e:\n        log_event(f\"ERROR updating queue: {str(e)}\")\n        return False\n\n\ndef process_audio_task(task: dict):\n    \"\"\"Process a single audio generation task.\"\"\"\n    task_id = task.get(\"id\")\n    script_text = task.get(\"description\", \"\")\n    \n    # Strip prefix if present\n    if script_text.startswith(\"Generate audio: \"):\n        script_text = script_text[len(\"Generate audio: \"):]\n    \n    script_text = script_text.strip()\n    \n    if not script_text:\n        log_event(f\"ERROR: Empty script for {task_id}\")\n        try:\n            with open(QUEUE_PATH, \"r\") as f:\n                queue = json.load(f)\n            for t in queue.get(\"tasks\", []):\n                if t[\"id\"] == task_id:\n                    t[\"status\"] = \"failed\"\n            with open(QUEUE_PATH, \"w\") as f:\n                json.dump(queue, f, indent=2)\n        except:\n            pass\n        send_message(f\"\u274c Audio generation failed for {task_id}: Empty script\")\n        return\n    \n    # Generate audio\n    audio_path = Path(AUDIO_OUTPUT_DIR) / f\"{task_id}.mp3\"\n    \n    # Check if file already exists (may have been completed in prior run)\n    if audio_path.exists():\n        log_event(f\"Audio file already exists, marking task done: {task_id}\")\n        update_queue(task_id, str(audio_path))\n        return\n    \n    success = asyncio.run(generate_audio(task_id, script_text))\n    \n    if not success:\n        log_event(f\"Audio generation failed: {task_id}\")\n        try:\n            with open(QUEUE_PATH, \"r\") as f:\n                queue = json.load(f)\n            for t in queue.get(\"tasks\", []):\n                if t[\"id\"] == task_id:\n                    t[\"status\"] = \"failed\"\n            with open(QUEUE_PATH, \"w\") as f:\n                json.dump(queue, f, indent=2)\n        except:\n            pass\n        send_message(f\"\u274c Audio generation failed for {task_id}\")\n        return\n    \n    # Update queue and send alert\n    update_queue(task_id, str(audio_path))\n    send_alert(task_id, str(audio_path))\n\n\ndef watch_queue():\n    \"\"\"Watch queue.json for pending Audio Agent tasks.\"\"\"\n    try:\n        if not Path(QUEUE_PATH).exists():\n            log_event(\"Queue file not found, exiting\")\n            return\n        \n        with open(QUEUE_PATH, \"r\") as f:\n            queue = json.load(f)\n        \n        pending_tasks = [\n            task for task in queue.get(\"tasks\", [])\n            if task.get(\"agent\") == \"Audio Agent\" and task.get(\"status\") == \"pending\"\n        ]\n        \n        if not pending_tasks:\n            log_event(\"No pending Audio Agent tasks\")\n            return\n        \n        log_event(f\"Found {len(pending_tasks)} pending task(s)\")\n        \n        for task in pending_tasks:\n            process_audio_task(task)\n    \n    except Exception as e:\n        log_event(f\"ERROR in watch_queue: {str(e)}\")\n\n\nif __name__ == \"__main__\":\n    if len(sys.argv) > 1 and sys.argv[1] == \"watch\":\n        import time\n        while True:\n            try:\n                watch_queue()\n                time.sleep(5)  # Check queue every 5 seconds\n            except KeyboardInterrupt:\n                log_event(\"Audio Agent shutting down\")\n                break\n            except Exception as e:\n                log_event(f\"ERROR in main loop: {str(e)}\")\n                time.sleep(5)\n    else:\n        print(\"Usage: python3 audio_agent.py watch\")\n",
+  "elevenlabs_voice_id": null
+}
