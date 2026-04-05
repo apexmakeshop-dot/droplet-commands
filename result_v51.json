@@ -1,0 +1,897 @@
+#!/usr/bin/env python3
+"""
+APEX Animation Agent (Agent 11)
+Renders Remotion animation videos synced to Audio Agent MP3 output.
+Pure Python — zero Claude API calls.
+"""
+
+import json
+import os
+import sys
+import subprocess
+import logging
+import shutil
+from pathlib import Path
+from datetime import datetime, timezone
+import requests
+
+# Import asset_manager for canonical paths
+sys.path.insert(0, '/home/agentuser/media')
+from asset_manager import short_path, episode_captions
+
+# Import scene library and video assembler
+sys.path.insert(0, "/home/agentuser/agents/animation_agent/scenes")
+try:
+    import video_assembler
+except ImportError:
+    video_assembler = None
+
+# Configuration
+QUEUE_PATH = "/home/agentuser/queue.json"
+MEDIA_AUDIO_DIR = "/home/agentuser/media/audio/"
+MEDIA_VIDEO_RAW_DIR = "/home/agentuser/media/video/raw/"
+SCENE_DIR = "/home/agentuser/agents/animation_agent/scenes/"
+LOG_DIR = "/home/agentuser/agents/animation_agent/logs/"
+INFRA_BOT_TOKEN = os.getenv("INFRA_BOT_TOKEN", "")
+REINIER_CHAT_ID = os.getenv("REINIER_CHAT_ID", "8235811059")  # Default Reinier's ID
+TELEGRAM_BOT_URL = "https://api.telegram.org/bot"
+
+# Ensure directories exist
+Path(LOG_DIR).mkdir(parents=True, exist_ok=True)
+Path(MEDIA_VIDEO_RAW_DIR).mkdir(parents=True, exist_ok=True)
+
+# Setup logging
+log_file = Path(LOG_DIR) / f"animation_{datetime.now().strftime('%Y%m%d')}.log"
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler(log_file),
+        logging.StreamHandler(sys.stdout)
+    ]
+)
+logger = logging.getLogger(__name__)
+
+
+def send_message(message: str) -> bool:
+    """Send message via @Apexinfrabot to Reinier."""
+    if not INFRA_BOT_TOKEN:
+        logger.warning(f"INFRA_BOT_TOKEN not set. Message: {message}")
+        return False
+    
+    url = f"{TELEGRAM_BOT_URL}{INFRA_BOT_TOKEN}/sendMessage"
+    payload = {
+        "chat_id": REINIER_CHAT_ID,
+        "text": message,
+        "parse_mode": "Markdown"
+    }
+    
+    try:
+        response = requests.post(url, json=payload, timeout=10)
+        if response.status_code == 200:
+            logger.info(f"Telegram message sent: {message[:50]}...")
+            return True
+        else:
+            logger.warning(f"Telegram API error: {response.status_code} - {response.text}")
+            return False
+    except Exception as e:
+        logger.error(f"Telegram send failed: {e}")
+        return False
+
+
+def send_alert(task_id: str, video_path: str, duration: float):
+    """Send alert for completed animation task."""
+    message = f"""🎬 Animation ready
+────────────────────────
+Task: {task_id}
+File: {video_path}
+Duration: {duration:.1f}s
+────────────────────────
+Animation Agent ready for next task."""
+    
+    send_message(message)
+
+
+def log_event(message: str):
+    """Log timestamped event to daily log."""
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    log_line = f"[{timestamp}] {message}"
+    logger.info(log_line)
+
+
+def read_queue():
+    """Read queue.json and return task list."""
+    try:
+        with open(QUEUE_PATH, "r") as f:
+            data = json.load(f)
+            return data.get("tasks", [])
+    except FileNotFoundError:
+        logger.warning(f"Queue file not found: {QUEUE_PATH}")
+        return []
+    except json.JSONDecodeError as e:
+        logger.error(f"Invalid JSON in queue: {e}")
+        return []
+
+
+def write_queue(tasks):
+    """Write tasks back to queue.json."""
+    try:
+        with open(QUEUE_PATH, "w") as f:
+            json.dump({"tasks": tasks}, f, indent=2)
+        logger.info("Queue updated successfully")
+    except Exception as e:
+        logger.error(f"Failed to write queue: {e}")
+
+
+def get_audio_duration(audio_file: str) -> float:
+    """Get duration of audio file in seconds using ffprobe."""
+    try:
+        result = subprocess.run(
+            [
+                "ffprobe", "-v", "quiet", "-print_format", "json",
+                "-show_format", audio_file
+            ],
+            capture_output=True,
+            text=True,
+            timeout=10
+        )
+        if result.returncode != 0:
+            logger.warning(f"ffprobe failed for {audio_file}: {result.stderr}")
+            return None
+        
+        data = json.loads(result.stdout)
+        duration = float(data["format"]["duration"])
+        logger.info(f"Audio duration for {audio_file}: {duration:.2f}s")
+        return duration
+    except Exception as e:
+        logger.error(f"Error getting audio duration: {e}")
+        return None
+
+
+
+
+
+def burn_captions(input_path: str, srt_path: str, output_path: str, is_shorts: bool = False) -> bool:
+    """
+    Burns SRT captions into video using ffmpeg subtitles filter.
+    Called after audio normalisation — landscape and Shorts.
+    
+    If SRT missing or ffmpeg fails: logs warning, copies input to output unchanged.
+    Never blocks the pipeline.
+    
+    Caption style:
+    - Font: Arial bold
+    - Size: 18 for landscape, 14 for Shorts
+    - Colour: white
+    - Outline: black 2px
+    - Position: bottom-centre (Alignment=2, MarginV=60 landscape, MarginV=1700 Shorts)
+    """
+    if not os.path.exists(srt_path):
+        log_event(f"WARNING: SRT not found at {srt_path} — skipping captions")
+        try:
+            shutil.copy(input_path, output_path)
+        except:
+            pass
+        return True
+    
+    try:
+        font_size = 14 if is_shorts else 18
+        margin_v = 1700 if is_shorts else 60
+
+        cmd = [
+            "ffmpeg", "-i", input_path,
+            "-vf", f"subtitles={srt_path}:force_style='FontName=Arial,"
+            f"FontSize={font_size},Bold=1,PrimaryColour=&HFFFFFF&,"
+            f"OutlineColour=&H000000&,Outline=2,"
+            f"Alignment=2,MarginV={margin_v}'",
+            "-c:a", "copy",
+            output_path, "-y"
+        ]
+        
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+        
+        if result.returncode != 0:
+            log_event(f"WARNING: Caption burn failed — {result.stderr[:200]}")
+            try:
+                shutil.copy(input_path, output_path)
+            except:
+                pass
+            return False
+        
+        log_event(f"Captions burned successfully: {output_path}")
+        return True
+    except Exception as e:
+        log_event(f"WARNING: Caption burn exception — {e}")
+        try:
+            shutil.copy(input_path, output_path)
+        except:
+            pass
+        return False
+
+
+def render_animation(task_id: str, audio_file: str, scene_title: str, duration: float, format: str = "landscape") -> str:
+    """
+    Render animation (Remotion for both landscape and shorts) and combine with audio.
+    Returns path to final MP4 or None if failed.
+    format: 'landscape' (1280x720) or 'shorts' (1080x1920)
+    """
+    # Determine output directory based on format
+    if format == "shorts":
+        output_dir = Path(MEDIA_VIDEO_RAW_DIR) / "shorts"
+        output_dir.mkdir(parents=True, exist_ok=True)
+    else:
+        output_dir = Path(MEDIA_VIDEO_RAW_DIR)
+    
+    output_path = output_dir / f"{task_id}.mp4"
+    
+    # Check if output already exists
+    if output_path.exists():
+        logger.warning(f"Output already exists, skipping: {output_path}")
+        return None
+    
+    # Render silent video based on format
+    if format == "shorts":
+        # Use Remotion for Shorts (9:16 vertical)
+        silent_video = render_remotion_shorts(task_id, duration)
+    else:
+        # Use Remotion for landscape (16:9)
+        silent_video = render_remotion_landscape(task_id, audio_file, scene_title, duration)
+    
+    if not silent_video or not Path(silent_video).exists():
+        logger.error(f"Silent video render failed for {task_id}")
+        return None
+    
+    # Step B: Combine video + audio with ffmpeg
+    logger.info(f"Combining video + audio for {task_id}...")
+    mixed_output = str(output_path).replace(".mp4", "_mixed.mp4")
+    try:
+        result = subprocess.run(
+            [
+                "ffmpeg", "-i", silent_video, "-i", audio_file,
+                "-c:v", "copy", "-c:a", "aac", "-shortest",
+                mixed_output, "-y"
+            ],
+            capture_output=True,
+            text=True,
+            timeout=120  # 2 minutes max for ffmpeg
+        )
+        
+        if result.returncode != 0:
+            logger.error(f"ffmpeg combine failed: {result.stderr}")
+            return None
+        
+        logger.info(f"ffmpeg combine completed for {task_id}")
+        
+    except subprocess.TimeoutExpired:
+        logger.error(f"ffmpeg combine timeout for {task_id}")
+        return None
+    except Exception as e:
+        logger.error(f"ffmpeg combine exception: {e}")
+        return None
+    
+    # Step C: Normalise audio to -14 LUFS
+    logger.info(f"Normalising audio to -14 LUFS for {task_id}...")
+    normalised_path = str(output_path).replace(".mp4", "_norm.mp4")
+    try:
+        result = subprocess.run(
+            [
+                "ffmpeg", "-i", mixed_output,
+                "-af", "loudnorm=I=-14:TP=-1.5:LRA=11",
+                "-c:v", "copy",
+                normalised_path, "-y"
+            ],
+            capture_output=True,
+            text=True,
+            timeout=120
+        )
+        
+        if result.returncode != 0:
+            logger.error(f"Audio normalisation failed: {result.stderr}")
+            # Fallback: use mixed output if normalisation fails
+            normalised_path = mixed_output
+        else:
+            logger.info(f"Audio normalisation completed for {task_id}")
+            # Clean up intermediate
+            try:
+                Path(mixed_output).unlink()
+            except:
+                pass
+    except Exception as e:
+        logger.error(f"Audio normalisation exception: {e}")
+        normalised_path = mixed_output
+    
+    # Step D: Burn captions (if SRT exists)
+    srt_path = None
+    # Note: srt_file is only available in render_animation_shorts via task dict
+    # Landscape renders don't burn captions yet
+    
+    if srt_path and Path(srt_path).exists():
+        logger.info(f"Burning captions from {srt_path}...")
+        burn_captions(normalised_path, srt_path, str(output_path), is_shorts=False)
+    else:
+        # No SRT provided, use normalised as final
+        try:
+            shutil.move(normalised_path, str(output_path))
+        except:
+            pass
+    
+    # Step E: Confirm output exists
+    if not output_path.exists() or output_path.stat().st_size == 0:
+        logger.error(f"Output MP4 missing or empty: {output_path}")
+        return None
+    
+    logger.info(f"Final MP4 ready: {output_path} ({output_path.stat().st_size} bytes)")
+    return str(output_path)
+
+
+def render_remotion_landscape(task_id: str, audio_file: str, scene_title: str, duration: float) -> str:
+    """
+    Render Remotion landscape scene (1280x720, 16:9).
+    Uses default scene sequence: TitleScene → BreakdownScene → OutroScene.
+    """
+    logger.info(f"Rendering Remotion landscape scene for {task_id}...")
+    
+    # Calculate total frames for landscape sequence
+    # TitleScene: 90 frames, BreakdownScene: 150 frames, OutroScene: 90 frames
+    # Total: 330 frames @ 24fps = 13.75 seconds
+    total_frames = 330
+    
+    # Build scenes props JSON
+    scenes_props = {
+        "scenes": [
+            {
+                "id": "TitleScene",
+                "duration_frames": 90,
+                "props": {
+                    "title": scene_title,
+                    "subtitle": "APEX Media",
+                    "tag": "Landscape"
+                }
+            },
+            {
+                "id": "BreakdownScene",
+                "duration_frames": 150,
+                "props": {
+                    "title": scene_title,
+                    "breakdown": ["50% Needs", "30% Wants", "20% Savings"]
+                }
+            },
+            {
+                "id": "OutroScene",
+                "duration_frames": 90,
+                "props": {
+                    "text": "Thank you for watching",
+                    "cta": "Subscribe for more"
+                }
+            }
+        ]
+    }
+    
+    # Create temporary silent video path
+    temp_silent_path = Path(MEDIA_VIDEO_RAW_DIR) / f"{task_id}_silent.mp4"
+    
+    try:
+        # Step A: Render via Remotion CLI
+        node_path = "/home/agentuser/.nvm/versions/node/v22.22.1/bin"
+        
+        # Build Remotion render command
+        cmd = [
+            f"{node_path}/npx", "remotion", "render",
+            "src/index.jsx",
+            "TitleScene",  # Landscape composition ID
+            str(temp_silent_path),
+            f"--props={json.dumps(scenes_props)}",
+            "--codec=h264",
+            "--crf=18"
+        ]
+        
+        logger.info(f"Running Remotion render command for {task_id}")
+        result = subprocess.run(
+            cmd,
+            cwd="/home/agentuser/remotion",
+            capture_output=True,
+            text=True,
+            timeout=600  # 10 minutes max for Remotion render
+        )
+        
+        if result.returncode != 0:
+            logger.error(f"Remotion render failed: {result.stderr}")
+            logger.error(f"Remotion stdout: {result.stdout}")
+            return None
+        
+        logger.info(f"Remotion render completed for {task_id}")
+        logger.debug(f"Remotion stdout: {result.stdout[-500:]}")
+        
+        # Verify silent MP4 exists
+        if not temp_silent_path.exists() or temp_silent_path.stat().st_size == 0:
+            logger.error(f"Remotion output not found or empty: {temp_silent_path}")
+            return None
+        
+        logger.info(f"Remotion silent MP4 ready: {temp_silent_path} ({temp_silent_path.stat().st_size} bytes)")
+        return str(temp_silent_path)
+        
+    except subprocess.TimeoutExpired:
+        logger.error(f"Remotion render timeout for {task_id}")
+        return None
+    except Exception as e:
+        logger.error(f"Remotion render exception: {e}")
+        return None
+
+
+def render_remotion_shorts(task_id: str, duration: float) -> str:
+    """Render Remotion scene for Shorts (9:16 vertical)."""
+    logger.info(f"Rendering Remotion shorts scene for {task_id}...")
+    
+    # Calculate duration in frames (30fps)
+    duration_frames = int(duration * 30)
+    
+    # Create temporary silent video path
+    temp_silent_path = f"/tmp/{task_id}_silent.mp4"
+    
+    # Default props for generic Shorts scene (TitleScene)
+    props = {
+        "title": "APEX Media",
+        "subtitle": "Learn Financial Mastery",
+        "tag": "Episode 1",
+        "format": "shorts"
+    }
+    
+    try:
+        # Render via Remotion CLI
+        node_path = "/home/agentuser/.nvm/versions/node/v22.22.1/bin"
+        result = subprocess.run(
+            [
+                f"{node_path}/npx", "remotion", "render",
+                "src/index.jsx",
+                "ShortsVideo-TitleScene",  # Default to TitleScene
+                temp_silent_path,
+                f"--props={json.dumps(props)}",
+                f"--frames=0-{duration_frames - 1}",
+                "--codec=h264",
+                "--crf=18"
+            ],
+            cwd="/home/agentuser/remotion",
+            capture_output=True,
+            text=True,
+            timeout=600  # 10 minutes max for Remotion render
+        )
+        
+        if result.returncode != 0:
+            logger.error(f"Remotion render failed: {result.stderr}")
+            return None
+        
+        logger.info(f"Remotion render completed for {task_id}")
+        logger.debug(f"Remotion stdout: {result.stdout[-500:]}")
+        
+        if not Path(temp_silent_path).exists():
+            logger.error(f"Remotion output not found: {temp_silent_path}")
+            return None
+        
+        return temp_silent_path
+        
+    except subprocess.TimeoutExpired:
+        logger.error(f"Remotion render timeout for {task_id}")
+        return None
+    except Exception as e:
+        logger.error(f"Remotion render exception: {e}")
+        return None
+
+
+def update_queue(task_id: str, video_path: str):
+    """Update task status to 'done' and set video_file path."""
+    tasks = read_queue()
+    
+    for task in tasks:
+        if task.get("id") == task_id:
+            task["status"] = "done"
+            task["video_file"] = video_path
+            task["completed_at"] = datetime.now(timezone.utc).isoformat()
+            logger.info(f"Updated task {task_id} to done: {video_path}")
+            break
+    
+    write_queue(tasks)
+
+
+def process_budget_rule_video(task: dict):
+    """Process 50/30/20 budget rule video using video_assembler."""
+    task_id = task.get("id")
+    audio_file = task.get("audio_file")
+    
+    logger.info(f"Processing 50/30/20 budget rule video: {task_id}")
+    
+    # Validate audio_file
+    if audio_file:
+        audio_path = Path(MEDIA_AUDIO_DIR) / audio_file
+        if not audio_path.exists() or audio_path.stat().st_size == 0:
+            logger.error(f"Audio file missing for {task_id}: {audio_path}")
+            log_event(f"❌ Task {task_id} failed: audio file not found")
+            send_message(f"❌ Budget rule video {task_id} failed: audio file not found")
+            task["status"] = "failed"
+            task["error"] = "Audio file missing"
+            return task
+    
+    # Run video_assembler
+    logger.info(f"Starting video_assembler for {task_id}")
+    try:
+        # Change to scenes directory to ensure relative imports work
+        original_dir = os.getcwd()
+        os.chdir("/home/agentuser/agents/animation_agent/scenes")
+        
+        # Call assembler main function
+        success = video_assembler.main()
+        
+        os.chdir(original_dir)
+        
+        if not success:
+            logger.error(f"video_assembler failed for {task_id}")
+            log_event(f"❌ Task {task_id} failed: assembler error")
+            send_message(f"❌ Budget rule video {task_id} failed: render error")
+            task["status"] = "failed"
+            task["error"] = "Assembler failed"
+            return task
+        
+        # Find the output video file
+        silent_video = Path(MEDIA_VIDEO_RAW_DIR) / "5030_20_budget_silent.mp4"
+        final_video = Path(MEDIA_VIDEO_RAW_DIR) / "5030_20_budget_final.mp4"
+        
+        video_path = None
+        if final_video.exists() and final_video.stat().st_size > 0:
+            video_path = str(final_video)
+        elif silent_video.exists() and silent_video.stat().st_size > 0:
+            video_path = str(silent_video)
+        
+        if not video_path:
+            logger.error(f"video_assembler output not found for {task_id}")
+            log_event(f"❌ Task {task_id} failed: output file not found")
+            send_message(f"❌ Budget rule video {task_id} failed: output not found")
+            task["status"] = "failed"
+            task["error"] = "Output not found"
+            return task
+        
+        # Update queue
+        update_queue(task_id, video_path)
+        
+        # Send success alert
+        video_size_mb = Path(video_path).stat().st_size / (1024 * 1024)
+        send_alert(task_id, video_path, video_size_mb)
+        log_event(f"✅ Budget rule video complete: {task_id} → {video_path}")
+        
+        task["status"] = "done"
+        task["video_file"] = video_path
+        return task
+    
+    except Exception as e:
+        logger.error(f"Exception in budget rule video: {e}")
+        log_event(f"❌ Task {task_id} failed: {str(e)}")
+        send_message(f"❌ Budget rule video {task_id} failed: {str(e)}")
+        task["status"] = "failed"
+        task["error"] = str(e)
+        return task
+
+
+def render_remotion_shorts_extract_audio(task_id: str, full_audio_path: str, start_time: str, end_time: str) -> str:
+    """Extract audio clip from full episode audio for Shorts."""
+    logger.info(f"Extracting audio clip for {task_id}: {start_time} to {end_time}")
+    
+    # Convert SRT format timestamps (HH:MM:SS,mmm) to ffmpeg format (HH:MM:SS.mmm)
+    start_time_ffmpeg = start_time.replace(",", ".")
+    end_time_ffmpeg = end_time.replace(",", ".")
+    
+    clip_audio_path = f"/tmp/{task_id}_audio_clip.mp3"
+    
+    try:
+        result = subprocess.run(
+            [
+                "ffmpeg", "-ss", start_time_ffmpeg, "-to", end_time_ffmpeg,
+                "-i", full_audio_path,
+                "-c:a", "libmp3lame", "-q:a", "4", clip_audio_path, "-y"
+            ],
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
+        
+        if result.returncode != 0:
+            logger.error(f"Audio clip extraction failed: {result.stderr}")
+            return None
+        
+        if not Path(clip_audio_path).exists() or Path(clip_audio_path).stat().st_size == 0:
+            logger.error(f"Audio clip missing or empty: {clip_audio_path}")
+            return None
+        
+        logger.info(f"Audio clip extracted: {clip_audio_path}")
+        return clip_audio_path
+    
+    except Exception as e:
+        logger.error(f"Audio clip extraction exception: {e}")
+        return None
+
+
+def render_animation_shorts(task_id: str, audio_path: str, task: dict, duration: float) -> str:
+    """
+    Render Shorts animation with scene type and props from task.
+    Combines Remotion render + audio using ffmpeg.
+    Uses canonical path from asset_manager if available.
+    """
+    logger.info(f"Rendering Shorts animation for {task_id}...")
+    
+    scene_type = task.get("scene_type", "TitleScene")
+    props = task.get("props", {})
+    
+    # Get output path from task, or use canonical path from asset_manager
+    output_path = task.get("output_path")
+    if not output_path:
+        ep_num = task.get("episode", 0)
+        short_num = task.get("short_num", 0)
+        if ep_num and short_num:
+            output_path = short_path(ep_num, short_num)
+        else:
+            output_path = f"/home/agentuser/media/shorts/ep01/ep01_short_{task_id}.mp4"
+    
+    # Ensure output directory exists
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    
+    # Step A: Render Remotion scene to silent MP4
+    silent_path = str(Path(output_path).parent / f"{task_id}_silent.mp4")
+    
+    try:
+        node_path = "/home/agentuser/.nvm/versions/node/v22.22.1/bin"
+        duration_frames = int(duration * 30)  # 30fps
+        
+        cmd = [
+            f"{node_path}/npx", "remotion", "render",
+            "src/index.jsx",
+            f"ShortsVideo-{scene_type}",
+            silent_path,
+            f"--props={json.dumps(props)}",
+            "--codec=h264",
+            "--crf=18"
+        ]
+        
+        logger.info(f"Rendering Remotion scene {scene_type} for {task_id}")
+        result = subprocess.run(
+            cmd,
+            cwd="/home/agentuser/remotion",
+            capture_output=True,
+            text=True,
+            timeout=600
+        )
+        
+        if result.returncode != 0:
+            logger.error(f"Remotion render failed: {result.stderr}")
+            return None
+        
+        if not Path(silent_path).exists() or Path(silent_path).stat().st_size == 0:
+            logger.error(f"Remotion silent MP4 missing or empty: {silent_path}")
+            return None
+        
+        logger.info(f"Remotion render complete: {silent_path}")
+        
+    except subprocess.TimeoutExpired:
+        logger.error(f"Remotion render timeout for {task_id}")
+        return None
+    except Exception as e:
+        logger.error(f"Remotion render exception: {e}")
+        return None
+    
+    # Step B: Mix video + audio with ffmpeg
+    logger.info(f"Mixing video + audio for {task_id}...")
+    mixed_output = output_path.replace(".mp4", "_mixed.mp4")
+    
+    try:
+        result = subprocess.run(
+            [
+                "ffmpeg", "-i", silent_path, "-i", audio_path,
+                "-c:v", "copy", "-c:a", "libmp3lame", "-q:a", "4", "-ar", "44100", "-shortest",
+                mixed_output, "-y"
+            ],
+            capture_output=True,
+            text=True,
+            timeout=120
+        )
+        
+        if result.returncode != 0:
+            logger.error(f"ffmpeg mix failed: {result.stderr}")
+            return None
+        
+        logger.info(f"ffmpeg mix complete for {task_id}")
+        
+    except subprocess.TimeoutExpired:
+        logger.error(f"ffmpeg mix timeout for {task_id}")
+        return None
+    except Exception as e:
+        logger.error(f"ffmpeg mix exception: {e}")
+        return None
+    
+    # Step C: Normalise audio to -14 LUFS
+    logger.info(f"Normalising audio to -14 LUFS for {task_id}...")
+    normalised_path = output_path.replace(".mp4", "_norm.mp4")
+    try:
+        result = subprocess.run(
+            [
+                "ffmpeg", "-i", mixed_output,
+                "-af", "loudnorm=I=-14:TP=-1.5:LRA=11",
+                "-c:v", "copy",
+                normalised_path, "-y"
+            ],
+            capture_output=True,
+            text=True,
+            timeout=120
+        )
+        
+        if result.returncode != 0:
+            logger.error(f"Audio normalisation failed: {result.stderr}")
+            normalised_path = mixed_output
+        else:
+            logger.info(f"Audio normalisation completed for {task_id}")
+            # Clean up intermediate
+            try:
+                Path(mixed_output).unlink()
+            except:
+                pass
+    except Exception as e:
+        logger.error(f"Audio normalisation exception: {e}")
+        normalised_path = mixed_output
+    
+    # Step D: Burn captions for Shorts (if SRT exists)
+    srt_path = task.get("srt_file")
+    if srt_path and Path(srt_path).exists():
+        logger.info(f"Burning captions from {srt_path} (Shorts)...")
+        burn_captions(normalised_path, srt_path, output_path, is_shorts=True)
+    else:
+        # No SRT provided, use normalised as final
+        try:
+            shutil.move(normalised_path, output_path)
+        except:
+            pass
+    
+    # Step E: Validate final MP4
+    if not Path(output_path).exists() or Path(output_path).stat().st_size == 0:
+        logger.error(f"Final Shorts MP4 missing or empty: {output_path}")
+        return None
+    
+    # Clean up intermediate files
+    try:
+        Path(silent_path).unlink()
+        if Path(audio_path).name.endswith("_audio_clip.mp3"):
+            Path(audio_path).unlink()
+    except:
+        pass
+    
+    logger.info(f"Shorts MP4 ready: {output_path} ({Path(output_path).stat().st_size} bytes)")
+    return output_path
+
+
+def process_animation_task(task: dict):
+    """Process a single animation task."""
+    task_id = task.get("id")
+    audio_file = task.get("audio_file")
+    description = task.get("description", "")
+    format = task.get("format", "landscape")  # Default to landscape
+    
+    logger.info(f"Processing animation task: {task_id} (format: {format})")
+    
+    # Check if this is a 50/30/20 budget rule video
+    if video_assembler and ("50/30/20" in description or "budget rule" in description.lower()):
+        logger.info(f"Detected 50/30/20 task — using video_assembler")
+        task = process_budget_rule_video(task)
+        return task
+    
+    # Validate audio_file
+    if not audio_file:
+        logger.error(f"Task {task_id} missing audio_file")
+        log_event(f"❌ Task {task_id} failed: missing audio_file")
+        send_message(f"❌ Animation task {task_id} failed: missing audio_file")
+        task["status"] = "failed"
+        task["error"] = "Missing audio_file"
+        return task
+    
+    audio_path = Path(MEDIA_AUDIO_DIR) / audio_file
+    if not audio_path.exists() or audio_path.stat().st_size == 0:
+        logger.error(f"Task {task_id} audio file missing or empty: {audio_path}")
+        log_event(f"❌ Task {task_id} failed: audio file not found at {audio_path}")
+        send_message(f"❌ Animation task {task_id} failed: audio file not found")
+        task["status"] = "failed"
+        task["error"] = "Audio file missing"
+        return task
+    
+    # For Shorts format: handle audio clipping
+    audio_start = task.get("audio_start")
+    audio_end = task.get("audio_end")
+    
+    if format == "shorts" and audio_start and audio_end:
+        # Extract audio clip from full episode audio
+        logger.info(f"Extracting audio clip for Shorts: {audio_start} to {audio_end}")
+        clipped_audio_path = render_remotion_shorts_extract_audio(
+            task_id, str(audio_path), audio_start, audio_end
+        )
+        if not clipped_audio_path:
+            logger.error(f"Audio clip extraction failed for {task_id}")
+            log_event(f"❌ Task {task_id} failed: audio clip extraction error")
+            send_message(f"❌ Animation task {task_id} failed: audio clip extraction error")
+            task["status"] = "failed"
+            task["error"] = "Audio clip extraction failed"
+            return task
+        audio_path = Path(clipped_audio_path)
+    
+    # Extract scene title from description
+    scene_title = description.replace("Generate animation: ", "").strip()
+    if not scene_title:
+        scene_title = "APEX Media"
+    
+    logger.info(f"Scene title: {scene_title}")
+    
+    # Get audio duration
+    duration = get_audio_duration(str(audio_path))
+    if duration is None:
+        logger.error(f"Failed to get audio duration for {task_id}")
+        log_event(f"❌ Task {task_id} failed: could not determine audio duration")
+        send_message(f"❌ Animation task {task_id} failed: could not determine audio duration")
+        task["status"] = "failed"
+        task["error"] = "Audio duration unknown"
+        return task
+    
+    # For Shorts: use scene_type and props from task
+    if format == "shorts":
+        video_path = render_animation_shorts(
+            task_id, str(audio_path), task, duration
+        )
+    else:
+        # Render animation
+        video_path = render_animation(task_id, str(audio_path), scene_title, duration, format)
+    
+    if not video_path:
+        logger.error(f"Animation render failed for {task_id}")
+        log_event(f"❌ Task {task_id} failed: render error")
+        send_message(f"❌ Animation task {task_id} failed: render error")
+        task["status"] = "failed"
+        task["error"] = "Render failed"
+        return task
+    
+    # Update queue
+    update_queue(task_id, video_path)
+    
+    # Send success alert
+    send_alert(task_id, video_path, duration)
+    log_event(f"✅ Animation complete: {task_id} → {video_path}")
+    
+    task["status"] = "done"
+    task["video_file"] = video_path
+    return task
+
+
+def watch_queue():
+    """Watch queue for Animation Agent tasks."""
+    tasks = read_queue()
+    
+    pending_tasks = [
+        t for t in tasks
+        if t.get("agent") == "Animation Agent" and t.get("status") == "pending"
+    ]
+    
+    if not pending_tasks:
+        logger.info("No pending Animation Agent tasks")
+        return
+    
+    logger.info(f"Found {len(pending_tasks)} pending Animation Agent tasks")
+    
+    for task in pending_tasks:
+        process_animation_task(task)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "watch":
+        import time
+        while True:
+            try:
+                watch_queue()
+                time.sleep(5)  # Check queue every 5 seconds
+            except KeyboardInterrupt:
+                logger.info("Animation Agent shutting down")
+                break
+            except Exception as e:
+                logger.error(f"ERROR in main loop: {str(e)}")
+                time.sleep(5)
+    else:
+        print("Usage: python3 animation_agent.py watch")
+        sys.exit(1)
