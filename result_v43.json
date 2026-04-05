@@ -51,7 +51,15 @@
     "get_daily_spend": "Added isinstance() checks for list vs dict; filters list by timestamp prefix; sums 'actual' field",
     "record_usage": "Refactored to build record dict once, then branch by ledger type; appends to list or uses legacy dict structure"
   },
+  "generated_script": {
+    "file_path": "/home/agentuser/.openclaw/workspace-script/approved/epx_wheredoesyourmoneyactuallygoth_20260405_174348.json",
+    "task_id": "test-script-apex-001",
+    "topic": "Where Does Your Money Actually Go? The Average American Spending Breakdown",
+    "first_400_chars": "{\n  \"task_id\": \"test-script-apex-001\",\n  \"episode\": null,\n  \"topic\": \"Where Does Your Money Actually Go? The Average American Spending Breakdown\",\n  \"script\": \"You are spending money right now. Even if you are just sitting here watching this video, your subscriptions are running, your rent is accruing, and somewhere in the background your money is quietly disappearing. The question is, do you actu"
+  },
   "deployment_ready": true,
   "repo": "droplet-commands (main branch)",
-  "deployed_at": "2026-04-05T17:45:15Z"
+  "commit": "595b413",
+  "deployed_at": "2026-04-05T17:47:30Z",
+  "github_url": "https://github.com/apexmakeshop-dot/droplet-commands/commits/main"
 }
