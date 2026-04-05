@@ -1,0 +1,214 @@
+{
+  "timestamp": "2026-04-05T15:14:28.850618Z",
+  "task": "droplet-commands result_v30 - EP2 status collection",
+  "ffprobe_ep2_audio": {
+    "file": "task-audio-ep02-zerobased.mp3",
+    "output": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "mp3",
+          "codec_long_name": "MP3 (MPEG audio layer 3)",
+          "codec_type": "audio",
+          "codec_tag_string": "[0][0][0][0]",
+          "codec_tag": "0x0000",
+          "sample_fmt": "fltp",
+          "sample_rate": "24000",
+          "channels": 1,
+          "channel_layout": "mono",
+          "bits_per_sample": 0,
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/14112000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 4749083136,
+          "duration": "336.528000",
+          "bit_rate": "48000",
+          "disposition": {
+            "default": 0,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0
+          }
+        }
+      ],
+      "format": {
+        "filename": "/home/agentuser/media/audio/task-audio-ep02-zerobased.mp3",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "format_name": "mp3",
+        "format_long_name": "MP2/3 (MPEG audio layer 2/3)",
+        "start_time": "0.000000",
+        "duration": "336.528000",
+        "size": "2019168",
+        "bit_rate": "48000",
+        "probe_score": 51
+      }
+    }
+  },
+  "video_raw_files": [
+    {
+      "filename": "5030_20_budget_final_v3.mp4",
+      "size_bytes": 13918909,
+      "size_human": "13.3 MB",
+      "modified": "2026-03-31T19:17:11.079413Z"
+    },
+    {
+      "filename": "5030_20_budget_silent.mp4",
+      "size_bytes": 33305351,
+      "size_human": "31.8 MB",
+      "modified": "2026-03-31T18:56:08.900776Z"
+    },
+    {
+      "filename": "test-animation-1920x1080-001.mp4",
+      "size_bytes": 56128,
+      "size_human": "54.8 KB",
+      "modified": "2026-04-03T19:54:43.417513Z"
+    },
+    {
+      "filename": "test-animation-1920x1080-001_silent.mp4",
+      "size_bytes": 257737,
+      "size_human": "251.7 KB",
+      "modified": "2026-04-03T19:54:43.077508Z"
+    },
+    {
+      "filename": "test-animation-duplicate-4c27bbb4.mp4",
+      "size_bytes": 83317,
+      "size_human": "81.4 KB",
+      "modified": "2026-03-31T00:47:44.740750Z"
+    },
+    {
+      "filename": "test-animation-f929b1af.mp4",
+      "size_bytes": 83317,
+      "size_human": "81.4 KB",
+      "modified": "2026-03-31T00:46:05.631280Z"
+    },
+    {
+      "filename": "test-animation-remotion-001.mp4",
+      "size_bytes": 49011,
+      "size_human": "47.9 KB",
+      "modified": "2026-04-03T19:50:41.049847Z"
+    },
+    {
+      "filename": "test-animation-remotion-001_silent.mp4",
+      "size_bytes": 250374,
+      "size_human": "244.5 KB",
+      "modified": "2026-04-03T19:50:40.773843Z"
+    }
+  ],
+  "video_scenes_files": [
+    {
+      "filename": "BreakdownScene_09.mp4",
+      "size_bytes": 3944823,
+      "size_human": "3.8 MB",
+      "modified": "2026-03-31T18:44:41.014506Z"
+    },
+    {
+      "filename": "CategoryScene_03.mp4",
+      "size_bytes": 258704,
+      "size_human": "252.6 KB",
+      "modified": "2026-03-31T18:29:19.764894Z"
+    },
+    {
+      "filename": "CategoryScene_05.mp4",
+      "size_bytes": 278585,
+      "size_human": "272.1 KB",
+      "modified": "2026-03-31T18:33:08.400369Z"
+    },
+    {
+      "filename": "CategoryScene_07.mp4",
+      "size_bytes": 263450,
+      "size_human": "257.3 KB",
+      "modified": "2026-03-31T18:37:21.648044Z"
+    },
+    {
+      "filename": "ListScene_04.mp4",
+      "size_bytes": 2933956,
+      "size_human": "2.8 MB",
+      "modified": "2026-03-31T18:32:43.943998Z"
+    },
+    {
+      "filename": "ListScene_06.mp4",
+      "size_bytes": 3557159,
+      "size_human": "3.4 MB",
+      "modified": "2026-03-31T18:37:04.439794Z"
+    },
+    {
+      "filename": "ListScene_08.mp4",
+      "size_bytes": 4342499,
+      "size_human": "4.1 MB",
+      "modified": "2026-03-31T18:41:09.747383Z"
+    },
+    {
+      "filename": "MistakeScene_10.mp4",
+      "size_bytes": 3277036,
+      "size_human": "3.1 MB",
+      "modified": "2026-03-31T18:47:41.181184Z"
+    },
+    {
+      "filename": "MistakeScene_11.mp4",
+      "size_bytes": 3215934,
+      "size_human": "3.1 MB",
+      "modified": "2026-03-31T18:50:38.039823Z"
+    },
+    {
+      "filename": "MistakeScene_12.mp4",
+      "size_bytes": 2416522,
+      "size_human": "2.3 MB",
+      "modified": "2026-03-31T18:52:46.881750Z"
+    },
+    {
+      "filename": "MistakeScene_13.mp4",
+      "size_bytes": 3247439,
+      "size_human": "3.1 MB",
+      "modified": "2026-03-31T18:55:43.304392Z"
+    },
+    {
+      "filename": "OutroScene_14.mp4",
+      "size_bytes": 470314,
+      "size_human": "459.3 KB",
+      "modified": "2026-03-31T18:56:07.856761Z"
+    },
+    {
+      "filename": "PieChartScene_01.mp4",
+      "size_bytes": 1955755,
+      "size_human": "1.9 MB",
+      "modified": "2026-03-31T18:26:50.846630Z"
+    },
+    {
+      "filename": "StatScene_02.mp4",
+      "size_bytes": 1820993,
+      "size_human": "1.7 MB",
+      "modified": "2026-03-31T18:28:54.332507Z"
+    },
+    {
+      "filename": "TitleScene_00.mp4",
+      "size_bytes": 1344885,
+      "size_human": "1.3 MB",
+      "modified": "2026-03-31T18:24:28.380463Z"
+    }
+  ],
+  "ep2_srt": {
+    "path": "/home/agentuser/media/episodes/ep02/ep02_captions.srt",
+    "size_bytes": 6708,
+    "size_human": "6.6 KB"
+  },
+  "animation_agent_log": {
+    "file": "animation_agent_service.log",
+    "last_50_lines": "[2026-04-05 15:10:20,563 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:10:25,565 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:10:30,569 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:10:35,575 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:10:40,580 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:10:45,586 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:10:50,591 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:10:55,597 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:11:00,601 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:11:05,606 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:11:10,612 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:11:15,618 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:11:20,623 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:11:25,629 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:11:30,632 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:11:35,637 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:11:40,643 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:11:45,645 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:11:50,650 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:11:55,656 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:12:00,662 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:12:05,665 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:12:10,670 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:12:15,685 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:12:20,689 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:12:25,703 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:12:30,709 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:12:35,716 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:12:40,721 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:12:45,728 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:12:50,815 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:12:55,821 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:13:00,827 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:13:05,832 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:13:10,837 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:13:15,843 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:13:20,849 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:13:25,854 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:13:30,860 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:13:35,866 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:13:40,872 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:13:45,991 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:13:50,993 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:13:55,999 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:14:01,005 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:14:06,012 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:14:11,018 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:14:16,023 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:14:21,029 UTC] INFO - No pending Animation Agent tasks\n[2026-04-05 15:14:26,035 UTC] INFO - No pending Animation Agent tasks\n"
+  },
+  "asset_manager_output": {
+    "stdout": "APEX Media Asset Manager - Status Check\n============================================================\n\nEP01: \u2705 COMPLETE\nEP02: \u2705 COMPLETE\nEP03: \u26a0\ufe0f  MISSING: audio, captions, script\n       \u2514\u2500 audio: /home/agentuser/media/episodes/ep03/ep03_audio.mp3\n       \u2514\u2500 captions: /home/agentuser/media/episodes/ep03/ep03_captions.srt\n       \u2514\u2500 script: /home/agentuser/media/episodes/ep03/ep03_script.json\nEP04: \u26a0\ufe0f  MISSING: audio, captions, script\n       \u2514\u2500 audio: /home/agentuser/media/episodes/ep04/ep04_audio.mp3\n       \u2514\u2500 captions: /home/agentuser/media/episodes/ep04/ep04_captions.srt\n       \u2514\u2500 script: /home/agentuser/media/episodes/ep04/ep04_script.json\nEP05: \u26a0\ufe0f  MISSING: audio, captions, script\n       \u2514\u2500 audio: /home/agentuser/media/episodes/ep05/ep05_audio.mp3\n       \u2514\u2500 captions: /home/agentuser/media/episodes/ep05/ep05_captions.srt\n       \u2514\u2500 script: /home/agentuser/media/episodes/ep05/ep05_script.json\nEP06: \u26a0\ufe0f  MISSING: audio, captions, script\n       \u2514\u2500 audio: /home/agentuser/media/episodes/ep06/ep06_audio.mp3\n       \u2514\u2500 captions: /home/agentuser/media/episodes/ep06/ep06_captions.srt\n       \u2514\u2500 script: /home/agentuser/media/episodes/ep06/ep06_script.json\nEP07: \u26a0\ufe0f  MISSING: audio, captions, script\n       \u2514\u2500 audio: /home/agentuser/media/episodes/ep07/ep07_audio.mp3\n       \u2514\u2500 captions: /home/agentuser/media/episodes/ep07/ep07_captions.srt\n       \u2514\u2500 script: /home/agentuser/media/episodes/ep07/ep07_script.json\nEP08: \u26a0\ufe0f  MISSING: audio, captions, script\n       \u2514\u2500 audio: /home/agentuser/media/episodes/ep08/ep08_audio.mp3\n       \u2514\u2500 captions: /home/agentuser/media/episodes/ep08/ep08_captions.srt\n       \u2514\u2500 script: /home/agentuser/media/episodes/ep08/ep08_script.json\nEP09: \u26a0\ufe0f  MISSING: audio, captions, script\n       \u2514\u2500 audio: /home/agentuser/media/episodes/ep09/ep09_audio.mp3\n       \u2514\u2500 captions: /home/agentuser/media/episodes/ep09/ep09_captions.srt\n       \u2514\u2500 script: /home/agentuser/media/episodes/ep09/ep09_script.json\nEP10: \u26a0\ufe0f  MISSING: audio, captions, script\n       \u2514\u2500 audio: /home/agentuser/media/episodes/ep10/ep10_audio.mp3\n       \u2514\u2500 captions: /home/agentuser/media/episodes/ep10/ep10_captions.srt\n       \u2514\u2500 script: /home/agentuser/media/episodes/ep10/ep10_script.json\nEP11: \u26a0\ufe0f  MISSING: audio, captions, script\n       \u2514\u2500 audio: /home/agentuser/media/episodes/ep11/ep11_audio.mp3\n       \u2514\u2500 captions: /home/agentuser/media/episodes/ep11/ep11_captions.srt\n       \u2514\u2500 script: /home/agentuser/media/episodes/ep11/ep11_script.json\nEP12: \u26a0\ufe0f  MISSING: audio, captions, script\n       \u2514\u2500 audio: /home/agentuser/media/episodes/ep12/ep12_audio.mp3\n       \u2514\u2500 captions: /home/agentuser/media/episodes/ep12/ep12_captions.srt\n       \u2514\u2500 script: /home/agentuser/media/episodes/ep12/ep12_script.json\n\n============================================================\nasset_manager.py ready for use by all agents.\n",
+    "stderr": null,
+    "returncode": 0
+  }
+}
