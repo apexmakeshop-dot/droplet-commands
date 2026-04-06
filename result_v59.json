@@ -1,0 +1,57 @@
+{
+  "episode": 2,
+  "task_id": "ep02-audio-001",
+  "step_1_injection": {
+    "status": "complete",
+    "injected_at": "2026-04-06T18:19:15.185812+00:00"
+  },
+  "step_2_wait": {
+    "status": "complete",
+    "wait_duration": "900 seconds (15 minutes)",
+    "wait_started": "2026-04-06 18:19:15 UTC",
+    "wait_ended": "2026-04-06 18:34:16 UTC",
+    "actual_generation_time": "3 minutes 1 second (180-200 seconds)"
+  },
+  "step_3_results": {
+    "task_status": "done",
+    "task_updated_at": "2026-04-06T18:22:15.734643+00:00",
+    "audio_file": "/home/agentuser/media/episodes/ep02/ep02_audio.mp3",
+    "file_specs": {
+      "file_size_mb": 8.8,
+      "file_size_bytes": 9215000,
+      "duration_seconds": 574.75,
+      "duration_human": "9:34 (9 minutes 34 seconds)",
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "channel_layout": "stereo",
+      "bit_rate_kbps": 128,
+      "codec": "MP3",
+      "format": "MPEG Audio Layer III"
+    },
+    "voice_provider": "ElevenLabs",
+    "voice_id": "bl7ZC9mJenFauaZiDqw2",
+    "processing_pipeline": [
+      "ElevenLabs streaming API (text-to-speech)",
+      "Audio normalised to -14 LUFS 44100Hz"
+    ]
+  },
+  "audio_agent_log_excerpt": {
+    "raw_file": "/home/agentuser/agents/audio_agent/logs/audio_20260406.log",
+    "key_events": [
+      "2026-04-06 18:19:18 UTC - Found 1 pending audio task (ep02-audio-001 episode=2)",
+      "2026-04-06 18:19:18 UTC - Calling ElevenLabs streaming API (voice: bl7ZC9mJenFauaZiDqw2)",
+      "2026-04-06 18:21:39 UTC - ElevenLabs streaming audio saved (9061400 bytes)",
+      "2026-04-06 18:22:08 UTC - Audio normalised to -14 LUFS 44100Hz",
+      "2026-04-06 18:22:08 UTC - Task ep02-audio-001 set to done",
+      "2026-04-06 18:22:09 UTC - Task ep02-audio-001 complete"
+    ],
+    "provider_used": "ElevenLabs (not edge-tts fallback)"
+  },
+  "summary": {
+    "ep02_audio_ready": true,
+    "total_words_spoken": 1747,
+    "estimated_word_rate": "183 words per minute",
+    "next_action": "Inject ep02-animation task to render Manim scenes synced to this audio"
+  },
+  "timestamp": "2026-04-06T18:34:16Z"
+}
