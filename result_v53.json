@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-04-06T17:38:00Z",
+  "task": "Fix daily_report.py to read list format cost_ledger.json instead of dict format",
+  "step_1_original_file": {
+    "status": "REVIEWED",
+    "finding": "daily_report.py had two functions that assumed dict format ledger: _load_day() and _day_total()",
+    "problem": "Lines 89-97 returned empty results when ledger was a list",
+    "code_snippet_old": [
+      "def _load_day(date: str) -> list:",
+      "    ledger = _load_json(LEDGER_PATH)",
+      "    if isinstance(ledger, list):",
+      "        return []  # <-- THIS WAS THE BUG",
+      "    return ledger.get(date, {}).get('tasks', [])",
+      "",
+      "def _day_total(date: str) -> float:",
+      "    ledger = _load_json(LEDGER_PATH)",
+      "    if isinstance(ledger, list):",
+      "        return 0.0  # <-- THIS WAS THE BUG",
+      "    return ledger.get(date, {}).get('total', 0.0)"
+    ]
+  },
+  "step_2_list_format_structure": {
+    "status": "VERIFIED",
+    "ledger_file": "/home/agentuser/apex/cost_ledger.json",
+    "format": "List of cost record objects",
+    "example_record": {
+      "timestamp": "2026-04-05T17:43:48.524419+00:00",
+      "agent": "agent_09_script",
+      "task_label": "script_test-script-apex-001",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 249,
+      "cache_write": 0,
+      "cache_read": 0,
+      "output_tokens": 1958,
+      "estimated": 0.060747,
+      "actual": 0.030117,
+      "overage_pct": -50.4
+    },
+    "key_fields": [
+      "timestamp (ISO 8601 with timezone)",
+      "agent (agent_XX_name)",
+      "task_label (string)",
+      "model (claude model ID)",
+      "actual (float USD cost)",
+      "cache_write, cache_read, output_tokens"
+    ]
+  },
+  "step_3_fixes_applied": {
+    "status": "COMPLETED",
+    "changes": [
+      {
+        "function": "_load_day(date)",
+        "change": "Now filters list records where timestamp starts with date string",
+        "new_code": [
+          "def _load_day(date: str) -> list:",
+          "    \"\"\"Load all cost records for a given date (list format ledger).\"\"\"",
+          "    ledger = _load_json(LEDGER_PATH)",
+          "    if isinstance(ledger, list):",
+          "        # Filter records where timestamp starts with date string (YYYY-MM-DD)",
+          "        return [r for r in ledger if r.get('timestamp', '').startswith(date)]",
+          "    # Fallback for legacy dict format",
+          "    return ledger.get(date, {}).get('tasks', [])"
+        ]
+      },
+      {
+        "function": "_day_total(date)",
+        "change": "Now sums 'actual' field from all matching date records",
+        "new_code": [
+          "def _day_total(date: str) -> float:",
+          "    \"\"\"Calculate total cost for a given date.\"\"\"",
+          "    ledger = _load_json(LEDGER_PATH)",
+          "    if isinstance(ledger, list):",
+          "        # Sum 'actual' field from all records matching date",
+          "        day_records = [r for r in ledger if r.get('timestamp', '').startswith(date)]",
+          "        return sum(r.get('actual', 0.0) for r in day_records)",
+          "    # Fallback for legacy dict format",
+          "    return ledger.get(date, {}).get('total', 0.0)"
+        ]
+      }
+    ]
+  },
+  "step_4_test_results": {
+    "status": "PASSED",
+    "test_1_2026_04_05": {
+      "command": "python3 /home/agentuser/apex/daily_report.py summary 2026-04-05",
+      "output": "📊 <b>APEX Token Report — 2026-04-05</b>\n────────────────────────\nTotal: <b>$0.0301</b> / $15.00  [░░░░░░░░░░] 0%\nCalls: 1\n────────────────────────\n<code>agent_09_script               </code> 1 calls   <b>$0.0301</b>\n────────────────────────\nPaused agents:   None\n\nDrill into an agent:\n<code>python3 daily_report.py drill agent_07_report 2026-04-05</code>",
+      "finding": "✅ Correctly reads and reports the 1 call from cost_ledger.json"
+    },
+    "test_2_2026_04_06": {
+      "command": "python3 /home/agentuser/apex/daily_report.py summary 2026-04-06",
+      "output": "📊 <b>APEX Token Report — 2026-04-06</b>\nNo activity recorded.",
+      "finding": "✅ Correctly reports no activity when no records match the date"
+    }
+  },
+  "step_5_syntax_check": {
+    "command": "python3 -m py_compile /home/agentuser/apex/daily_report.py",
+    "result": "✅ SYNTAX OK"
+  },
+  "summary": {
+    "status": "COMPLETE",
+    "changes_made": 2,
+    "functions_updated": [
+      "_load_day(date) — now filters list format records by timestamp prefix",
+      "_day_total(date) — now sums 'actual' field from list format records"
+    ],
+    "backward_compatibility": "Maintained — functions still handle legacy dict format if it ever reappears",
+    "test_coverage": "Both report functions tested and working",
+    "next_steps": "daily_report.py now correctly reads the current list format cost_ledger.json. Cron job at 08:00 UTC will send daily summary automatically."
+  }
+}
