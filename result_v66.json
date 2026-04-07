@@ -1,0 +1,64 @@
+{
+  "task": "Replace generate_srt.py with improved script-based SRT generator",
+  "timestamp": "2026-04-07T15:43:08Z",
+  "status": "completed",
+  "steps": {
+    "write_new_script": {
+      "action": "Wrote improved SRT generator script",
+      "file": "/home/agentuser/media/generate_srt.py",
+      "bytes": 5037,
+      "improvements": [
+        "Enhanced split_into_caption_blocks: breaks at sentence boundaries AND punctuation",
+        "Smarter word accumulation: respects sentence ends (.!?,) and enforces max 12 words per block",
+        "Cleaner block timing logic: uses min() to prevent duration overruns",
+        "Identical behavior: script IS the caption source, no speech-to-text API",
+        "Proportional word-count-based timing across audio duration"
+      ],
+      "result": "success"
+    },
+    "syntax_check": {
+      "action": "Validated Python syntax",
+      "command": "python3 -m py_compile /home/agentuser/media/generate_srt.py",
+      "result": "SYNTAX OK"
+    },
+    "test_ep02": {
+      "action": "Regenerated EP02 SRT using improved script",
+      "command": "rm -f /home/agentuser/media/episodes/ep02/ep02_captions.srt && python3 /home/agentuser/media/generate_srt.py --episode 2",
+      "audio_duration_seconds": 574.75,
+      "audio_duration_formatted": "00:09:34,750",
+      "script_total_words": 1747,
+      "caption_blocks_generated": 166,
+      "coverage_start": "00:00:00,300",
+      "coverage_end": "00:09:34,746",
+      "result": "success"
+    },
+    "output_samples": {
+      "first_segment": {
+        "index": 1,
+        "timecode": "00:00:00,300 --> 00:00:04,246",
+        "text": "What if I told you that the reason you are still living"
+      },
+      "sample_segment_mid": {
+        "index": 2,
+        "timecode": "00:00:04,246 --> 00:00:08,192",
+        "text": "paycheck to paycheck has nothing to do with how much money you"
+      },
+      "last_segment": {
+        "index": 166,
+        "timecode": "00:09:33,102 --> 00:09:34,746",
+        "text": "Let us get to work."
+      },
+      "total_segments": 166,
+      "result": "verified"
+    }
+  },
+  "changes_from_v65": {
+    "block_count": "219 → 166 (fewer, larger blocks due to improved punctuation-aware splitting)",
+    "splitting_logic": "Now respects sentence boundaries (.!?,) and enforces max word limit (8 + 4 buffer)",
+    "block_duration_logic": "Cleaner: uses min() instead of explicit if-else for duration ceiling",
+    "result_quality": "Same accurate timing, improved readability with fewer, more natural caption blocks"
+  },
+  "file_location": "/home/agentuser/media/generate_srt.py",
+  "srt_output": "/home/agentuser/media/episodes/ep02/ep02_captions.srt",
+  "notes": "Improved SRT generator prioritizes sentence breaks and punctuation. 166 blocks vs 219 in v65 = better readability while maintaining accurate proportional timing across 574.75s audio."
+}
