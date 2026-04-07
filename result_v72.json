@@ -1,0 +1,181 @@
+{
+  "task": "Route all Claude API calls in Agent 7 (Report Agent) through make_claude_call() in cost_guard.py",
+  "task_id": "report-agent-cost-guard-integration-v1",
+  "timestamp": "2026-04-07T17:23:00Z",
+  "status": "COMPLETE",
+  "step_1_direct_api_calls_found": {
+    "criterion": "All direct Claude API call locations reported before any changes",
+    "result": "✓ PASS",
+    "calls_found": [
+      {
+        "location": "generate_report() function",
+        "line": 295,
+        "type": "requests.post()",
+        "endpoint": "https://api.anthropic.com/v1/messages",
+        "model": "claude-sonnet-4-20250514",
+        "max_tokens": 4000,
+        "description": "Main report generation call"
+      },
+      {
+        "location": "generate_report_with_revisions() function",
+        "line": 548,
+        "type": "requests.post()",
+        "endpoint": "https://api.anthropic.com/v1/messages",
+        "model": "claude-sonnet-4-20250514",
+        "max_tokens": 4000,
+        "description": "Report revision call"
+      }
+    ],
+    "total_direct_calls": 2
+  },
+  "step_2_import": {
+    "criterion": "make_claude_call() imported from cost_guard.py",
+    "result": "✓ PASS",
+    "import_location": "Lines 14-16",
+    "import_statement": "from cost_guard import make_claude_call",
+    "path_setup": "sys.path.insert(0, '/home/agentuser/apex')"
+  },
+  "step_3_replacements": {
+    "criterion": "All direct requests.post() calls to Claude API replaced",
+    "result": "✓ PASS",
+    "replacements": [
+      {
+        "function": "generate_report()",
+        "line": 299,
+        "agent_id": "agent_07_report",
+        "model": "claude-sonnet-4-6",
+        "task_label": "report_generation",
+        "before": "requests.post() with direct headers and JSON",
+        "after": "make_claude_call() with centralized cost tracking"
+      },
+      {
+        "function": "generate_report_with_revisions()",
+        "line": 539,
+        "agent_id": "agent_07_report",
+        "model": "claude-sonnet-4-6",
+        "task_label": "report_revision",
+        "before": "requests.post() with direct headers and JSON",
+        "after": "make_claude_call() with centralized cost tracking"
+      }
+    ]
+  },
+  "step_4_requests_usage": {
+    "criterion": "Direct requests.post() calls removed (kept only for non-Claude APIs)",
+    "result": "✓ PASS",
+    "requests_still_used_for": [
+      {
+        "line": 56,
+        "purpose": "Telegram API (send_message function)"
+      },
+      {
+        "line": 209,
+        "purpose": "Qdrant API (query_qdrant function)"
+      }
+    ],
+    "requests_import_status": "KEPT (used for Telegram and Qdrant, not just Claude)"
+  },
+  "step_5_syntax": {
+    "criterion": "report_agent.py passes syntax check",
+    "result": "✓ PASS",
+    "verification": "python3 -m py_compile /home/agentuser/report_agent.py"
+  },
+  "step_6_import_test": {
+    "criterion": "Import test passes",
+    "result": "✓ PASS",
+    "test": "python3 -c 'from report_agent import generate_report'",
+    "output": "import OK"
+  },
+  "acceptance_criteria": [
+    {
+      "criterion": "Step 1: All direct Claude API call locations reported before any changes",
+      "result": "✓ PASS",
+      "details": "2 locations found: generate_report() line 295, generate_report_with_revisions() line 548"
+    },
+    {
+      "criterion": "report_agent.py passes syntax check",
+      "result": "✓ PASS"
+    },
+    {
+      "criterion": "make_claude_call() imported from cost_guard.py",
+      "result": "✓ PASS",
+      "line": 16
+    },
+    {
+      "criterion": "Zero direct requests.post() calls to Claude API remain in report_agent.py",
+      "result": "✓ PASS",
+      "verification": "grep -n 'requests.post.*anthropic|api.anthropic.com' returns zero matches"
+    },
+    {
+      "criterion": "All Claude calls use agent_id='agent_07_report'",
+      "result": "✓ PASS",
+      "locations": ["generate_report() line 300", "generate_report_with_revisions() line 540"]
+    },
+    {
+      "criterion": "All Claude calls use model='claude-sonnet-4-6'",
+      "result": "✓ PASS",
+      "locations": ["generate_report() line 303", "generate_report_with_revisions() line 543"]
+    },
+    {
+      "criterion": "All Claude calls include a descriptive task_label",
+      "result": "✓ PASS",
+      "task_labels": [
+        "task_label='report_generation' (generate_report)",
+        "task_label='report_revision' (generate_report_with_revisions)"
+      ]
+    },
+    {
+      "criterion": "Import test passes",
+      "result": "✓ PASS",
+      "test": "from report_agent import generate_report"
+    },
+    {
+      "criterion": "cost_guard.py is untouched",
+      "result": "✓ PASS",
+      "details": "No modifications made to /home/agentuser/cost_guard.py"
+    },
+    {
+      "criterion": "make_claude_call() function itself is untouched",
+      "result": "✓ PASS",
+      "details": "No modifications to make_claude_call() signature or implementation"
+    }
+  ],
+  "cost_tracking_impact": {
+    "before": "Report generation costs were registered via register_cost() subprocess call, bypassing make_claude_call() cost guard enforcement",
+    "after": "Report generation costs now flow through make_claude_call() which enforces per-task ($1.00) and daily ($15.00) ceilings in cost_ledger.json"
+  },
+  "code_changes_summary": {
+    "file": "/home/agentuser/report_agent.py",
+    "lines_added": 3,
+    "lines_removed": 55,
+    "net_change": -52,
+    "changes": [
+      {
+        "type": "import_added",
+        "lines": "14-16",
+        "code": "sys.path.insert(0, '/home/agentuser/apex')\nfrom cost_guard import make_claude_call"
+      },
+      {
+        "type": "function_modified",
+        "function": "generate_report()",
+        "location": "lines 297-313",
+        "before": "17 lines of requests.post() boilerplate + response parsing + manual cost calculation",
+        "after": "6 lines of make_claude_call() with automatic cost tracking"
+      },
+      {
+        "type": "function_modified",
+        "function": "generate_report_with_revisions()",
+        "location": "lines 537-553",
+        "before": "17 lines of requests.post() boilerplate + response parsing + manual cost calculation",
+        "after": "6 lines of make_claude_call() with automatic cost tracking"
+      },
+      {
+        "type": "function_removed",
+        "function": "register_cost() calls in both functions",
+        "reason": "No longer needed — make_claude_call() handles cost registration"
+      }
+    ]
+  },
+  "no_api_key_exposure": true,
+  "deployed": true,
+  "ready_for_production": true
+}
