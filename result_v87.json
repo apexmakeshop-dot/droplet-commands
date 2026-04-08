@@ -1,0 +1,125 @@
+{
+  "task": "Restart Agent 25 service and verify INDUSTRY_MAP uses exact Stratledger ICP (10 industries only)",
+  "timestamp": "2026-04-08T15:59:45Z",
+  "completion_status": "✅ ALL CHECKS COMPLETE",
+  "checks_completed": [
+    "1. ✅ INDUSTRY_MAP verified: contains exactly 10 Stratledger ICP industries (saas, hr_tech, fintech, marketing_tech, legal_tech, professional_services, logistics, recruitment, accounting, law_firm)",
+    "2. ✅ Non-Stratledger industries removed: healthcare, real_estate, education, retail NOT FOUND in code",
+    "3. ✅ Syntax check PASSED: python3 -m py_compile competitive_intel_agent.py",
+    "4. ✅ Industry inference tests: 6/6 PASS",
+    "5. ✅ Service restart: sudo systemctl restart competitive_intel_agent.service",
+    "6. ✅ Service status: Active (running)"
+  ],
+  "industry_map_verification": {
+    "total_industries": 10,
+    "industries": [
+      "hr_tech",
+      "fintech",
+      "marketing_tech",
+      "legal_tech",
+      "saas",
+      "professional_services",
+      "logistics",
+      "recruitment",
+      "accounting",
+      "law_firm"
+    ],
+    "excluded_industries": [
+      "healthcare (removed)",
+      "real_estate (removed)",
+      "education (removed)",
+      "retail (removed)"
+    ]
+  },
+  "syntax_check": {
+    "command": "python3 -m py_compile /home/agentuser/agents/competitive_intel/competitive_intel_agent.py",
+    "result": "✅ OK",
+    "status": "PASS"
+  },
+  "industry_inference_tests": {
+    "total_tests": 6,
+    "passed": 6,
+    "failed": 0,
+    "status": "✅ ALL PASS",
+    "results": [
+      {
+        "test": 1,
+        "input": "We build SaaS software for HR teams",
+        "expected": "hr_tech",
+        "actual": "hr_tech",
+        "confidence": "high",
+        "status": "PASS"
+      },
+      {
+        "test": 2,
+        "input": "Boutique management consulting firm serving growth stage companies",
+        "expected": "professional_services",
+        "actual": "professional_services",
+        "confidence": "medium",
+        "status": "PASS"
+      },
+      {
+        "test": 3,
+        "input": "Small business accounting and bookkeeping for B2B companies",
+        "expected": "accounting",
+        "actual": "accounting",
+        "confidence": "high",
+        "status": "PASS"
+      },
+      {
+        "test": 4,
+        "input": "Commercial law firm specialising in corporate contracts and M&A",
+        "expected": "law_firm",
+        "actual": "law_firm",
+        "confidence": "medium",
+        "status": "PASS"
+      },
+      {
+        "test": 5,
+        "input": "Freight and logistics platform for supply chain management",
+        "expected": "logistics",
+        "actual": "logistics",
+        "confidence": "high",
+        "status": "PASS"
+      },
+      {
+        "test": 6,
+        "input": "Talent acquisition and executive search firm",
+        "expected": "recruitment",
+        "actual": "recruitment",
+        "confidence": "high",
+        "status": "PASS"
+      }
+    ]
+  },
+  "service_restart": {
+    "command": "sudo systemctl restart competitive_intel_agent.service",
+    "result": "✅ OK",
+    "timestamp": "Wed 2026-04-08 15:59:44 UTC"
+  },
+  "service_status": {
+    "command": "sudo systemctl status competitive_intel_agent.service --no-pager | grep Active",
+    "result": "Active: active (running) since Wed 2026-04-08 15:59:44 UTC; 24ms ago",
+    "status": "✅ ACTIVE AND RUNNING"
+  },
+  "deployment_status": "✅ PRODUCTION READY",
+  "verification_summary": {
+    "industry_map": "✅ Exact Stratledger ICP (10 industries)",
+    "syntax": "✅ PASS",
+    "tests": "✅ 6/6 PASS",
+    "service": "✅ ACTIVE (running)",
+    "overall": "✅ READY FOR PRODUCTION"
+  },
+  "next_steps": [
+    "1. Monitor service logs: tail -f /home/agentuser/data/competitive_intel/competitive_intel_agent.log",
+    "2. Test with sample Growth tier task to verify parallel discovery in logs",
+    "3. Verify industry inference accuracy on real market descriptions",
+    "4. Monitor Agent 7 integration and template path handoff"
+  ],
+  "file_changes": {
+    "modified": "/home/agentuser/agents/competitive_intel/competitive_intel_agent.py",
+    "summary": "INDUSTRY_MAP verified to contain exactly 10 Stratledger ICP industries; non-Stratledger industries (healthcare, real_estate, education, retail) not present"
+  },
+  "github_push_ready": true,
+  "deletion_note": "result_v86.json deleted, result_v87.json created"
+}
