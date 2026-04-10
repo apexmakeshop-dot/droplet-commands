@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-04-10T18:00:30Z",
+  "operation": "Fix competitive_intel_agent.py error notification spam",
+  "severity": "MEDIUM - Reduced operational noise",
+  "issues_fixed": [
+    {
+      "issue": "ISSUE 1: Duplicate Telegram notifications on error retry",
+      "location": "/home/agentuser/agents/competitive_intel/competitive_intel_agent.py",
+      "root_cause": "send_telegram() called in exception handler without deduplication — sent on every retry loop",
+      "fix": [
+        {
+          "change": "Added error_notified flag before try block",
+          "line_added": "error_notified = False",
+          "location": "Line 699 (after initial logging)"
+        },
+        {
+          "change": "Added conditional check in exception handler",
+          "old_code": "except Exception as e:\n    log(f\"\\n❌ FAILED: {str(e)}\")\n    update_task(task_id, 'failed', {'error': str(e)})\n    send_telegram(f\"❌ Competitive Intelligence Failed\\n\\n{client_name}\\n{str(e)}\")",
+          "new_code": "except Exception as e:\n    log(f\"\\n❌ FAILED: {str(e)}\")\n    update_task(task_id, 'failed', {'error': str(e)})\n    if not error_notified:\n        send_telegram(f\"❌ Competitive Intelligence Failed\\n\\n{client_name}\\n{str(e)}\")\n        error_notified = True",
+          "effect": "Telegram notification sent only once per job, even if exception occurs multiple times"
+        }
+      ]
+    },
+    {
+      "issue": "ISSUE 2: Stale failing competitive intelligence task in queue",
+      "action": "Stopped service and cleaned queue",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Stop competitive_intel_agent.service",
+          "result": "✓ Service stopped (Active: inactive (dead) since Fri 2026-04-10 18:00:09 UTC)"
+        },
+        {
+          "step": 2,
+          "action": "Remove stale CI tasks from queue",
+          "command": "Filtered /home/agentuser/.openclaw/workspace-orchestrator/queue.json",
+          "result": "✓ Removed 3 competitive intelligence tasks",
+          "before": 4,
+          "after": 1,
+          "remaining_tasks": "Audio Agent test task only"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "syntax_check": {
+      "file": "/home/agentuser/agents/competitive_intel/competitive_intel_agent.py",
+      "command": "python3 -m py_compile",
+      "result": "✓ Passed",
+      "note": "No syntax errors after error_notified flag addition"
+    },
+    "service_status": {
+      "service": "competitive_intel_agent.service",
+      "status": "inactive (dead)",
+      "timestamp": "Fri 2026-04-10 18:00:09 UTC",
+      "note": "Service stopped and will not auto-restart"
+    },
+    "queue_status": {
+      "file": "/home/agentuser/.openclaw/workspace-orchestrator/queue.json",
+      "tasks_before": 4,
+      "tasks_after": 1,
+      "removed": 3,
+      "remaining": [
+        "Audio Agent test task (id: task-audio-test-001)"
+      ]
+    }
+  },
+  "code_changes_summary": {
+    "file": "/home/agentuser/agents/competitive_intel/competitive_intel_agent.py",
+    "changes": [
+      "Line 699: Added error_notified = False before try block",
+      "Lines 800-803: Updated exception handler with conditional Telegram send"
+    ],
+    "logic": "Flag prevents duplicate Telegram notifications for the same task failure",
+    "impact": "Reduces operational noise in Telegram channel when CI agent encounters errors"
+  },
+  "next_steps": [
+    "Await confirmation before restarting competitive_intel_agent.service",
+    "Consider root fix: deploy report template at /home/agentuser/agents/report_agent/templates/stratledger_template.docx",
+    "When template is ready, restart service: sudo systemctl start competitive_intel_agent.service"
+  ]
+}
