@@ -1,0 +1,165 @@
+{
+  "timestamp": "2026-04-10T16:00:00Z",
+  "diagnostic_run": true,
+  "crontab": {
+    "entries": [
+      "0 8 * * * python3 /home/agentuser/apex/daily_report.py summary >> /home/agentuser/apex/logs/daily_report.log 2>&1",
+      "0 9 * * * python3 /home/agentuser/.openclaw/workspace/auto_prospect_qdrant.py >> /home/agentuser/apex/logs/growth.log 2>&1",
+      "0 10 * * * python3 /home/agentuser/.openclaw/workspace-starter/auto_prospect_starter_qdrant.py >> /home/agentuser/apex/logs/starter.log 2>&1"
+    ],
+    "note": "No cron entry for competitive_intel_agent.py"
+  },
+  "systemd_timers": {
+    "count": 11,
+    "next_scheduled": [
+      "Fri 2026-04-10 20:13:39 UTC - update-notifier-download.timer",
+      "Fri 2026-04-10 20:22:40 UTC - systemd-tmpfiles-clean.timer",
+      "Sat 2026-04-11 00:00:00 UTC - dpkg-db-backup.timer",
+      "Sat 2026-04-11 00:00:00 UTC - logrotate.timer"
+    ],
+    "note": "No OpenClaw timers found in systemd"
+  },
+  "python_processes": {
+    "long_running": [
+      {
+        "pid": 578198,
+        "user": "agentuser",
+        "uptime": "from Mar31 (~10 days)",
+        "command": "/usr/bin/python3 /home/agentuser/github_bridge/watcher.py"
+      },
+      {
+        "pid": 578199,
+        "user": "agentuser",
+        "uptime": "from Mar31 (~10 days)",
+        "command": "/usr/bin/python3 /opt/yt-agent/yt_bot.py"
+      },
+      {
+        "pid": 1529336,
+        "user": "agentuser",
+        "uptime": "from Apr04 (~6 days)",
+        "command": "/usr/bin/python3 /home/agentuser/apex/agent.py"
+      },
+      {
+        "pid": 2226221,
+        "user": "agentuser",
+        "uptime": "from Apr07 (~3 days)",
+        "command": "/usr/bin/python3 /home/agentuser/.local/bin/gunicorn"
+      },
+      {
+        "pid": 2226225,
+        "user": "agentuser",
+        "uptime": "from Apr07 (~3 days)",
+        "command": "gunicorn worker"
+      },
+      {
+        "pid": 2226228,
+        "user": "agentuser",
+        "uptime": "from Apr07 (~3 days)",
+        "command": "gunicorn worker"
+      }
+    ],
+    "agent_processes": [
+      {
+        "pid": 2276807,
+        "agent": "Audio Agent",
+        "started": "Apr08",
+        "status": "running",
+        "uptime": "~2 days"
+      },
+      {
+        "pid": 2276821,
+        "agent": "Audio Agent (parent)",
+        "started": "Apr08",
+        "status": "running",
+        "uptime": "~2 days"
+      },
+      {
+        "pid": 2276868,
+        "agent": "Animation Agent",
+        "started": "Apr08",
+        "status": "running",
+        "uptime": "~2 days"
+      },
+      {
+        "pid": 2276872,
+        "agent": "Animation Agent (parent)",
+        "started": "Apr08",
+        "status": "running",
+        "uptime": "~2 days"
+      },
+      {
+        "pid": 2276937,
+        "agent": "Script Agent",
+        "started": "Apr08",
+        "status": "running",
+        "uptime": "~2 days"
+      },
+      {
+        "pid": 2858431,
+        "agent": "Competitive Intelligence Agent",
+        "started": "Apr10 16:00 UTC",
+        "status": "currently_running",
+        "cpu": "17.1%",
+        "memory": "2.4%",
+        "note": "Launched during this session"
+      },
+      {
+        "pid": 2858447,
+        "agent": "Firecrawl Agent (child of CI)",
+        "started": "Apr10 16:00 UTC",
+        "status": "running_crawl",
+        "cpu": "44.5%",
+        "memory": "1.5%",
+        "task": "Crawling Capterra for Mesh Bioplastics competitors"
+      }
+    ]
+  },
+  "openclaw_commands_log": {
+    "file": "/home/agentuser/.openclaw/logs/commands.log",
+    "entries_analyzed": 100,
+    "date_range": "2026-03-22 to 2026-04-10",
+    "last_entry": {
+      "timestamp": "2026-04-10T15:48:03.669Z",
+      "action": "new",
+      "session": "agent:devagent:telegram:direct:8235811059",
+      "note": "Current session startup"
+    },
+    "pattern": "Multiple daily resets followed by new sessions",
+    "note": "Shows normal session lifecycle, no error entries"
+  },
+  "findings": {
+    "missing_infrastructure": [
+      "No cron entry for competitive_intel_agent.py (must run via manual trigger or cron)",
+      "No /home/agentuser/agents/report_agent/ directory",
+      "No stratledger_template.docx template file",
+      "Report Agent (Agent 7) infrastructure not deployed"
+    ],
+    "running_services": [
+      "Audio Agent - operational (~2 days uptime)",
+      "Animation Agent - operational (~2 days uptime)",
+      "Script Agent - operational (~2 days uptime)",
+      "GitHub Bridge watcher - operational (~10 days)",
+      "YouTube Bot - operational (~10 days)",
+      "APEX agent - operational (~6 days)",
+      "API Bridge (gunicorn) - operational (~3 days)"
+    ],
+    "current_activity": [
+      "Competitive Intelligence Agent processing Mesh Bioplastics starter tier task (ci_starter_5ec89d14)",
+      "Firecrawl Agent crawling Capterra for competitor discovery",
+      "Task blocked by missing report_agent template"
+    ]
+  },
+  "recommendations": {
+    "immediate": [
+      "Deploy /home/agentuser/agents/report_agent/templates/ directory",
+      "Create or restore stratledger_template.docx",
+      "Deploy render_report.py in report_agent/",
+      "Add cron entry for competitive_intel_agent.py (recommended: every 60 seconds like Audio/Animation agents)"
+    ],
+    "follow_up": [
+      "Verify docxtpl module installed",
+      "Update COMPETITIVE_INTEL_TEMPLATE path in competitive_intel_agent.py",
+      "Verify Agent 7 (Report Writer) configuration"
+    ]
+  }
+}
