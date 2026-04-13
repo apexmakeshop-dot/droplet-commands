@@ -1,0 +1,142 @@
+═══════════════════════════════════════════════════════════════════════════════
+AGENT 25 (COMPETITIVE INTELLIGENCE) PPTX RENDERER INTEGRATION
+═══════════════════════════════════════════════════════════════════════════════
+
+Task: Wire render_ci_report.js into Agent 25 workflow as final step in run_competitive_intel_job()
+Status: ✅ COMPLETE
+Date: 2026-04-13 13:59 UTC
+
+═══════════════════════════════════════════════════════════════════════════════
+DELIVERABLES
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ 1. PPTXGENJS INSTALLED
+   Location: /home/agentuser/agents/report_agent/node_modules/
+   Version: 4.x (19 packages)
+   Test: node -e "require('pptxgenjs'); console.log('OK')"
+
+✅ 2. RENDERER DEPLOYED
+   File: /home/agentuser/agents/report_agent/pptx/render_ci_report.js
+   Size: 23.2 KB (23,173 bytes)
+   Lines: 508
+   Input: agent7_payload.json (JSON with scoring_data, client, players, axes)
+   Output: PPTX with 9 slides (Stratledger branding)
+
+✅ 3. RENDERER TESTED
+   Test Data: Mesh Bioplastics vs 3 competitors
+   Output PPTX: 405 KB, 1280x720 16:9 format
+   Slides: Cover, TOC, Client Profile, Intelligence Framework, Competitive Map,
+           Competitor Deep Dives (×3), KPI Matrix, Strategic Recommendations, Closing
+
+✅ 4. AGENT 25 INTEGRATION
+   Modified File: /home/agentuser/agents/competitive_intel/competitive_intel_agent.py
+   New Steps: STEP 6 (payload), STEP 7 (PPTX render), STEP 7b (GitHub push)
+   Syntax: Valid (python3 -m py_compile OK)
+   Error Handling: Graceful degradation (warnings logged, task continues)
+
+✅ 5. AGENT7_PAYLOAD.JSON GENERATION
+   Location: /home/agentuser/data/competitive_intel/{client_slug}_{date}/agent7_payload.json
+   Format: JSON with mapping from axis_data + competitor_data
+   Fields: client (name, URL, overview, differentiator, x/y scores)
+           x_axis / y_axis (label, low, high)
+           players (array with name, hq, x/y scores, threat_level, kpis)
+           white_space_opportunities
+
+✅ 6. POWERPOINT RENDERING
+   Subprocess Call: node render_ci_report.js <payload.json> <output.pptx>
+   Output Path: /home/agentuser/data/competitive_intel/{client_slug}_{date}/{client_slug}_CI_Report.pptx
+   Timeout: 60 seconds
+   Error Handling: Logs warnings if render fails (does not block task)
+
+✅ 7. GITHUB INTEGRATION
+   Copy to: /home/agentuser/github_bridge/{client_slug}_CI_Report.pptx
+   Git Commit: "CI Report: {client_name}"
+   Git Push: origin main
+   Error Handling: Logs warnings if push fails (does not block task)
+
+✅ 8. DOCUMENTATION
+   File: /home/agentuser/.openclaw/workspace-devagent/INTEGRATION_SUMMARY.md
+   Details: Full workflow, file changes, format specs, error handling
+   GitHub: Commit 0228f91
+
+═══════════════════════════════════════════════════════════════════════════════
+GITHUB COMMITS
+═══════════════════════════════════════════════════════════════════════════════
+
+Commit f6be4ec: CI PPTX renderer deployed
+  - Mesh_Bioplastics_CI_Starter.pptx (test output, 405 KB)
+
+Commit dd225ac: Agent 25 PPTX renderer integration complete
+  - result_v100b.json (metadata)
+
+Commit 0228f91: Agent 25 PPTX renderer integration — full documentation
+  - INTEGRATION_SUMMARY.md
+
+═══════════════════════════════════════════════════════════════════════════════
+WORKFLOW CHANGES
+═══════════════════════════════════════════════════════════════════════════════
+
+BEFORE:
+  run_competitive_intel_job()
+  ├─ Crawl client + competitors
+  ├─ Score via Claude Sonnet
+  ├─ Generate matrix PNG
+  └─ Queue report task to Agent 7
+
+AFTER (NEW):
+  run_competitive_intel_job()
+  ├─ Crawl client + competitors
+  ├─ Score via Claude Sonnet
+  ├─ Generate matrix PNG
+  ├─ Build agent7_payload.json ← NEW
+  ├─ Render PowerPoint PPTX ← NEW
+  ├─ Push to GitHub ← NEW
+  └─ Queue report task to Agent 7
+
+Result: Agent 25 now generates THREE outputs per job:
+  1. positioning_matrix.png (existing)
+  2. {client_slug}_CI_Report.pptx (NEW) — downloadable via GitHub
+  3. Report queued to Agent 7 for DOCX generation (existing)
+
+═══════════════════════════════════════════════════════════════════════════════
+BACKWARDS COMPATIBILITY
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ FULL — No breaking changes
+  • Existing report queueing unchanged
+  • PNG generation unchanged
+  • Function signatures unchanged
+  • New steps are additive (steps 6-7)
+  • Graceful error handling ensures tasks complete even if PPTX fails
+
+═══════════════════════════════════════════════════════════════════════════════
+ACCEPTANCE CRITERIA (ALL MET)
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ Renderer wired as final step in run_competitive_intel_job()
+✅ Input: agent7_payload.json path passed to Node.js subprocess
+✅ Output: PPTX written to /home/agentuser/data/competitive_intel/{client_slug}_{date}/
+✅ GitHub integration: PPTX copied to /home/agentuser/github_bridge/ and pushed
+✅ agent7_payload.json maps scoring_data fields to renderer input format
+✅ result_v100.json renamed to result_v100b.json and pushed to GitHub
+✅ result_v99.json deleted
+✅ Integration summary documentation created and pushed
+
+═══════════════════════════════════════════════════════════════════════════════
+VERIFICATION
+═══════════════════════════════════════════════════════════════════════════════
+
+To test the integration on the next Competitive Intelligence job:
+
+$ python3 /home/agentuser/agents/competitive_intel/competitive_intel_agent.py watch
+
+Expected log output:
+  [6/7] Building competitive intelligence report payload...
+  ✓ Payload saved: /home/agentuser/data/competitive_intel/...
+  [7/7] Rendering PowerPoint presentation...
+  ✓ PowerPoint rendered: .../client_slug_CI_Report.pptx
+  ✓ PPTX pushed to GitHub
+
+═══════════════════════════════════════════════════════════════════════════════
+END OF REPORT
+═══════════════════════════════════════════════════════════════════════════════
