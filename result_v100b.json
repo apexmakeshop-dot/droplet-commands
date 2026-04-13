@@ -1,0 +1,64 @@
+{
+  "task": "Deploy competitive intelligence PowerPoint renderer",
+  "date": "2026-04-13T13:51:00Z",
+  "status": "COMPLETE",
+  "acceptance_criteria": {
+    "pptxgenjs_installed": true,
+    "directory_created": "/home/agentuser/agents/report_agent/pptx",
+    "renderer_deployed": "/home/agentuser/agents/report_agent/pptx/render_ci_report.js",
+    "test_deck_generated": true,
+    "pptx_exists": true,
+    "pptx_size_bytes": 414720,
+    "github_push": "SUCCESS"
+  },
+  "details": {
+    "pptxgenjs_version": "4.x via npm install",
+    "installation_method": "npm install pptxgenjs (local in /home/agentuser/agents/report_agent)",
+    "renderer_slides": 8,
+    "slides": [
+      "Cover slide with Stratledger branding",
+      "Table of Contents",
+      "Client Profile with positioning scores",
+      "Intelligence Framework (11 KPIs)",
+      "Competitive Landscape Map (4-quadrant)",
+      "Competitor Deep Dives (one per competitor)",
+      "KPI Comparison Matrix (side-by-side)",
+      "Strategic Recommendations (Exploit/Defend/Position)",
+      "Closing slide with contact info"
+    ],
+    "test_data": {
+      "client": "Mesh Bioplastics",
+      "competitors_analyzed": 3,
+      "competitor_list": ["Krauss Maffei", "Engel Austria", "NISSEI Plastic"]
+    },
+    "output_location": "/home/agentuser/agents/report_agent/pptx/Mesh_Bioplastics_CI_Starter.pptx",
+    "github_location": "droplet-commands/Mesh_Bioplastics_CI_Starter.pptx"
+  },
+  "usage": {
+    "cli": "node /home/agentuser/agents/report_agent/pptx/render_ci_report.js <input.json> <output.pptx>",
+    "input_format": {
+      "client": {
+        "name": "string",
+        "url": "string",
+        "overview": "string",
+        "differentiator": "string",
+        "x_score": "number 0-100",
+        "y_score": "number 0-100",
+        "perception_gap": "boolean",
+        "perception_gap_note": "string",
+        "revenue": "string",
+        "pricing": "string",
+        "news": "string"
+      },
+      "x_axis": {"label": "string", "low": "string", "high": "string"},
+      "y_axis": {"label": "string", "low": "string", "high": "string"},
+      "players": [{"name": "string", "url": "string", "hq": "string", "x_score": number, "y_score": number, "threat_level": "high|medium|low", "kpis": {...}}],
+      "recommendations": {"exploit": [string], "defend": [string], "position": [string]}
+    }
+  },
+  "next_steps": {
+    "integration": "Wire render_ci_report.js into Agent 25 workflow",
+    "agent_25_unknown": true,
+    "pending_clarification": "What is Agent 25? How should it invoke the renderer?"
+  }
+}
