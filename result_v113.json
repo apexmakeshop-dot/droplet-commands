@@ -1,0 +1,1101 @@
+{
+  "timestamp": "2026-04-15T17:25:42.606759",
+  "total_companies": 25,
+  "successful": 25,
+  "failed": 0,
+  "total_emails_found": 138,
+  "results": [
+    {
+      "company": "Matex Co Ltd",
+      "domain": "matex-japan.com",
+      "country": "Japan",
+      "pattern": null,
+      "emails": [
+        {
+          "value": "info@matex-japan.com",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 10,
+          "verification_status": null
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "Connection error: HTTPSConnectionPool(host='api.hunter.io', port=443): Read timed out. (read timeout=15)"
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Thai Usui Co Ltd",
+      "domain": "tuc.co.th",
+      "country": "Thailand",
+      "pattern": "{last}{f}",
+      "emails": [
+        {
+          "value": "silom@tuc.co.th",
+          "type": "personal",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 84,
+          "verification_status": null
+        },
+        {
+          "value": "info@tuc.co.th",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 77,
+          "verification_status": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Jet Industries Co Ltd",
+      "domain": "jetindustries.co.th",
+      "country": "Thailand",
+      "pattern": null,
+      "emails": [
+        {
+          "value": "contact@jetindustries.co.th",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 81,
+          "verification_status": null
+        },
+        {
+          "value": "shen.yang@jetindustries.co.th",
+          "type": "personal",
+          "first_name": "Shen",
+          "last_name": "Yang",
+          "position": null,
+          "confidence": 15,
+          "verification_status": null
+        },
+        {
+          "email": "ceo@jetindustries.co.th",
+          "score": 49,
+          "verification_status": "accept_all",
+          "error": null
+        },
+        {
+          "email": "cfo@jetindustries.co.th",
+          "score": 46,
+          "verification_status": "accept_all",
+          "error": null
+        },
+        {
+          "email": "cto@jetindustries.co.th",
+          "score": 48,
+          "verification_status": "accept_all",
+          "error": null
+        },
+        {
+          "email": "procurement@jetindustries.co.th",
+          "score": 45,
+          "verification_status": "accept_all",
+          "error": null
+        },
+        {
+          "email": "engineering@jetindustries.co.th",
+          "score": 46,
+          "verification_status": "accept_all",
+          "error": null
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Glasfil Polymer Sdn Bhd",
+      "domain": "glasfil.com",
+      "country": "Malaysia",
+      "pattern": "{last}{first}",
+      "emails": [
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "PT Banshu Plastic Indonesia",
+      "domain": "banshuplastic.com",
+      "country": "Indonesia",
+      "pattern": null,
+      "emails": [
+        {
+          "value": "sales@banshuplastic.com",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 78,
+          "verification_status": null
+        },
+        {
+          "value": "hrd@banshuplastic.com",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 75,
+          "verification_status": null
+        },
+        {
+          "value": "recruitment@banshuplastic.com",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 75,
+          "verification_status": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Presisi Group",
+      "domain": "presisiplastics.co.id",
+      "country": "Indonesia",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        },
+        {
+          "email": null,
+          "score": null,
+          "verification_status": null,
+          "error": null
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "PT Dinamika Polimerindo",
+      "domain": "polimerindo.com",
+      "country": "Indonesia",
+      "pattern": "{first}{l}",
+      "emails": [
+        {
+          "value": "kristianb@polimerindo.com",
+          "type": "personal",
+          "first_name": "Kristian",
+          "last_name": "Bunjamin",
+          "position": "Managing Director",
+          "confidence": 98,
+          "verification_status": null
+        },
+        {
+          "value": "hindartot@polimerindo.com",
+          "type": "personal",
+          "first_name": "Hindarto",
+          "last_name": "Tjandrakusuma",
+          "position": "Managing Director",
+          "confidence": 97,
+          "verification_status": null
+        },
+        {
+          "value": "ferryd@polimerindo.com",
+          "type": "personal",
+          "first_name": "Ferry",
+          "last_name": "Darmawan",
+          "position": "Quality Assurance Manager",
+          "confidence": 99,
+          "verification_status": "unknown"
+        },
+        {
+          "value": "info@polimerindo.com",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 95,
+          "verification_status": null
+        },
+        {
+          "value": "hrd@polimerindo.com",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 77,
+          "verification_status": null
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Anil Plastics and Enterprises",
+      "domain": "anilplastics.com",
+      "country": "India",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Primex Plastics Pvt Ltd",
+      "domain": "primexplast.com",
+      "country": "India",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "CX Technology Corporation",
+      "domain": "cxtechnology.com",
+      "country": "Vietnam",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Samjin LND Co Ltd",
+      "domain": "samjin.co.kr",
+      "country": "South Korea",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Hankook Mold Co Ltd",
+      "domain": "hkmold.com",
+      "country": "South Korea",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Fujigousei Inc",
+      "domain": "fujigousei.co.jp",
+      "country": "Japan",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Tanaka Die and Mold Works",
+      "domain": "tanakadie.co.jp",
+      "country": "Japan",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Ming-Li Precision Steel Molds",
+      "domain": "mingliprecision.com",
+      "country": "Taiwan",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "HIL Industries Berhad",
+      "domain": "hil.com.my",
+      "country": "Malaysia",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "HH Precision Mould Sdn Bhd",
+      "domain": "hhprecision.com.my",
+      "country": "Malaysia",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Sungjin Techwin Co Ltd",
+      "domain": "sungjin.co.kr",
+      "country": "South Korea",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Needs One Inc",
+      "domain": "needsone.co.kr",
+      "country": "South Korea",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Pradip Plastic Moulders Pvt Ltd",
+      "domain": "pradipplastic.com",
+      "country": "India",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Jairaj Group",
+      "domain": "jairajgroup.com",
+      "country": "India",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Long Thanh Plastic JSC",
+      "domain": "nhualangthanh.com.vn",
+      "country": "Vietnam",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Beyonics International",
+      "domain": "beyonics.com",
+      "country": "Singapore",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Mitsui Plastics Philippines",
+      "domain": "mitsui-chemicals.com",
+      "country": "Philippines",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "company": "Holly Plastic Parts Co Ltd",
+      "domain": "hollyplasticparts.com",
+      "country": "China",
+      "pattern": null,
+      "emails": [
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        },
+        {
+          "email": null,
+          "score": 0,
+          "verification_status": null,
+          "error": "HTTP 429: {\n  \"errors\": [\n    {\n      \"id\": \"too_many_requests\",\n      \"code\": 429,\n      \"details\": \"You've reached the limit for the number of searches per billing period allowed on your account.\"\n    }\n  ]\n}"
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}
