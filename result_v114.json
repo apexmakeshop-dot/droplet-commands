@@ -1,0 +1,323 @@
+{
+  "results": [
+    {
+      "company": "Matex Co Ltd",
+      "domain": "matex-japan.com",
+      "pattern": null,
+      "emails": [],
+      "emails_found": 0
+    },
+    {
+      "company": "Thai Usui Co Ltd",
+      "domain": "tuc.co.th",
+      "skipped": true
+    },
+    {
+      "company": "Jet Industries Co Ltd",
+      "domain": "jetindustries.co.th",
+      "pattern": null,
+      "emails": [
+        {
+          "value": "contact@jetindustries.co.th",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 81,
+          "verification_status": null
+        }
+      ],
+      "emails_found": 1
+    },
+    {
+      "company": "Glasfil Polymer Sdn Bhd",
+      "domain": "glasfil.com",
+      "skipped": true
+    },
+    {
+      "company": "PT Banshu Plastic Indonesia",
+      "domain": "banshuplastic.com",
+      "pattern": null,
+      "emails": [
+        {
+          "value": "sales@banshuplastic.com",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 78,
+          "verification_status": null
+        },
+        {
+          "value": "hrd@banshuplastic.com",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 75,
+          "verification_status": null
+        }
+      ],
+      "emails_found": 2
+    },
+    {
+      "company": "Presisi Group",
+      "domain": "presisiplastics.co.id",
+      "pattern": null,
+      "emails": [],
+      "emails_found": 0
+    },
+    {
+      "company": "PT Dinamika Polimerindo",
+      "domain": "polimerindo.com",
+      "skipped": true
+    },
+    {
+      "company": "Anil Plastics and Enterprises",
+      "domain": "anilplastics.com",
+      "skipped": true
+    },
+    {
+      "company": "Primex Plastics Pvt Ltd",
+      "domain": "primexplast.com",
+      "skipped": true
+    },
+    {
+      "company": "CX Technology Corporation",
+      "domain": "cxtechnology.com",
+      "pattern": "{first}",
+      "emails": [],
+      "emails_found": 0
+    },
+    {
+      "company": "Samjin LND Co Ltd",
+      "domain": "samjin.co.kr",
+      "pattern": "{first}",
+      "emails": [
+        {
+          "value": "scsong@samjin.co.kr",
+          "type": "personal",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 79,
+          "verification_status": null
+        },
+        {
+          "value": "ir@samjin.co.kr",
+          "type": "personal",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 75,
+          "verification_status": null
+        }
+      ],
+      "emails_found": 2
+    },
+    {
+      "company": "Hankook Mold Co Ltd",
+      "domain": "hkmold.com",
+      "pattern": null,
+      "emails": [],
+      "emails_found": 0
+    },
+    {
+      "company": "Fujigousei Inc",
+      "domain": "fujigousei.co.jp",
+      "pattern": null,
+      "emails": [
+        {
+          "value": "oyama-fa@fujigousei.co.jp",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 94,
+          "verification_status": null
+        },
+        {
+          "value": "oyama-soumu@fujigousei.co.jp",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 93,
+          "verification_status": null
+        }
+      ],
+      "emails_found": 2
+    },
+    {
+      "company": "Tanaka Die and Mold Works",
+      "domain": "tanakadie.co.jp",
+      "pattern": null,
+      "emails": [],
+      "emails_found": 0
+    },
+    {
+      "company": "Ming-Li Precision Steel Molds",
+      "domain": "mingliprecision.com",
+      "pattern": null,
+      "emails": [],
+      "emails_found": 0
+    },
+    {
+      "company": "HIL Industries Berhad",
+      "domain": "hil.com.my",
+      "pattern": "{first}",
+      "emails": [
+        {
+          "value": "fatin@hil.com.my",
+          "type": "personal",
+          "first_name": "Fatin",
+          "last_name": "Amyra",
+          "position": "Customer Service Representative",
+          "confidence": 99,
+          "verification_status": "valid"
+        },
+        {
+          "value": "izzat@hil.com.my",
+          "type": "personal",
+          "first_name": "Izzat",
+          "last_name": "Hadzir",
+          "position": "Shipping Coordinator",
+          "confidence": 98,
+          "verification_status": null
+        }
+      ],
+      "emails_found": 2
+    },
+    {
+      "company": "HH Precision Mould Sdn Bhd",
+      "domain": "hhprecision.com.my",
+      "pattern": null,
+      "emails": [],
+      "emails_found": 0
+    },
+    {
+      "company": "Sungjin Techwin Co Ltd",
+      "domain": "sungjin.co.kr",
+      "pattern": null,
+      "emails": [],
+      "emails_found": 0
+    },
+    {
+      "company": "Needs One Inc",
+      "domain": "needsone.co.kr",
+      "pattern": "{last}",
+      "emails": [],
+      "emails_found": 0
+    },
+    {
+      "company": "Pradip Plastic Moulders Pvt Ltd",
+      "domain": "pradipplastic.com",
+      "pattern": "{first}.{last}",
+      "emails": [
+        {
+          "value": "aditya.lakhani@pradipplastic.com",
+          "type": "personal",
+          "first_name": "Aditya",
+          "last_name": "Lakhani",
+          "position": "Director",
+          "confidence": 99,
+          "verification_status": "unknown"
+        },
+        {
+          "value": "manoj.kashid@pradipplastic.com",
+          "type": "personal",
+          "first_name": "Manoj",
+          "last_name": "Kashid",
+          "position": "Senior Quality Assurance Engineer",
+          "confidence": 98,
+          "verification_status": null
+        }
+      ],
+      "emails_found": 2
+    },
+    {
+      "company": "Jairaj Group",
+      "domain": "jairajgroup.com",
+      "pattern": "{first}",
+      "emails": [
+        {
+          "value": "bhavayachawla@jairajgroup.com",
+          "type": "personal",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 99,
+          "verification_status": null
+        },
+        {
+          "value": "rajiv@jairajgroup.com",
+          "type": "personal",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 98,
+          "verification_status": "unknown"
+        }
+      ],
+      "emails_found": 2
+    },
+    {
+      "company": "Long Thanh Plastic JSC",
+      "domain": "nhualangthanh.com.vn",
+      "pattern": null,
+      "emails": [],
+      "emails_found": 0
+    },
+    {
+      "company": "Beyonics International",
+      "domain": "beyonics.com",
+      "pattern": "{first}{last}",
+      "emails": [
+        {
+          "value": "roymuscarella@beyonics.com",
+          "type": "personal",
+          "first_name": "Roy",
+          "last_name": "Muscarella",
+          "position": "CEO",
+          "confidence": 99,
+          "verification_status": "valid"
+        },
+        {
+          "value": "info@beyonics.com",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 95,
+          "verification_status": null
+        }
+      ],
+      "emails_found": 2
+    },
+    {
+      "company": "Mitsui Plastics Philippines",
+      "domain": "mitsui-chemicals.com",
+      "pattern": null,
+      "emails": [],
+      "emails_found": 0
+    },
+    {
+      "company": "Holly Plastic Parts Co Ltd",
+      "domain": "hollyplasticparts.com",
+      "pattern": null,
+      "emails": [
+        {
+          "value": "info@hollyplasticparts.com",
+          "type": "generic",
+          "first_name": null,
+          "last_name": null,
+          "position": null,
+          "confidence": 84,
+          "verification_status": null
+        }
+      ],
+      "emails_found": 1
+    }
+  ],
+  "errors": []
+}
