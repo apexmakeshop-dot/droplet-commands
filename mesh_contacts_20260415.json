@@ -1,0 +1,297 @@
+[
+  {
+    "company": "Matex Co Ltd",
+    "country": "Japan",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Thai Usui Co Ltd",
+    "country": "Thailand",
+    "contacts": [
+      {
+        "name": "Takuya",
+        "title": "Director",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      }
+    ],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Jet Industries Co Ltd",
+    "country": "Thailand",
+    "contacts": [
+      {
+        "name": "Amy",
+        "title": "Chief Financial Officer",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      },
+      {
+        "name": "Welly",
+        "title": "Chief Executive Officer",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      }
+    ],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Glasfil Polymer Sdn Bhd",
+    "country": "Malaysia",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "PT Banshu Plastic Indonesia",
+    "country": "Indonesia",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Presisi Group",
+    "country": "Indonesia",
+    "contacts": [
+      {
+        "name": "Jethro",
+        "title": "Director of Construction",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      }
+    ],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "PT Dinamika Polimerindo",
+    "country": "Indonesia",
+    "contacts": [
+      {
+        "name": "Hindarto",
+        "title": "Managing Director",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      },
+      {
+        "name": "Kristian",
+        "title": "Managing Director",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      }
+    ],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Anil Plastics and Enterprises",
+    "country": "India",
+    "contacts": [
+      {
+        "name": "Rabiyakhatun",
+        "title": "Co-Chief Executive Officer",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      }
+    ],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Primex Plastics Pvt Ltd",
+    "country": "India",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "CX Technology Corporation",
+    "country": "Vietnam",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Samjin LND Co Ltd",
+    "country": "South Korea",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Hankook Mold Co Ltd",
+    "country": "South Korea",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Fujigousei Inc",
+    "country": "Japan",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Tanaka Die and Mold Works",
+    "country": "Japan",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Ming-Li Precision Steel Molds",
+    "country": "Taiwan",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "HIL Industries Berhad",
+    "country": "Malaysia",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "HH Precision Mould Sdn Bhd",
+    "country": "Malaysia",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Sungjin Techwin Co Ltd",
+    "country": "South Korea",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Needs One Inc",
+    "country": "South Korea",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Pradip Plastic Moulders Pvt Ltd",
+    "country": "India",
+    "contacts": [
+      {
+        "name": "Sundeep",
+        "title": "Director",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      },
+      {
+        "name": "Aditya",
+        "title": "Director",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      }
+    ],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Jairaj Group",
+    "country": "India",
+    "contacts": [
+      {
+        "name": "Doppalapudi",
+        "title": "Chief Executive Officer",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      },
+      {
+        "name": "Jayant",
+        "title": "Founder & Chairman",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      },
+      {
+        "name": "Malu",
+        "title": "Associate Director",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      },
+      {
+        "name": "Dhaval",
+        "title": "Director",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      }
+    ],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Long Thanh Plastic Joint Stock Company",
+    "country": "Vietnam",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Beyonics International",
+    "country": "Singapore",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Mitsui Plastics Philippines",
+    "country": "Philippines",
+    "contacts": [],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  },
+  {
+    "company": "Holly Plastic Parts Co Ltd",
+    "country": "China",
+    "contacts": [
+      {
+        "name": "Jianjun",
+        "title": "Sales Director",
+        "email": null,
+        "email_status": null,
+        "linkedin_url": null,
+        "confidence": "MEDIUM"
+      }
+    ],
+    "emails_found": 0,
+    "status": "NOT_FOUND"
+  }
+]
